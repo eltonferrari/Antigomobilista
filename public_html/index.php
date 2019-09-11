@@ -20,7 +20,7 @@
                     full-height">
             <?php
                 if (isset($_SESSION['valid'])) {
-                    include("./connection/DbConnection.php");
+                    include("../conections/DbConnection.php");
                     $result = mysqli_query($mysqli, "SELECT * FROM users");
             ?>
                     <div class="top-center
@@ -74,7 +74,7 @@
                                     é necessário ter cadastro conosco.
                                     <br />
                                     Se já possui cadastro clique em 
-                                    <a href='login_register/login.php'>
+                                    <a href='home/login.php'>
                                         <font class="bold-green">
                                             Acesse aqui
                                         </font>
@@ -86,7 +86,7 @@
                                     .
                                     <br />
                                     Se ainda não possui cadastro conosco clique em 
-                                    <a href='login_register/register.php'>
+                                    <a href='home/register.php'>
                                         <font class="bold-green">
                                             Registre-se
                                         </font>
@@ -106,7 +106,7 @@
                                 É fácil e rápido.
                                 <br />
                             </font>
-                            <a href='login_register/login.php'>
+                            <a href='home/login.php'>
                                 <span class="glyphicon 
                                              glyphicon-log-in" 
                                       title="Página de Login">
@@ -119,7 +119,7 @@
                                          bold">
                                 ou
                             </font>
-                            <a href='login_register/register.php'>
+                            <a href='home/register.php'>
                                 <font class="bold-green">
                                     Registre-se
                                 </font>
