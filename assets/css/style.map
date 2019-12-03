@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/style.css",
+	"sources": [
+		"../scss/style.scss"
+	],
+	"sourcesContent": [
+		"// Variáveis\r\n$background: #fff;\r\n$destaque: ;\r\n$font_padrao: Verdana;\r\n\r\n\r\n// Formatação\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: $font_padrao;\r\n}\r\n\r\nbody {\r\n    background-color: $background;\r\n    background-image: url(../../images/system/background_1.jpg);\r\n}\r\n\r\np {\r\n    text-align: center;\r\n    color: RoyalBlue;\r\n}"
+	],
+	"mappings": ";AAOA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;EACX,WAAW,EAPD,OAAO;CAQpB;;;AAED,AAAA,IAAI,CAAC;EACD,gBAAgB,EAbP,IAAI;EAcb,gBAAgB,EAA0C,yCAAC;CAC9D;;;AAED,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,MAAO;EACnB,KAAK,EAAE,SAAU;CACpB",
+	"names": []
+}

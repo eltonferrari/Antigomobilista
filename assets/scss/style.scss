@@ -1,0 +1,22 @@
+// Variáveis
+$background: #fff;
+$destaque: ;
+$font_padrao: Verdana;
+
+
+// Formatação
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font_padrao;
+}
+
+body {
+    background-color: $background;
+    background-image: url(../../images/system/background_1.jpg);
+}
+
+p {
+    text-align: center;
+    color: RoyalBlue;
+}
