@@ -33,7 +33,7 @@
                         </span>
                     </a><br>
                     Se ainda não possui cadastro clique em 
-                    <a href='home/register.php' title="Página de Registro">
+                    <a href='access/register.php' title="Página de Registro">
                         Registre-se
                         <span class="glyphicon 
                                      glyphicon-plus" 

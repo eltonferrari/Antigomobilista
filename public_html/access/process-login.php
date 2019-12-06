@@ -12,7 +12,7 @@
             $_SESSION['valid'] = $validuser;
             $_SESSION['name'] = $row['name'];
             $_SESSION['iduser'] = $row['iduser'];
-            
+            header('Location: ../home/home.php');
         }
     }
     mysqli_close($conexao);
