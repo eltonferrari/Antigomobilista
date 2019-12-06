@@ -57,7 +57,7 @@ ul {
 }
 
 ul li, ul li:hover {
-    width: 200px;
+    width: 150px;
     height: 30px;
     line-height: 30px;
     display: inline-block;    
@@ -70,6 +70,15 @@ ul li:hover {
 }
 
 // TABELAS
+
+tr, td {
+    text-align: center; 
+}
+
+td.l-register {
+    text-align: right;
+    padding-right: 10px;
+}
 
 // LOGIN
 
@@ -104,22 +113,23 @@ h1.h1-login {
 }
 
 label {
-    margin-right: 10px;
-    font-size: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 input {
     margin: 50px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 20px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
+    border: 1px solid #999;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 20px;
 }
 
 input.btn {
     margin-left: 10px;
     margin-right: 20px;
+    border-radius: 10px;
 }
 
 input.green {

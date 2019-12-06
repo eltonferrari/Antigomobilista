@@ -67,7 +67,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="l-register">
                                     <label for="name">
                                         Nome: 
                                     </label>
@@ -83,7 +83,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="l-register">
                                     <label for="email">
                                         E-Mail: 
                                     </label>
@@ -99,7 +99,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="l-register">
                                     <label for="password">
                                         Senha: 
                                     </label>
@@ -114,7 +114,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="l-register">
                                     <label for="repassword">
                                         Repita a senha: 
                                     </label>
