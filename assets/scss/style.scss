@@ -1,7 +1,13 @@
 // Variáveis
 $background: #fff;
-$destaque: ;
+$preto: #000;
+$destaque: #4169E1;
+$verdao: darkgreen;
+$verde: #00FF7F;
+$yellow: #ffff00;
+$cor-alert: #ff0000;
 $font_padrao: Verdana;
+$sans: sans-serif;
 
 
 // Formatação
@@ -13,10 +19,88 @@ $font_padrao: Verdana;
 
 body {
     background-color: $background;
-    background-image: url(../../images/system/background_1.jpg);
 }
 
-p {
+.title {
+    background-image: url(../../images/system/background_1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 30px;
     text-align: center;
-    color: RoyalBlue;
+    font-size: 10vw;
+    text-shadow: #222 10px 10px 10px;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    color: $destaque;
+}
+
+.h-index {
+    text-align: center;
+    color: $preto;
+    font: 1.5vw $sans;    
+}
+
+h3.h-index {
+    color: f00;
+} 
+
+section {
+    background-color: $background;    
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li, ul li:hover {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;    
+    text-align: center;
+}
+
+ul li:hover {
+    background-color: $background;
+    color: $verdao;
+}
+
+h1.h1-login {
+    color: $cor-alert;
+    font-size: 15px;
+    font-weight: bold;    
+}
+
+.form-login {
+    margin-left: 40%;
+    margin-right: 20%;
+    padding: 5px;
+    width: 40%;
+}
+
+label {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+input {
+    margin: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+input.btn {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+input.green {
+    background-color: $verde;
+}
+
+input.yellow {
+    background-color: $yellow;
 }
