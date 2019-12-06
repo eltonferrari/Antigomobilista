@@ -10,7 +10,7 @@ $font_padrao: Verdana;
 $sans: sans-serif;
 
 
-// Formatação
+// FORMATAÇÃO
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ body {
 }
 
 .title {
-    background-image: url(../../images/system/background_1.jpg);
+    background-image: url(../../images/system/background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     margin-bottom: 30px;
@@ -35,10 +35,12 @@ body {
     color: $destaque;
 }
 
+// INDEX
 .h-index {
     text-align: center;
     color: $preto;
-    font: 1.5vw $sans;    
+    font: 1.5vw $sans;
+    font-weight: bold;    
 }
 
 h3.h-index {
@@ -67,17 +69,38 @@ ul li:hover {
     color: $verdao;
 }
 
+// TABELAS
+
+// LOGIN
+
 h1.h1-login {
     color: $cor-alert;
     font-size: 15px;
     font-weight: bold;    
 }
 
-.form-login {
-    margin-left: 40%;
-    margin-right: 20%;
-    padding: 5px;
-    width: 40%;
+.form-login, 
+.form-register {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-login {
+    width: 300px;
+}
+
+.box-register {
+    width: 500px;
+}
+
+.box-login, 
+.box-register {
+    height: 300px;
+    background: #fff;
 }
 
 label {
@@ -90,6 +113,8 @@ input {
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
 }
 
 input.btn {
@@ -104,3 +129,44 @@ input.green {
 input.yellow {
     background-color: $yellow;
 }
+
+// REGISTER
+
+h1.h1-register, 
+h2.h2-register {
+    font-weight: bold;
+}
+
+h1.h1-register {
+    color: $destaque;
+    font-size: 20px;
+}
+
+h2.h2-register {
+    color: $cor-alert;
+    font-size: 15px;
+}
+
+
+
+/*
+
+// Centralizar em div
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #6C7A89;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+}
+
+*/

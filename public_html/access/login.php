@@ -44,39 +44,41 @@
         </header>
         <section>
             <div class="form-login">
-                <h1 class="h1-login">
-                    *Preencha todos os campos*
-                </h1>
-                <br>
-                <form method="post" action="process-login.php">
-                    <label for="email">
-                        E-mail
-                    </label>
+                <div class="box-login">
+                    <h1 class="h1-login">
+                        *Preencha todos os campos*
+                    </h1>
                     <br>
-                    <input type="email" 
-                           class="campos" 
-                           id="email" 
+                    <form method="post" action="process-login.php">
+                        <label for="email">
+                            E-mail
+                        </label>
+                        <br>
+                        <input type="email" 
+                            class="campos" 
+                            id="email" 
                             maxlength="50" 
-                           name="email" 
-                           required>
-                    <br>
-                    <label for="password">
-                        Senha
-                    </label><br>
-                    <input type="password" 
-                           class="campos" 
-                           id="password" 
-                           maxlength="20" 
-                           name="password" 
-                           required>
-                    <br><br>
-                    <input type="submit" 
-                           value="Entrar"
-                           class="btn green">
-                    <input type="reset" 
-                           value="Limpar"
-                           class="btn yellow">
-                </form>
+                            name="email" 
+                            required>
+                        <br>
+                        <label for="password">
+                            Senha
+                        </label><br>
+                        <input type="password" 
+                            class="campos" 
+                            id="password" 
+                            maxlength="20" 
+                            name="password" 
+                            required>
+                        <br><br>
+                        <input type="submit" 
+                            value="Entrar"
+                            class="btn green">
+                        <input type="reset" 
+                            value="Limpar"
+                            class="btn yellow">
+                    </form>
+                </div>
             </div>
         </section>
     </body>
