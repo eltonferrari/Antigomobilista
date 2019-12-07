@@ -35,7 +35,7 @@
                         <li>
                             <a href="register.php" title="Página de Registro">
                                 <span class="glyphicon glyphicon-plus" title="Página de Registro"></span>
-                                    Registre-se
+                                Registre-se
                             </a>
                         </li>
                     </ul>
@@ -45,38 +45,69 @@
         <section>
             <div class="form-login">
                 <div class="box-login">
-                    <h1 class="h1-login">
-                        *Preencha todos os campos*
-                    </h1>
-                    <br>
-                    <form method="post" action="process-login.php">
-                        <label for="email">
-                            E-mail
-                        </label>
-                        <br>
-                        <input type="email" 
-                            class="campos" 
-                            id="email" 
-                            maxlength="50" 
-                            name="email" 
-                            required>
-                        <br>
-                        <label for="password">
-                            Senha
-                        </label><br>
-                        <input type="password" 
-                            class="campos" 
-                            id="password" 
-                            maxlength="20" 
-                            name="password" 
-                            required>
-                        <br><br>
-                        <input type="submit" 
-                            value="Entrar"
-                            class="btn green">
-                        <input type="reset" 
-                            value="Limpar"
-                            class="btn yellow">
+                    <form method="post" 
+                          action="process-login.php">
+                        <div class="table-responsive">
+                            <table>
+                                <tr>
+                                    <td class="center" colspan="2">
+                                        <h1 class="h1-login">
+                                            Entrar no sistema
+                                        </h1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center" colspan="2">
+                                        <h2 class="h2-login">
+                                            *Preencha todos os campos*
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="right">
+                                        <label for="email">
+                                            E-mail:
+                                        </label>
+                                    </td>
+                                    <td class="center">
+                                        <input type="email" 
+                                               class="campos" 
+                                               id="email" 
+                                               maxlength="50" 
+                                               name="email" 
+                                               required
+                                               autofocus>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="right">
+                                        <label for="password">
+                                            Senha: 
+                                        </label>
+                                    </td>
+                                    <td class="center">
+                                        <input type="password" 
+                                               class="campos" 
+                                               id="password" 
+                                               maxlength="20" 
+                                               name="password" 
+                                               required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="right">
+                                        <input type="submit" 
+                                            value="Cadastrar"
+                                            class="btn green">
+                                    </td>
+                                    <td class="center">
+                                        <input type="reset" 
+                                            value="Limpar"
+                                            class="btn yellow">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </form>
                 </div>
             </div>

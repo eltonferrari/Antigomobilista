@@ -1,5 +1,6 @@
 // Variáveis
-$background: #fff;
+$branco: #fff;
+$background: $branco;
 $preto: #000;
 $destaque: #4169E1;
 $verdao: darkgreen;
@@ -7,6 +8,7 @@ $verde: #00FF7F;
 $yellow: #ffff00;
 $cor-alert: #ff0000;
 $font_padrao: Verdana;
+$darkgolden: #b8860b;
 $sans: sans-serif;
 
 
@@ -71,22 +73,26 @@ ul li:hover {
 
 // TABELAS
 
-tr, td {
+
+table {
+    background-color: $verde;
+    border: 1px solid #000;
+}
+
+tr,td{
+    border: 1px solid #000;
+}
+
+td.center {
     text-align: center; 
 }
 
-td.l-register {
+td.right {
     text-align: right;
     padding-right: 10px;
 }
 
 // LOGIN
-
-h1.h1-login {
-    color: $cor-alert;
-    font-size: 15px;
-    font-weight: bold;    
-}
 
 .form-login, 
 .form-register {
@@ -98,21 +104,19 @@ h1.h1-login {
     align-items: center;
 }
 
+.box-register,
 .box-login {
-    width: 300px;
-}
-
-.box-register {
     width: 500px;
-}
-
-.box-login, 
-.box-register {
     height: 300px;
     background: #fff;
 }
 
+table {
+    width: 100%;
+}
+
 label {
+    color: $verdao;
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -123,36 +127,60 @@ input {
     border: 1px solid #999;
     border-radius: 15px;
     padding: 5px;
-    margin: 20px;
 }
 
 input.btn {
+    width: 100px;
     margin-left: 10px;
     margin-right: 20px;
     border-radius: 10px;
 }
 
+input.green,
+input.yellow {
+    color: $verdao;
+}
+
+input.green:hover,
+input.yellow:hover {
+    color: $branco;
+    font-weight: bold;
+}
+
+
 input.green {
     background-color: $verde;
+}
+
+input.green:hover {
+    background-color: $verdao;
 }
 
 input.yellow {
     background-color: $yellow;
 }
 
+input.yellow:hover {
+    background-color: $darkgolden;
+}
+
 // REGISTER
 
 h1.h1-register, 
-h2.h2-register {
+h2.h2-register,
+h1.h1-login,
+h2.h2-login {
     font-weight: bold;
 }
 
-h1.h1-register {
+h1.h1-register,
+h1.h1-login {
     color: $destaque;
     font-size: 20px;
 }
 
-h2.h2-register {
+h2.h2-register,
+h2.h2-login {
     color: $cor-alert;
     font-size: 15px;
 }

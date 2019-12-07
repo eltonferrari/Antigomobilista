@@ -1,16 +1,16 @@
-/* line 14, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 16, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 * {
   margin: 0;
   padding: 0;
   font-family: Verdana;
 }
 
-/* line 20, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 22, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 body {
   background-color: #fff;
 }
 
-/* line 24, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 26, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 .title {
   background-image: url(../../images/system/background.jpg);
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@ body {
   color: #4169E1;
 }
 
-/* line 39, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 41, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 .h-index {
   text-align: center;
   color: #000;
@@ -33,23 +33,23 @@ body {
   font-weight: bold;
 }
 
-/* line 46, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 48, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 h3.h-index {
   color: f00;
 }
 
-/* line 50, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 52, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 section {
   background-color: #fff;
 }
 
-/* line 54, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 56, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 ul {
   list-style-type: none;
   text-align: center;
 }
 
-/* line 59, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 61, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 ul li, ul li:hover {
   width: 150px;
   height: 30px;
@@ -58,31 +58,35 @@ ul li, ul li:hover {
   text-align: center;
 }
 
-/* line 67, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 69, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 ul li:hover {
   background-color: #fff;
   color: darkgreen;
 }
 
-/* line 74, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 77, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+table {
+  background-color: #00FF7F;
+  border: 1px solid #000;
+}
+
+/* line 82, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 tr, td {
+  border: 1px solid #000;
+}
+
+/* line 86, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+td.center {
   text-align: center;
 }
 
-/* line 78, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
-td.l-register {
+/* line 90, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+td.right {
   text-align: right;
   padding-right: 10px;
 }
 
-/* line 85, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
-h1.h1-login {
-  color: #ff0000;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-/* line 91, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 97, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 .form-login,
 .form-register {
   width: 100vw;
@@ -93,70 +97,94 @@ h1.h1-login {
   align-items: center;
 }
 
-/* line 101, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 107, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+.box-register,
 .box-login {
-  width: 300px;
-}
-
-/* line 105, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
-.box-register {
   width: 500px;
-}
-
-/* line 109, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
-.box-login,
-.box-register {
   height: 300px;
   background: #fff;
 }
 
-/* line 115, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 114, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+table {
+  width: 100%;
+}
+
+/* line 118, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 label {
+  color: darkgreen;
   font-size: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 121, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 125, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 input {
   margin: 50px;
   border: 1px solid #999;
   border-radius: 15px;
   padding: 5px;
-  margin: 20px;
 }
 
-/* line 129, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 132, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 input.btn {
+  width: 100px;
   margin-left: 10px;
   margin-right: 20px;
   border-radius: 10px;
 }
 
-/* line 135, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 139, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+input.green,
+input.yellow {
+  color: darkgreen;
+}
+
+/* line 144, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+input.green:hover,
+input.yellow:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* line 151, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 input.green {
   background-color: #00FF7F;
 }
 
-/* line 139, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 155, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+input.green:hover {
+  background-color: darkgreen;
+}
+
+/* line 159, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 input.yellow {
   background-color: #ffff00;
 }
 
-/* line 145, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 163, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+input.yellow:hover {
+  background-color: #b8860b;
+}
+
+/* line 169, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 h1.h1-register,
-h2.h2-register {
+h2.h2-register,
+h1.h1-login,
+h2.h2-login {
   font-weight: bold;
 }
 
-/* line 150, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
-h1.h1-register {
+/* line 176, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+h1.h1-register,
+h1.h1-login {
   color: #4169E1;
   font-size: 20px;
 }
 
-/* line 155, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
-h2.h2-register {
+/* line 182, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+h2.h2-register,
+h2.h2-login {
   color: #ff0000;
   font-size: 15px;
 }

@@ -47,100 +47,99 @@
         <section>
             <div class="form-register">
                 <div class="box-register">
-                    <div class="table-responsive">
                     <form name="formInsertUser"
-                        method="post" 
-                        action="process-register.php">
-                        <table>
-                            <tr>
-                                <td colspan="2">
-                                    <h1 class="h1-register">
-                                        Registro para novos usuários
-                                    </h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <h2 class="h2-register">
-                                        Todos os campos são de preenchimento obrigatório
-                                    </h2>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="l-register">
-                                    <label for="name">
-                                        Nome: 
-                                    </label>
-                                </td>
-                                <td>
-                                    <input type="text" 
-                                           class="campos" 
-                                           id="name" 
-                                           maxlength="50" 
-                                           name="name" 
-                                           required
-                                           autofocus>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="l-register">
-                                    <label for="email">
-                                        E-Mail: 
-                                    </label>
-                                </td>
-                                <td>
-                                <input type="email" 
-                                       class="campos" 
-                                       id="email" 
-                                       maxlength="40" 
-                                       name="email" 
-                                       required>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="l-register">
-                                    <label for="password">
-                                        Senha: 
-                                    </label>
-                                </td>
-                                <td>
-                                    <input type="password" 
-                                           class="campos" 
-                                           id="password" 
-                                           maxlength="20" 
-                                           name="password" 
-                                           required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="l-register">
-                                    <label for="repassword">
-                                        Repita a senha: 
-                                    </label>
-                                </td>
-                                <td>
-                                    <input type="password" 
-                                           class="campos" 
-                                           id="repassword" 
-                                           maxlength="20" 
-                                           name="repassword" 
-                                           required>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <input type="submit" 
-                                           value="Cadastrar"
-                                           class="btn green">
-                                    <input type="reset" 
-                                           value="Limpar"
-                                           class="btn yellow">
-
-                                </td>
-                            </tr>
-                        </table>
+                          method="post" 
+                          action="process-register.php">
+                        <div class="table-responsive">
+                            <table>
+                                <tr>
+                                    <td class="center" colspan="2">
+                                        <h1 class="h1-register">
+                                            Registro para novos usuários
+                                        </h1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center" colspan="2">
+                                        <h2 class="h2-register">
+                                            Todos os campos são de preenchimento obrigatório
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="right">
+                                        <label for="name">
+                                            Nome: 
+                                        </label>
+                                    </td>
+                                    <td class="center">
+                                        <input type="text" 
+                                            class="campos" 
+                                            id="name" 
+                                            maxlength="50" 
+                                            name="name" 
+                                            required
+                                            autofocus>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="right">
+                                        <label for="email">
+                                            E-Mail: 
+                                        </label>
+                                    </td>
+                                    <td class="center">
+                                    <input type="email" 
+                                        class="campos" 
+                                        id="email" 
+                                        maxlength="40" 
+                                        name="email" 
+                                        required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="right">
+                                        <label for="password">
+                                            Senha: 
+                                        </label>
+                                    </td>
+                                    <td class="center">
+                                        <input type="password" 
+                                            class="campos" 
+                                            id="password" 
+                                            maxlength="20" 
+                                            name="password" 
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="right">
+                                        <label for="repassword">
+                                            Repita a senha: 
+                                        </label>
+                                    </td>
+                                    <td class="center">
+                                        <input type="password" 
+                                            class="campos" 
+                                            id="repassword" 
+                                            maxlength="20" 
+                                            name="repassword" 
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="right">
+                                        <input type="submit" 
+                                            value="Cadastrar"
+                                            class="btn green">
+                                    </td>
+                                    <td class="center">
+                                        <input type="reset" 
+                                            value="Limpar"
+                                            class="btn yellow">
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </form>
                 </div>
