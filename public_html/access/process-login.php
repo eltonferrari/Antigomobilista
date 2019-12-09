@@ -1,6 +1,5 @@
-<?php
-    session_start();
-    include_once("conection.php");
+<?php session_start();
+    include_once("../../conections/conection.php");
     if (isset($_POST['submit'])) {
         $email = $_POST["email"];
         $password = $_POST["password"];
@@ -15,5 +14,5 @@
             header('Location: ../home/home.php');
         }
     }
-    mysqli_close($conexao);
+    mysqli_close($conection);
 ?>

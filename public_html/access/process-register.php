@@ -1,12 +1,12 @@
-<?php
-    session_start();
-    include("../../conections/conection.php");
-    if (isset($_POST['submit'])) {
+<?php session_start();
+    include_once("../../conections/conection.php");
+    
         $name = $_POST['name'];
         $email = $_POST['email'];
         $pass = $_POST['password'];
-        $repass = $_POST['password_confirmation'];
+        $repass = $_POST['repassword'];
 ?>
+        <!DOCTYPE html>
         <html lang="pt-br">
             <head>
                 <title>Novo usuário</title>
@@ -31,12 +31,24 @@
 <?php
         if ($pass == $repass) {
             $sql = "insert into users(name, email, password) 
-                    values('$name', '$email', md5('$pass'))";
-            $save = mysqli_query($mysqli,$sql);
-            $lines = mysqli_affected_rows($conection);
-            mysqli_close($conection);
+                    values ('$name', '$email', md5('$pass'))";
+            $save = mysqli_query($conection, $sql);
+            $lines = mysqli_affected_rows($conection);            
             if($lines == 1) {
                 print "Cadastro efetuado com sucesso!!!";
+                $sql = "select * from users where email='.$email.' and password=md5('$pass')";
+                $result = mysqli_query($conection, $sql);
+                $row = mysqli_fetch_assoc($result);
+                if (is_array($row) && !empty($row)) {
+                    $validuser = $row['email'];
+                    $_SESSION['valid'] = $validuser;
+                    $_SESSION['name'] = $row['name'];
+                    $_SESSION['iduser'] = $row['iduser'];
+                    mysqli_close($conection);
+?>
+                    <a href="../home/home.php">Continuar</a>
+<?php
+        }
             } else {
                 print "Cadastro NÃO efetuado.<br>Já existe um usuário com este E-MAIL!!!";
             }
@@ -47,7 +59,7 @@
         <a href="register.php">Refazer cadastro</a>
 <?php
         }
-    }
+    
 ?>
                 </section>
             </body>
