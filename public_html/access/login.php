@@ -75,8 +75,7 @@
                                                id="email" 
                                                maxlength="50" 
                                                name="email" 
-                                               required
-                                               autofocus>
+                                               required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -97,7 +96,7 @@
                                 <tr>
                                     <td class="right">
                                         <input type="submit" 
-                                            value="Cadastrar"
+                                            value="Entrar"
                                             class="btn green">
                                     </td>
                                     <td class="center">

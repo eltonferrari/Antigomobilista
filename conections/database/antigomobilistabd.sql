@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `iduser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `points` int(11) NOT NULL DEFAULT '5',
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL UNIQUE,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'vazio.png',
   `type` int(1) NOT NULL DEFAULT '0',
