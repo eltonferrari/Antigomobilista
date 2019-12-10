@@ -5,26 +5,19 @@
     }
 ?>
 <html lang="pt-BR">
-    
     <head>
+        <title>Novo usuário</title>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>
-            Página Inicial
-        </title>
-
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" 
-              rel="stylesheet" 
-              type="text/css">
+        <meta http-equiv="X-UA-Compatible" 
+              content="IE=edge">
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" 
-              href="../../assets/bootstrap_3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet"
-              href="../../assets/css/style_home.css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="../../assets/bootstrap_3.3.7/js/bootstrap.min.js"></script>
+              href="../../assets/css/style.css"> ​
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
     <body>
         <?php 
@@ -32,18 +25,12 @@
         ?>
         <div class="col-md-12">
             <div class="col-md-4 tit">
-                <div class="title">
-                    <br />
-                    MINHAS IMAGENS
-                    <br />
-                </div>
+                MINHAS IMAGENS
                 <a href="../posts/add.php" 
                    title="Adicionar novas fotos">
                     <span class="glyphicon
                                  glyphicon-plus"></span>
-                    <font class="add">
-                        Adicionar
-                    </font>
+                    Adicionar
                     <span class="glyphicon
                                  glyphicon-plus"></span>
                     <br />
@@ -61,8 +48,8 @@
                          role="listbox">
                         <?php
                             $activeControl = 2;
-                            $result = "SELECT * FROM posts WHERE iduser=". $iduser . " ORDER BY created_at ASC";
-                            $res = mysqli_query($mysqli, $result);
+                            $result = "select * from posts where iduser=". $iduser . " order by created_at ASC";
+                            $res = mysqli_query($conection, $result);
                             while ($row_carousel = mysqli_fetch_assoc($res)) {
                                 if ($activeControl == 2) {
                         ?>
@@ -125,11 +112,10 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="title">
-                    <br />
-                    Eventos
-                    <br />
-                    <br />
+                <br />
+                Eventos
+                <br />
+                <br />
                 </div>
                 <div id="carousel-example-generic-event" 
                      class="carousel slide" 
@@ -143,8 +129,8 @@
                          role="listbox">
                         <?php
                             $actCont = 2;
-                            $result = "SELECT * FROM events ORDER BY date ASC";
-                            $resEvent = mysqli_query($mysqli, $result);
+                            $result = "select * from events order by date ASC";
+                            $resEvent = mysqli_query($conection, $result);
                             while ($row_carouselEvent = mysqli_fetch_assoc($resEvent)) {
                                 if ($actCont == 2) {
                         ?>
@@ -207,25 +193,22 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="title">
-                    <br />
-                    Vendas
-                    <br />
+                <br />
+                Vendas
+                <br />
                 </div>
                 <a href="../posts/add.php" 
                    title="Adicionar novas fotos">
                     <span class="glyphicon
                                  glyphicon-plus"></span>
-                    <font class="add">
-                        Adicionar
-                    </font>
+                    Adicionar
                     <span class="glyphicon
                                  glyphicon-plus"></span>
                     <br />
                     <br />
                 </a>
                 <?php
-                    $result = mysqli_query($mysqli, "SELECT * FROM posts WHERE sell=1 ORDER BY created_at ASC");
+                    $result = mysqli_query($conection, "select * from posts where sell=1 order by created_at ASC");
                     while ($res = mysqli_fetch_assoc($result)) {
                 ?>
                         <div class="box-detail">

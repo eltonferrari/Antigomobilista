@@ -1,12 +1,10 @@
 <?php
     if (isset($_SESSION['valid'])) {
-        //including the database connection file
-        include_once("../../connection/DbConnection.php");
-        $result = mysqli_query($mysqli, "SELECT * FROM users");
-        ?>
+        include_once("../../conections/conection.php");
+        $result = mysqli_query($conection,"select * from users");
+?>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" 
                             class="navbar-toggle collapsed" 
@@ -20,46 +18,35 @@
                     </button>
                     <a class="navbar-brand" 
                        href="../home/home.php">
-                        <font class="menu">
-                            Antigomobilista
-                        </font>
+                        Antigomobilista
                     </a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" 
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="../home/home.php">
-                                <font class="menu">
-                                    Início
-                                </font>
+                                Início
                             </a>
                         </li>
                         <li>
                             <a href="../user/view.php">
-                                <font class="menu">
-                                    Pessoas
-                                </font>
+                                Pessoas
                             </a>
                         </li>
                         <li>
                             <a href="../posts/view.php">
-                                <font class="menu">
-                                    Fotos
-                                </font>
+                                Fotos
                             </a>
                         </li>
                         <li>
                             <a href="../events/view.php">
-                                <font class="menu">
-                                    Eventos
-                                </font>
+                                Eventos
                             </a>
                         </li>
                         <?php
                             $adm = "";
-                            $login = mysqli_query($mysqli, "SELECT * FROM users WHERE iduser=" . $_SESSION['iduser']);
+                            $login = mysqli_query($conection, "select * from users where iduser=" . $_SESSION['iduser']);
                             while ($log = mysqli_fetch_assoc($login)) {
                                 $adm = $log['type'];
                             }
@@ -67,16 +54,12 @@
                         ?>
                                 <li>
                                     <a href="../gamification/view.php?page=0" onblur>
-                                        <font class="menu">
-                                            Gamification
-                                        </font>
+                                        Gamification
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../user/view_adm.php?page=0"  onblur>
-                                        <font class="menu">
-                                            ADM de Pessoal
-                                        </font>
+                                    <a href="../user/view_adm.php?page=0" onblur>
+                                        ADM de Pessoal    
                                     </a>
                                 </li>                        
                         <?php
@@ -86,17 +69,15 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="../messages/view.php" onblur>
-                                <font class="menu">
-                                    Mensagens
-                                </font>
+                                Mensagens
                                 <div class="circle">
-                                    
+                            
                                 </div>
                             </a>
                         </li>
                         <li class="dropdown">
                             <?php
-                                $img = mysqli_query($mysqli, "SELECT * FROM users WHERE iduser=" . $_SESSION['iduser']);
+                                $img = mysqli_query($conection, "select * from users where iduser=" . $_SESSION['iduser']);
                             ?>
                             <a href="../user/perfil.php" 
                                class="dropdown-toggle"
@@ -108,16 +89,14 @@
                                     while ($res = mysqli_fetch_array($img)) {
                                 ?>
                                 <div class="gallery-perfil">
-                                    <img src="../../images/perfil/<?php echo $res['image'] ?>" />
+                                    <img src="../../../images/profile/<?php echo $res['image'] ?>" />
                                 </div>
                                 <?php
                                     }
                                 ?>
-                                <font class="perfil">
                                     <?php 
                                         echo $_SESSION['name'] 
                                     ?>
-                                </font>
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu"
@@ -127,17 +106,13 @@
                                         <span class="glyphicon glyphicon-user" 
                                           title="Página de Login">
                                         </span>
-                                        <font class="menu">
-                                            Perfil
-                                        </font>
+                                        Perfil
                                     </a>
                                     <a href="#">
                                         <span class="glyphicon glyphicon-lock" 
                                           title="Página de Login">
                                         </span>
-                                        <font class="menu">
-                                            Alterar Senha
-                                        </font>
+                                        Alterar Senha
                                     </a>
                                     <a href="../../login_register/logout.php"
                                        onclick="event.preventDefault();
@@ -145,9 +120,7 @@
                                         <span class="glyphicon glyphicon-log-out" 
                                               title="Página de Login">
                                         </span>
-                                        <font class="menu">
-                                            Sair
-                                        </font>
+                                        Sair
                                     </a>
                                     <form id="logout-form"
                                           action="../../login_register/logout.php"
