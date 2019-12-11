@@ -1,10 +1,8 @@
 <?php session_start();
     include_once("../../conections/conection.php");
-
-    if (isset($_POST['submit'])) {
         $email = $_POST["email"];
-        $password = $_POST["password"];
-        $sql = "select * from users where email='.$email.' and password=md5('$password')";
+        $pass = $_POST["password"];
+        $sql = "select * from users where email='.$email.' and password=md5('$pass')";
         $result = mysqli_query($conection, $sql);
         $row = mysqli_fetch_assoc($result);
         if (is_array($row) && !empty($row)) {
@@ -68,6 +66,6 @@
             </html>
 <?php
         }
-    }
+    
     mysqli_close($conection);
 ?>

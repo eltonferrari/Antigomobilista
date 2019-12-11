@@ -83,8 +83,13 @@ tr,td{
     border: 1px solid #000;
 }
 
-td.center {
-    text-align: center; 
+td.center,
+section.section-center {
+    text-align: center;
+}
+
+section.section-center {
+    color: $destaque; 
 }
 
 td.right {
@@ -169,7 +174,8 @@ input.yellow:hover {
 h1.h1-register, 
 h2.h2-register,
 h1.h1-login,
-h2.h2-login {
+h2.h2-login,
+h1.msg-no-register {
     font-weight: bold;
 }
 
@@ -180,9 +186,14 @@ h1.h1-login {
 }
 
 h2.h2-register,
-h2.h2-login {
+h2.h2-login,
+h1.msg-no-register {
     color: $cor-alert;
     font-size: 15px;
+}
+
+h1.msg-no-register {
+    font-size: 20px;
 }
 
 

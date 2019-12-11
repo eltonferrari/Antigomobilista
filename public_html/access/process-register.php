@@ -50,8 +50,8 @@
                     </section>
                 </header>
                 <hr>
-            <section>
-                    <h1>Cadastro</h1>
+            <section class="section-center">
+                    <h1 class="title-p-r">Cadastro</h1>
                     <hr>
                     <br>
                     <br>
@@ -75,15 +75,24 @@
 ?>
                     <a href="../home/home.php">Continuar</a>
 <?php
-        }
+                }
             } else {
-                print "Cadastro NÃO efetuado.<br>Já existe um usuário com este E-MAIL!!!";
+?>                
+                <h1 class="msg-no-register">
+                    Cadastro NÃO efetuado.
+                    <br>
+                    Já existe um usuário com este E-MAIL!
+                    <br>
+                    Por favor, refaça o 
+                    <a href="register.php">Cadastro</a>
+                </h1>
+<?php
             }
         } else {
             print "A senha deve ser digitada e confirmada!";
             print "Por favor clique no link abaixo e refassa seu cadastro!";
 ?>
-        <a href="register.php">Refazer cadastro</a>
+            <a href="register.php">Refazer cadastro</a>
 <?php
         }
     
