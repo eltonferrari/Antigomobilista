@@ -1,6 +1,5 @@
 <?php session_start();
     include_once("../../conections/conection.php");
-    
         $name = $_POST['name'];
         $email = $_POST['email'];
         $pass = $_POST['password'];
@@ -62,7 +61,11 @@
             $save = mysqli_query($conection, $sql);
             $lines = mysqli_affected_rows($conection);            
             if($lines == 1) {
-                print "Cadastro efetuado com sucesso!!!";
+?>
+                <h1 class="msg-register">
+                Cadastro efetuado com sucesso!
+                <br><br>
+<?php
                 $sql = "select * from users where email='$email' and password=md5('$pass')";
                 $result = mysqli_query($conection, $sql);
                 $row = mysqli_fetch_assoc($result);
@@ -73,26 +76,31 @@
                     $_SESSION['iduser'] = $row['iduser'];
                     mysqli_close($conection);
 ?>
-                    <a href="../home/home.php">Continuar</a>
+                    <a href="../home/home.php">ENTRAR NO<br><br>ANTIGOMOBILISTA</a>
 <?php
                 }
             } else {
 ?>                
-                <h1 class="msg-no-register">
+                <h1 class="msg-register">
                     Cadastro NÃO efetuado.
-                    <br>
+                    <br><br>
                     Já existe um usuário com este E-MAIL!
-                    <br>
-                    Por favor, refaça o 
-                    <a href="register.php">Cadastro</a>
+                    <br><br>
+                    Por favor, refaça o CADASTRO.
+                    <br><br>
+                    <a href="register.php">Refazer cadastro</a>
                 </h1>
 <?php
             }
         } else {
-            print "A senha deve ser digitada e confirmada!";
-            print "Por favor clique no link abaixo e refassa seu cadastro!";
-?>
-            <a href="register.php">Refazer cadastro</a>
+?>            
+            <h1 class="msg-register">
+                A senha deve ser digitada e confirmada!
+                <br><br>
+                Por favor clique no link abaixo e refassa seu cadastro!
+                <br><br>
+                <a href="register.php">Refazer cadastro</a>
+            </h1>
 <?php
         }
     

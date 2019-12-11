@@ -175,7 +175,7 @@ h1.h1-register,
 h2.h2-register,
 h1.h1-login,
 h2.h2-login,
-h1.msg-no-register {
+h1.msg-register {
     font-weight: bold;
 }
 
@@ -187,13 +187,17 @@ h1.h1-login {
 
 h2.h2-register,
 h2.h2-login,
-h1.msg-no-register {
+h1.msg-register {
     color: $cor-alert;
     font-size: 15px;
 }
 
-h1.msg-no-register {
+h1.msg-register {
     font-size: 20px;
+}
+
+h1.title-p-r {
+    font-weight: bold;
 }
 
 

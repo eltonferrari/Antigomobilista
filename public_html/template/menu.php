@@ -114,7 +114,7 @@
                                         </span>
                                         Alterar Senha
                                     </a>
-                                    <a href="../../login_register/logout.php"
+                                    <a href="../access/logout.php"
                                        onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
                                         <span class="glyphicon glyphicon-log-out" 
@@ -123,7 +123,7 @@
                                         Sair
                                     </a>
                                     <form id="logout-form"
-                                          action="../../login_register/logout.php"
+                                          action="../access/logout.php"
                                           method="POST"
                                           style="display: none;">
                                     </form>

@@ -178,7 +178,7 @@ h1.h1-register,
 h2.h2-register,
 h1.h1-login,
 h2.h2-login,
-h1.msg-no-register {
+h1.msg-register {
   font-weight: bold;
 }
 
@@ -192,14 +192,19 @@ h1.h1-login {
 /* line 188, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 h2.h2-register,
 h2.h2-login,
-h1.msg-no-register {
+h1.msg-register {
   color: #ff0000;
   font-size: 15px;
 }
 
 /* line 195, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
-h1.msg-no-register {
+h1.msg-register {
   font-size: 20px;
+}
+
+/* line 199, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+h1.title-p-r {
+  font-weight: bold;
 }
 
 /*
