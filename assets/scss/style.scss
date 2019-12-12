@@ -7,7 +7,7 @@ $verdao: darkgreen;
 $verde: #00FF7F;
 $yellow: #ffff00;
 $cor-alert: #ff0000;
-$font_padrao: Verdana;
+$font_padrao: Arial;
 $darkgolden: #b8860b;
 $sans: sans-serif;
 
@@ -22,6 +22,48 @@ $sans: sans-serif;
 body {
     background-color: $background;
 }
+
+//NAVBAR
+
+div.title-index,
+a.navbar-brand {
+    font-family: 'Lobster', cursive; 
+}
+
+nav {
+    border-radius: 10px;
+}
+
+
+
+
+
+div.gallery-perfil {
+    margin: 1px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 20px;
+    border-radius: 5px;
+}
+
+div.gallery-perfil:hover {
+    border: 1px solid #777;
+}
+
+div.gallery-perfil img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
 
 .title {
     background-image: url(../../images/system/background.jpg);
@@ -66,13 +108,7 @@ ul li, ul li:hover {
     text-align: center;
 }
 
-ul li:hover {
-    background-color: $background;
-    color: $verdao;
-}
-
 // TABELAS
-
 
 table {
     background-color: $verde;

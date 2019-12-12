@@ -1,17 +1,17 @@
-<?php 
-    session_start();
-?>
+<?php session_start();?>
 <html lang="pt-BR">
     <head>
-        <title>
-            Antigomobilista
-        </title>
+        <title>Antigomobilista</title>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" 
+              content="IE=edge">
         <meta name="viewport" 
               content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-              href="../assets/css/style.css">
-        ​<link rel="stylesheet" 
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" 
+              rel="stylesheet"> 
+        <link rel="stylesheet" 
+              href="../assets/css/style.css"> ​
+        <link rel="stylesheet" 
               href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -47,8 +47,8 @@
             </section>
         </header>
         <section>
-            <div class="title">
-                ANTIGOMOBILISTA
+            <div class="title title-index">
+                Antigomobilista
             </div>
         </section>
     </body>
