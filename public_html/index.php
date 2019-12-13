@@ -10,7 +10,9 @@
         <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" 
               rel="stylesheet"> 
         <link rel="stylesheet" 
-              href="../assets/css/style.css"> ​
+              href="../assets/css/style.css">
+        <link rel="stylesheet"​
+              href="../assets/css/index.css">
         <link rel="stylesheet" 
               href="../assets/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 12:47:01
+    Author     : elton
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 12:37:27
+    Author     : elton
+*/
+/* line 13, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
+.title {
+  background-image: url(../../images/system/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 10vw;
+  text-shadow: #222 10px 10px 10px;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  color: #4169E1;
+}
+
+/* line 27, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
+div.title-index {
+  font-family: 'Lobster', cursive;
+}
+
+/* line 31, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
+.h-index {
+  text-align: center;
+  color: #000;
+  font: 1.5vw sans-serif;
+  font-weight: bold;
+}
+
+/* line 38, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
+h3.h-index {
+  color: f00;
+}
+
+/* line 42, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
+section {
+  background-color: #fff;
+}
+
+/* line 46, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+/* line 51, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
+ul li, ul li:hover {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+/*# sourceMappingURL=../css/index.map */

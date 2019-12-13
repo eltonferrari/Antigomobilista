@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 12:47:01
+    Author     : elton
+*/
+
+@import "variaveis.scss";
+
+.title {
+    background-image: url(../../images/system/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 10vw;
+    text-shadow: #222 10px 10px 10px;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    color: $destaque;
+}
+
+div.title-index {
+    font-family: 'Lobster', cursive; 
+}
+
+.h-index {
+    text-align: center;
+    color: $preto;
+    font: 1.5vw $sans;
+    font-weight: bold;    
+}
+
+h3.h-index {
+    color: f00;
+} 
+
+section {
+    background-color: $background;    
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li, ul li:hover {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;    
+    text-align: center;
+}

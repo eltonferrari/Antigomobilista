@@ -1,17 +1,4 @@
-// Variáveis
-$branco: #fff;
-$background: $branco;
-$preto: #000;
-$destaque: #4169E1;
-$verdao: darkgreen;
-$verde: #00FF7F;
-$yellow: #ffff00;
-$cor-alert: #ff0000;
-$font_padrao: Arial;
-$darkgolden: #b8860b;
-$sans: sans-serif;
-
-
+@import 'variaveis.scss';
 // FORMATAÇÃO
 * {
     margin: 0;
@@ -21,91 +8,6 @@ $sans: sans-serif;
 
 body {
     background-color: $background;
-}
-
-//NAVBAR
-
-div.title-index,
-a.navbar-brand {
-    font-family: 'Lobster', cursive; 
-}
-
-nav {
-    border-radius: 10px;
-}
-
-
-
-
-
-div.gallery-perfil {
-    margin: 1px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 20px;
-    border-radius: 5px;
-}
-
-div.gallery-perfil:hover {
-    border: 1px solid #777;
-}
-
-div.gallery-perfil img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-div img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-
-.title {
-    background-image: url(../../images/system/background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 10vw;
-    text-shadow: #222 10px 10px 10px;
-    width: 100%;
-    height: 500px;
-    justify-content: center;
-    color: $destaque;
-}
-
-// INDEX
-.h-index {
-    text-align: center;
-    color: $preto;
-    font: 1.5vw $sans;
-    font-weight: bold;    
-}
-
-h3.h-index {
-    color: f00;
-} 
-
-section {
-    background-color: $background;    
-}
-
-ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-ul li, ul li:hover {
-    width: 150px;
-    height: 30px;
-    line-height: 30px;
-    display: inline-block;    
-    text-align: center;
 }
 
 // TABELAS

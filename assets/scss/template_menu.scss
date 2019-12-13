@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 12:42:13
+    Author     : elton
+*/
+@import "variaveis.scss";
+
+//NAVBAR
+
+a.navbar-brand {
+    font-family: 'Lobster', cursive; 
+}
+
+nav {
+    border-radius: 10px;
+}
+
+//Verificar
+div.gallery-perfil {
+    margin: 1px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 20px;
+    border-radius: 5px;
+}
+
+div.gallery-perfil:hover {
+    border: 1px solid #777;
+}
+
+div.gallery-perfil img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

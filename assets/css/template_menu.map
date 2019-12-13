@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "../scss/template_menu.css",
+	"sources": [
+		"../scss/template_menu.scss",
+		"../scss/variaveis.scss"
+	],
+	"sourcesContent": [
+		"/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : 13/12/2019, 12:42:13\n    Author     : elton\n*/\n@import \"variaveis.scss\";\n\n//NAVBAR\n\na.navbar-brand {\n    font-family: 'Lobster', cursive; \n}\n\nnav {\n    border-radius: 10px;\n}\n\n//Verificar\ndiv.gallery-perfil {\n    margin: 1px;\n    border: 1px solid #ccc;\n    float: left;\n    width: 20px;\n    border-radius: 5px;\n}\n\ndiv.gallery-perfil:hover {\n    border: 1px solid #777;\n}\n\ndiv.gallery-perfil img {\n    width: 100%;\n    height: auto;\n    border-radius: 5px;\n}\n\ndiv img {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}",
+		"/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : 13/12/2019, 12:37:27\n    Author     : elton\n*/\n\n$branco: #fff;\n$background: $branco;\n$preto: #000;\n$destaque: #4169E1;\n$verdao: darkgreen;\n$verde: #00FF7F;\n$yellow: #ffff00;\n$cor-alert: #ff0000;\n$font_padrao: Arial;\n$darkgolden: #b8860b;\n$sans: sans-serif;\n"
+	],
+	"mappings": "AAAA;;;;EAIE;AACF;;;EAGE;ACRF;;;;EAIE;AACF;;;EAGE;;ADKF,AAAC,CAAA,AAAA,aAAa,CAAC;EACX,WAAW,EAAE,kBAAmB;CACnC;;;AAED,AAAA,GAAG,CAAC;EACA,aAAa,EAAE,IAAK;CACvB;;;AAGD,AAAG,GAAA,AAAA,eAAe,CAAC;EACf,MAAM,EAAE,GAAI;EACZ,MAAM,EAAE,cAAe;EACvB,KAAK,EAAE,IAAK;EACZ,KAAK,EAAE,IAAK;EACZ,aAAa,EAAE,GAAI;CACtB;;;AAED,AAAkB,GAAf,AAAA,eAAe,AAAA,MAAM,CAAC;EACrB,MAAM,EAAE,cAAe;CAC1B;;;AAED,AAAmB,GAAhB,AAAA,eAAe,CAAC,GAAG,CAAC;EACnB,KAAK,EAAE,IAAK;EACZ,MAAM,EAAE,IAAK;EACb,aAAa,EAAE,GAAI;CACtB;;;AAED,AAAI,GAAD,CAAC,GAAG,CAAC;EACJ,OAAO,EAAE,KAAM;EACf,WAAW,EAAE,IAAK;EAClB,YAAY,EAAE,IAAK;CACtB",
+	"names": []
+}
