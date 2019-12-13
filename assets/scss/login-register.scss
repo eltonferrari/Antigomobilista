@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 15:42:00
+    Author     : elton
+*/
+
+@import "variaveis.scss";
+
+.form-login, 
+.form-register {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-register,
+.box-login {
+    width: 500px;
+    height: 300px;
+    background: #fff;
+}
+
+h1.h1-register, 
+h2.h2-register,
+h1.h1-login,
+h2.h2-login,
+h1.msg-register {
+    font-weight: bold;
+}
+
+h1.h1-register,
+h1.h1-login {
+    color: $destaque;
+    font-size: 20px;
+}
+
+h2.h2-register,
+h2.h2-login,
+h1.msg-register {
+    color: $cor-alert;
+    font-size: 15px;
+}
+
+h1.msg-register {
+    font-size: 20px;
+}
+
+section.section-center {
+    color: $destaque; 
+}
+
+h1.title-p-r {
+    font-weight: bold;
+}

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../scss/login.css",
+	"sources": [
+		"../scss/login.scss"
+	],
+	"sourcesContent": [
+		"/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : 13/12/2019, 15:42:00\n    Author     : elton\n*/\n\n.form-login {\n    width: 100vw;\n    height: 50vh;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}"
+	],
+	"mappings": "AAAA;;;;EAIE;AACF;;;EAGE;;AAEF,AAAA,WAAW,CAAC;EACR,KAAK,EAAE,KAAM;EACb,MAAM,EAAE,IAAK;EACb,OAAO,EAAE,IAAK;EACd,cAAc,EAAE,GAAI;EACpB,eAAe,EAAE,MAAO;EACxB,WAAW,EAAE,MAAO;CACvB",
+	"names": []
+}

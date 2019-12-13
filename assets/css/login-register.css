@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 15:42:00
+    Author     : elton
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 12:37:27
+    Author     : elton
+*/
+/* line 13, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+.form-login,
+.form-register {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 23, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+.box-register,
+.box-login {
+  width: 500px;
+  height: 300px;
+  background: #fff;
+}
+
+/* line 30, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+h1.h1-register,
+h2.h2-register,
+h1.h1-login,
+h2.h2-login,
+h1.msg-register {
+  font-weight: bold;
+}
+
+/* line 38, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+h1.h1-register,
+h1.h1-login {
+  color: #4169E1;
+  font-size: 20px;
+}
+
+/* line 44, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+h2.h2-register,
+h2.h2-login,
+h1.msg-register {
+  color: #ff0000;
+  font-size: 15px;
+}
+
+/* line 51, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+h1.msg-register {
+  font-size: 20px;
+}
+
+/* line 55, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+section.section-center {
+  color: #4169E1;
+}
+
+/* line 59, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+h1.title-p-r {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=../css/login-register.map */

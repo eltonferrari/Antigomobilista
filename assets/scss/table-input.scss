@@ -1,0 +1,90 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 15:44:15
+    Author     : elton
+*/
+
+@import "variaveis.scss";
+
+table {
+    width: 100%;
+    background-color: $verde;
+    border: 1px solid #000;
+
+}
+
+label {
+    color: $verdao;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+tr,td{
+    border: 1px solid #000;
+}
+
+td.center,
+section.section-center {
+    text-align: center;
+}
+
+td.right {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.form-register {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin: 50px;
+    border: 1px solid #999;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+input.btn {
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+input.green,
+input.yellow {
+    color: $verdao;
+}
+
+input.green:hover,
+input.yellow:hover {
+    color: $branco;
+    font-weight: bold;
+}
+
+
+input.green {
+    background-color: $verde;
+}
+
+input.green:hover {
+    background-color: $verdao;
+}
+
+input.yellow {
+    background-color: $yellow;
+}
+
+input.yellow:hover {
+    background-color: $darkgolden;
+}

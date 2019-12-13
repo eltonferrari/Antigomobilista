@@ -104,8 +104,7 @@
                 <a href="register.php">Refazer cadastro</a>
             </h1>
 <?php
-        }
-    
+        }    
 ?>
                 </section>
             </body>
