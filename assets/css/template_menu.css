@@ -5,7 +5,7 @@ and open the template in the editor.
 */
 /* 
     Created on : 13/12/2019, 12:42:13
-    Author     : elton
+    Author     : Elton Ferrari
 */
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -14,19 +14,19 @@ and open the template in the editor.
 */
 /* 
     Created on : 13/12/2019, 12:37:27
-    Author     : elton
+    Author     : Elton Ferrari
 */
-/* line 14, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 15, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 a.navbar-brand {
   font-family: 'Lobster', cursive;
 }
 
-/* line 18, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 19, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 nav {
   border-radius: 10px;
 }
 
-/* line 23, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 24, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 div.gallery-perfil {
   margin: 1px;
   border: 1px solid #ccc;
@@ -35,19 +35,19 @@ div.gallery-perfil {
   border-radius: 5px;
 }
 
-/* line 31, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 32, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 div.gallery-perfil:hover {
   border: 1px solid #777;
 }
 
-/* line 35, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 36, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 div.gallery-perfil img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-/* line 41, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 42, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 div img {
   display: block;
   margin-left: auto;

@@ -4,17 +4,26 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 13/12/2019, 12:37:27
-    Author     : elton
+    Created on : 13/12/2019, 12:47:01
+    Author     : Elton Ferrari
 */
-/* line 3, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2019, 12:37:27
+    Author     : Elton Ferrari
+*/
+/* line 15, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 * {
   margin: 0;
   padding: 0;
   font-family: Arial;
 }
 
-/* line 9, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
+/* line 21, C:/wamp/www/Antigomobilista/assets/scss/style.scss */
 body {
   background-color: #fff;
 }
