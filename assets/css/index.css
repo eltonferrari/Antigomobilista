@@ -54,19 +54,4 @@ section {
   background-color: #fff;
 }
 
-/* line 46, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
-ul {
-  list-style-type: none;
-  text-align: center;
-}
-
-/* line 51, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
-ul li, ul li:hover {
-  width: 150px;
-  height: 30px;
-  line-height: 30px;
-  display: inline-block;
-  text-align: center;
-}
-
 /*# sourceMappingURL=../css/index.map */

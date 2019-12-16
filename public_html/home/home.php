@@ -17,6 +17,8 @@
         <link rel="stylesheet" 
               href="../../assets/css/style.css"> ​
         <link rel="stylesheet" 
+              href="../../assets/css/template_menu.css"> ​
+        <link rel="stylesheet" 
               href="../assets/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>

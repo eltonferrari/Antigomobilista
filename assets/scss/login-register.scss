@@ -59,3 +59,16 @@ section.section-center {
 h1.title-p-r {
     font-weight: bold;
 }
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li, ul li:hover {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;    
+    text-align: center;
+}

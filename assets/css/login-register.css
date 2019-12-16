@@ -74,4 +74,19 @@ h1.title-p-r {
   font-weight: bold;
 }
 
+/* line 63, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+/* line 68, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+ul li, ul li:hover {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
 /*# sourceMappingURL=../css/login-register.map */
