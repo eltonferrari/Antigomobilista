@@ -10,6 +10,16 @@ and open the template in the editor.
 
 @import "variaveis.scss";
 
+div.log-reg {
+    font-family: 'Lobster', cursive; 
+    font-size: 10vw;
+    text-align: center;
+    color: $destaque;
+    width: 250px;
+    height: 30px;
+    line-height: 30px;
+}
+
 .form-login, 
 .form-register {
     width: 100vw;

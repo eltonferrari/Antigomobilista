@@ -4,7 +4,7 @@
         include_once("../../connections/connection.php");
         $result = mysqli_query($connection, "SELECT * FROM users");
         ?>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-light bg-faded">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">

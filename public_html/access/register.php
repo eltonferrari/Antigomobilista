@@ -22,8 +22,15 @@
     </head>
     <body>
         <header>
+            <div class="col-md-12">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 log-reg">
+                    Antigomobilista
+                </div>
+                <div class="col-md-4"></div>               
+            </div>
             <section>
-                <div>
+                <div class="col-md-12">
                     <ul>
                         <li>
                             <a href="../index.php" title="Página Inicial">
@@ -47,7 +54,6 @@
                 </div>
             </section>
         </header>
-        <hr>
         <section>
             <div class="form-register">
                 <div class="box-register">

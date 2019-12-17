@@ -17,6 +17,17 @@ and open the template in the editor.
     Author     : Elton Ferrari
 */
 /* line 13, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+div.log-reg {
+  font-family: 'Lobster', cursive;
+  font-size: 10vw;
+  text-align: center;
+  color: #4169E1;
+  width: 250px;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 23, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 .form-login,
 .form-register {
   width: 100vw;
@@ -27,7 +38,7 @@ and open the template in the editor.
   align-items: center;
 }
 
-/* line 23, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 33, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 .box-register,
 .box-login {
   width: 500px;
@@ -35,7 +46,7 @@ and open the template in the editor.
   background: #fff;
 }
 
-/* line 30, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 40, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 h1.h1-register,
 h2.h2-register,
 h1.h1-login,
@@ -44,14 +55,14 @@ h1.msg-register {
   font-weight: bold;
 }
 
-/* line 38, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 48, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 h1.h1-register,
 h1.h1-login {
   color: #4169E1;
   font-size: 20px;
 }
 
-/* line 44, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 54, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 h2.h2-register,
 h2.h2-login,
 h1.msg-register {
@@ -59,28 +70,28 @@ h1.msg-register {
   font-size: 15px;
 }
 
-/* line 51, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 61, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 h1.msg-register {
   font-size: 20px;
 }
 
-/* line 55, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 65, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 section.section-center {
   color: #4169E1;
 }
 
-/* line 59, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 69, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 h1.title-p-r {
   font-weight: bold;
 }
 
-/* line 63, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 73, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 ul {
   list-style-type: none;
   text-align: center;
 }
 
-/* line 68, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+/* line 78, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
 ul li, ul li:hover {
   width: 150px;
   height: 30px;

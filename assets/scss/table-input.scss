@@ -12,20 +12,13 @@ and open the template in the editor.
 
 table {
     width: 100%;
-    background-color: $verde;
-    border: 1px solid #000;
-
 }
 
 label {
     color: $verdao;
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-tr,td{
-    border: 1px solid #000;
 }
 
 td.center,
@@ -48,10 +41,11 @@ td.right {
 }
 
 input {
-    margin: 50px;
+    font-size: 15px;
+    margin: 10px;
     border: 1px solid #999;
-    border-radius: 15px;
-    padding: 2px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 input.btn {
@@ -71,7 +65,6 @@ input.yellow:hover {
     color: $branco;
     font-weight: bold;
 }
-
 
 input.green {
     background-color: $verde;
