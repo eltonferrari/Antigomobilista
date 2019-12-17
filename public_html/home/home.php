@@ -1,40 +1,47 @@
 <?php 
     session_start();
     if (!isset($_SESSION['valid'])) {
-        header('Location: ../../login_register/login.php');
+        header('Location: ../access/login.php');
     }
 ?>
 <html lang="pt-BR">
     <head>
-        <title>Início</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" 
               content="IE=edge">
         <meta name="viewport" 
-              content="width=device-width, initial-scale=1.0">
+              content="width=device-width, initial-scale=1">
+        <title>Página Inicial</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" 
+              rel="stylesheet" 
+              type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" 
               rel="stylesheet"> 
         <link rel="stylesheet" 
-              href="../../assets/css/style.css"> ​
-        <link rel="stylesheet" 
-              href="../../assets/css/template_menu.css"> ​
-        <link rel="stylesheet" 
-              href="../assets/css/bootstrap.min.css">
+              href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet"
+              href="../../assets/css/style.css">
+        <link rel="stylesheet"
+              href="../../assets/css/template_menu.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php 
-            include '../template/menu.php';        
-        ?>
+        <?php include '../template/menu.php';?>
         <div class="col-md-12">
             <div class="col-md-4 tit">
-                MINHAS IMAGENS
+                <div class="title">
+                    <br />
+                    MINHAS IMAGENS
+                    <br />
+                </div>
                 <a href="../posts/add.php" 
                    title="Adicionar novas fotos">
                     <span class="glyphicon
                                  glyphicon-plus"></span>
-                    Adicionar
+                    <font class="add">
+                        Adicionar
+                    </font>
                     <span class="glyphicon
                                  glyphicon-plus"></span>
                     <br />
@@ -52,8 +59,8 @@
                          role="listbox">
                         <?php
                             $activeControl = 2;
-                            $result = "select * from posts where iduser=". $iduser . " order by created_at ASC";
-                            $res = mysqli_query($conection, $result);
+                            $result = "SELECT * FROM posts WHERE iduser=". $iduser . " ORDER BY created_at ASC";
+                            $res = mysqli_query($mysqli, $result);
                             while ($row_carousel = mysqli_fetch_assoc($res)) {
                                 if ($activeControl == 2) {
                         ?>
@@ -116,10 +123,11 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <br />
-                Eventos
-                <br />
-                <br />
+                <div class="title">
+                    <br />
+                    Eventos
+                    <br />
+                    <br />
                 </div>
                 <div id="carousel-example-generic-event" 
                      class="carousel slide" 
@@ -133,8 +141,8 @@
                          role="listbox">
                         <?php
                             $actCont = 2;
-                            $result = "select * from events order by date ASC";
-                            $resEvent = mysqli_query($conection, $result);
+                            $result = "SELECT * FROM events ORDER BY date ASC";
+                            $resEvent = mysqli_query($mysqli, $result);
                             while ($row_carouselEvent = mysqli_fetch_assoc($resEvent)) {
                                 if ($actCont == 2) {
                         ?>
@@ -197,22 +205,25 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <br />
-                Vendas
-                <br />
+                <div class="title">
+                    <br />
+                    Vendas
+                    <br />
                 </div>
                 <a href="../posts/add.php" 
                    title="Adicionar novas fotos">
                     <span class="glyphicon
                                  glyphicon-plus"></span>
-                    Adicionar
+                    <font class="add">
+                        Adicionar
+                    </font>
                     <span class="glyphicon
                                  glyphicon-plus"></span>
                     <br />
                     <br />
                 </a>
                 <?php
-                    $result = mysqli_query($conection, "select * from posts where sell=1 order by created_at ASC");
+                    $result = mysqli_query($mysqli, "SELECT * FROM posts WHERE sell=1 ORDER BY created_at ASC");
                     while ($res = mysqli_fetch_assoc($result)) {
                 ?>
                         <div class="box-detail">

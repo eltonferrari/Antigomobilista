@@ -1,10 +1,10 @@
 <?php 
     session_start();
-    include_once("../../conections/conection.php");
+    include_once("../../connections/connection.php");
     $email = $_POST["email"];
     $pass = $_POST["password"];
     $sql = "select * from users where email='$email' and password=md5('$pass')";
-    $result = mysqli_query($conection, $sql);
+    $result = mysqli_query($connection, $sql);
     $row = mysqli_fetch_assoc($result);
 ?>    
     <!DOCTYPE html>

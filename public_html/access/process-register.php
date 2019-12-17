@@ -1,5 +1,5 @@
 <?php session_start();
-    include_once("../../conections/conection.php");
+    include_once("../../connections/connection.php");
         $name = $_POST['name'];
         $email = $_POST['email'];
         $pass = $_POST['password'];
@@ -62,8 +62,8 @@
         if ($pass == $repass) {
             $sql = "insert into users(name, email, password) 
                     values ('$name', '$email', md5('$pass'))";
-            $save = mysqli_query($conection, $sql);
-            $lines = mysqli_affected_rows($conection);            
+            $save = mysqli_query($connection, $sql);
+            $lines = mysqli_affected_rows($connection);            
             if($lines == 1) {
 ?>
                 <h1 class="msg-register">
@@ -71,14 +71,14 @@
                 <br><br>
 <?php
                 $sql = "select * from users where email='$email' and password=md5('$pass')";
-                $result = mysqli_query($conection, $sql);
+                $result = mysqli_query($connection, $sql);
                 $row = mysqli_fetch_assoc($result);
                 if (is_array($row) && !empty($row)) {
                     $validuser = $row['email'];
                     $_SESSION['valid'] = $validuser;
                     $_SESSION['name'] = $row['name'];
                     $_SESSION['iduser'] = $row['iduser'];
-                    mysqli_close($conection);
+                    mysqli_close($connection);
 ?>
                     <a href="../home/home.php">ENTRAR NO<br><br>ANTIGOMOBILISTA</a>
 <?php

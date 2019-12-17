@@ -3,9 +3,9 @@
     $user = "root";
     $password = "";
     $database = "antigomobilistabd";
-    $conection = mysqli_connect($hostname,$user,$password,$database);
+    $connection = mysqli_connect($hostname,$user,$password,$database);
 
-    if(!$conection) {
+    if(!$connection) {
         print "Falha na conexão com o banco de dados!";
     }
 ?>

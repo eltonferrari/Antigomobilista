@@ -14,6 +14,12 @@ and open the template in the editor.
 
 a.navbar-brand {
     font-family: 'Lobster', cursive; 
+    font-size: 25px;
+    color: $destaque;
+}
+
+nav div div a {
+    
 }
 
 nav {
@@ -44,4 +50,3 @@ div img {
     margin-left: auto;
     margin-right: auto;
 }
-

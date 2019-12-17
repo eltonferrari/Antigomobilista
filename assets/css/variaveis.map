@@ -5,7 +5,7 @@
 		"../scss/variaveis.scss"
 	],
 	"sourcesContent": [
-		"/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : 13/12/2019, 12:37:27\n    Author     : Elton Ferrari\n*/\n\n//VARIÁVEIS\n\n$branco: #fff;\n$background: $branco;\n$preto: #000;\n$destaque: #4169E1;\n$verdao: darkgreen;\n$verde: #00FF7F;\n$yellow: #ffff00;\n$cor-alert: #ff0000;\n$font_padrao: Arial;\n$darkgolden: #b8860b;\n$sans: sans-serif;\n"
+		"/*\nTo change this license header, choose License Headers in Project Properties.\nTo change this template file, choose Tools | Templates\nand open the template in the editor.\n*/\n/* \n    Created on : 13/12/2019, 12:37:27\n    Author     : Elton Ferrari\n*/\n\n//VARIÁVEIS\n\n$branco: #fff;\n$background: $branco;\n$preto: #000;\n$destaque: #4169E1;\n$verdao: darkgreen;\n$verde: #00FF7F;\n$yellow: #ffff00;\n$cor-alert: #ff0000;\n$font_padrao: Arial;\n$darkgolden: #b8860b;\n$sans: sans-serif;\n$lightyellow: #FFF8DC;"
 	],
 	"mappings": "AAAA;;;;EAIE;AACF;;;EAGE",
 	"names": []

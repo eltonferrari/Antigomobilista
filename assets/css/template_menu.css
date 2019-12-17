@@ -19,14 +19,16 @@ and open the template in the editor.
 /* line 15, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 a.navbar-brand {
   font-family: 'Lobster', cursive;
+  font-size: 25px;
+  color: #4169E1;
 }
 
-/* line 19, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 25, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 nav {
   border-radius: 10px;
 }
 
-/* line 24, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 30, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 div.gallery-perfil {
   margin: 1px;
   border: 1px solid #ccc;
@@ -35,19 +37,19 @@ div.gallery-perfil {
   border-radius: 5px;
 }
 
-/* line 32, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 38, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 div.gallery-perfil:hover {
   border: 1px solid #777;
 }
 
-/* line 36, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 42, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 div.gallery-perfil img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-/* line 42, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
+/* line 48, C:/wamp/www/Antigomobilista/assets/scss/template_menu.scss */
 div img {
   display: block;
   margin-left: auto;
