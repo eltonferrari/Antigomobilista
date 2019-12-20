@@ -10,9 +10,15 @@ and open the template in the editor.
 
 @import "variaveis.scss";
 
-div.log-reg {
+.col-md-4 {
+    width: 33%;
+    display: inline-block;    
+    text-align: center;
+}
+
+h1.log-reg {
     font-family: 'Lobster', cursive; 
-    font-size: 10vw;
+    font-size: 3vw;
     text-align: center;
     color: $destaque;
     width: 250px;
