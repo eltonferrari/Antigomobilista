@@ -10,37 +10,12 @@ and open the template in the editor.
 
 @import "variaveis.scss";
 
-.col-md-4 {
-    width: 33%;
-    display: inline-block;    
-    text-align: center;
-}
-
 h1.log-reg {
     font-family: 'Lobster', cursive; 
     font-size: 3vw;
     text-align: center;
     color: $destaque;
-    width: 250px;
-    height: 30px;
-    line-height: 30px;
-}
-
-.form-login, 
-.form-register {
-    width: 100vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.box-register,
-.box-login {
-    width: 500px;
-    height: 300px;
-    background: #fff;
+    margin: 0 auto;
 }
 
 h1.h1-register, 
@@ -48,6 +23,8 @@ h2.h2-register,
 h1.h1-login,
 h2.h2-login,
 h1.msg-register {
+    text-align: center;
+    margin: 0 auto;
     font-weight: bold;
 }
 
@@ -68,14 +45,6 @@ h1.msg-register {
     font-size: 20px;
 }
 
-section.section-center {
-    color: $destaque; 
-}
-
-h1.title-p-r {
-    font-weight: bold;
-}
-
 ul {
     list-style-type: none;
     text-align: center;
@@ -87,4 +56,21 @@ ul li, ul li:hover {
     line-height: 30px;
     display: inline-block;    
     text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flex > div {
+    flex: 1 1 200px;
+    margin: 0 10px;
 }

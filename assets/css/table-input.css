@@ -21,7 +21,14 @@ table {
   width: 100%;
 }
 
-/* line 17, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/*
+table,
+tr,
+td {
+    border: 1px solid $preto;
+}
+*/
+/* line 26, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 label {
   color: darkgreen;
   font-size: 20px;
@@ -29,19 +36,19 @@ label {
   margin-bottom: 10px;
 }
 
-/* line 24, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 33, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 td.center,
 section.section-center {
   text-align: center;
 }
 
-/* line 29, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 38, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 td.right {
   text-align: right;
   padding-right: 10px;
 }
 
-/* line 34, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 43, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 .form-register {
   width: 100vw;
   height: 50vh;
@@ -51,7 +58,7 @@ td.right {
   align-items: center;
 }
 
-/* line 43, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 52, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 input {
   font-size: 15px;
   margin: 10px;
@@ -60,7 +67,7 @@ input {
   padding: 5px;
 }
 
-/* line 51, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 60, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 input.btn {
   width: 100px;
   margin-left: 10px;
@@ -68,35 +75,35 @@ input.btn {
   border-radius: 20px;
 }
 
-/* line 58, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 67, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 input.green,
 input.yellow {
   color: darkgreen;
 }
 
-/* line 63, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 72, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 input.green:hover,
 input.yellow:hover {
   color: #fff;
   font-weight: bold;
 }
 
-/* line 69, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 78, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 input.green {
   background-color: #00FF7F;
 }
 
-/* line 73, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 82, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 input.green:hover {
   background-color: darkgreen;
 }
 
-/* line 77, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 86, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 input.yellow {
   background-color: #ffff00;
 }
 
-/* line 81, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+/* line 90, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
 input.yellow:hover {
   background-color: #b8860b;
 }

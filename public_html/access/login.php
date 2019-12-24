@@ -20,107 +20,103 @@
     </head>
     <body>
         <header>
-            <div class="col-lg-12">
-                <div class="col-md-3">
-                    <h1 class="log-reg">
-                        Antigomobilista
-                    </h1>
-                </div>
-                <div class="col-md-6">
-                    <section>
-                        <ul>
-                            <li>
-                                <a href="../index.php" title="Página Inicial">
-                                    <span class="glyphicon glyphicon-home" title="Página Inicial"></span>
-                                    Página inicial
-                                </a>
-                            </li>
-                            <li>
-                                <a href="login.php" title="Página de Login">
-                                    <span class="glyphicon glyphicon-log-in" title="Página de Login"></span>
-                                    Acesse aqui
-                                </a>
-                            </li>
-                            <li>
-                                <a href="register.php" title="Página de Registro">
-                                    <span class="glyphicon glyphicon-plus" title="Página de Registro"></span>
-                                    Registre-se
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-md-3">teste</div>
-            </div>
-            
+            <h1 class="log-reg">
+                Antigomobilista
+            </h1>
         </header>
+        <nav>    
+            <ul>
+                <li>
+                    <a href="../index.php" title="Página Inicial">
+                        <span class="glyphicon glyphicon-home" title="Página Inicial"></span>
+                        Página inicial
+                    </a>
+                </li>
+                <li>
+                    <a href="login.php" title="Página de Login">
+                        <span class="glyphicon glyphicon-log-in" title="Página de Login"></span>
+                        Acesse aqui
+                    </a>
+                </li>
+                <li>
+                    <a href="register.php" title="Página de Registro">
+                        <span class="glyphicon glyphicon-plus" title="Página de Registro"></span>
+                        Registre-se
+                    </a>
+                </li>
+            </ul>
+        </nav>
         <section>
-            <div class="form-login">
-                <div class="box-login">
-                    <form method="post" 
-                          action="process-login.php">
-                        <div class="table-responsive">
-                            <table>
-                                <tr>
-                                    <td class="center" colspan="2">
-                                        <h1 class="h1-login">
-                                            Entrar no sistema
-                                        </h1>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="center" colspan="2">
-                                        <h2 class="h2-login">
-                                            *Preencha todos os campos*
-                                        </h2>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="right">
-                                        <label for="email">
-                                            E-mail:
-                                        </label>
-                                    </td>
-                                    <td class="center">
-                                        <input type="email" 
-                                               class="campos" 
-                                               id="email" 
-                                               maxlength="50" 
-                                               name="email" 
-                                               required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="right">
-                                        <label for="password">
-                                            Senha: 
-                                        </label>
-                                    </td>
-                                    <td class="center">
-                                        <input type="password" 
-                                               class="campos" 
-                                               id="password" 
-                                               maxlength="20" 
-                                               name="password" 
-                                               required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="right">
-                                        <input type="submit" 
-                                            value="Entrar"
-                                            class="btn green">
-                                    </td>
-                                    <td class="center">
-                                        <input type="reset" 
-                                            value="Limpar"
-                                            class="btn yellow">
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </form>
-                </div>
+            <div>
+                <h1 class="h1-login">
+                    Entrar no sistema
+                </h1>
+            </div>
+            <br>
+            <div>
+                <h2 class="h2-login">
+                    *Preencha todos os campos*
+                </h2>
+            </div>
+            <br>
+        </section>
+        <section class="flex">
+            <div>
+                <img src="../../images/system/background_2.jpg">
+            </div>
+            <div>
+                <form method="post" 
+                      action="process-login.php">
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <td class="right">
+                                    <label for="email">
+                                        E-mail:
+                                    </label>
+                                </td>
+                                <td class="center">
+                                    <input type="email" 
+                                           class="campos" 
+                                           id="email" 
+                                           maxlength="50" 
+                                           name="email" 
+                                           required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="right">
+                                    <label for="password">
+                                        Senha: 
+                                    </label>
+                                </td>
+                                <td class="center">
+                                    <input type="password" 
+                                           class="campos" 
+                                           id="password" 
+                                           maxlength="20" 
+                                           name="password" 
+                                           required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="right">
+                                    <input type="submit" 
+                                        value="Entrar"
+                                        class="btn green">
+                                </td>
+                                <td class="center">
+                                    <input type="reset" 
+                                        value="Limpar"
+                                        class="btn yellow">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <img src="../../images/system/background_1.jpg">
             </div>
         </section>
     </body>

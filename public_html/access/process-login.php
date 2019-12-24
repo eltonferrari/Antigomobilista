@@ -1,10 +1,9 @@
 <?php 
     session_start();
-    include_once("../../connections/connection.php");
+    include '../../public_html/users/users_control.php';
     $email = $_POST["email"];
     $pass = $_POST["password"];
-    $sql = "select * from users where email='$email' and password=md5('$pass')";
-    $result = mysqli_query($connection, $sql);
+    $result = getByLogin($email, $pass);
     $row = mysqli_fetch_assoc($result);
 ?>    
     <!DOCTYPE html>
