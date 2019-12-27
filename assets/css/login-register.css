@@ -91,4 +91,20 @@ img {
   margin: 0 10px;
 }
 
+@media (max-width: 700px) {
+  /* line 79, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+  .flex > div > img {
+    display: none;
+  }
+  /* line 83, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+  div > form {
+    flex: 1 1 200px;
+    margin: 0 10px;
+  }
+  /* line 87, C:/wamp/www/Antigomobilista/assets/scss/login-register.scss */
+  h1.log-reg {
+    font-size: 30px;
+  }
+}
+
 /*# sourceMappingURL=../css/login-register.map */

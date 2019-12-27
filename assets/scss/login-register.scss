@@ -74,3 +74,17 @@ img {
     flex: 1 1 200px;
     margin: 0 10px;
 }
+
+@media (max-width: 700px) {
+    .flex > div > img {
+        display: none;
+    }
+    
+    div > form {
+        flex: 1 1 200px;
+        margin: 0 10px;
+    }
+    h1.log-reg {
+        font-size: 30px;
+    }
+}

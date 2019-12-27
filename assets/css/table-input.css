@@ -108,4 +108,23 @@ input.yellow:hover {
   background-color: #b8860b;
 }
 
+@media (max-width: 400px) {
+  /* line 95, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+  label {
+    color: darkgreen;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  /* line 101, C:/wamp/www/Antigomobilista/assets/scss/table-input.scss */
+  input {
+    font-size: 15px;
+    margin: 5px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 0px;
+    max-width: 150px;
+  }
+}
+
 /*# sourceMappingURL=../css/table-input.map */

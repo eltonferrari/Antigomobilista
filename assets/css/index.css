@@ -54,4 +54,11 @@ section {
   background-color: #fff;
 }
 
+@media (max-width: 700px) {
+  /* line 47, C:/wamp/www/Antigomobilista/assets/scss/index.scss */
+  .h-index {
+    font: 15px sans-serif;
+  }
+}
+
 /*# sourceMappingURL=../css/index.map */

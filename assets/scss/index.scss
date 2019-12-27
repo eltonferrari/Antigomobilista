@@ -42,3 +42,9 @@ h3.h-index {
 section {
     background-color: $background;    
 }
+
+@media (max-width: 700px) {
+    .h-index {
+        font: 15px $sans;
+    }
+}

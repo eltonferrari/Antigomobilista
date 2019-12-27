@@ -90,3 +90,22 @@ input.yellow {
 input.yellow:hover {
     background-color: $darkgolden;
 }
+
+@media (max-width: 400px) {
+    label {
+        color: $verdao;
+        font-size: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    input {
+        font-size: 15px;
+        margin: 5px;
+        border: 1px solid #999;
+        border-radius: 5px;
+        padding: 0px;
+        max-width: 150px;
+    }
+    
+    
+}
