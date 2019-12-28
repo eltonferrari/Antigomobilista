@@ -140,7 +140,8 @@ function getById($id_user) {
 function getLogin($email,$password) {
     $sql = "select * from users where email='$email' and password=md5('$password')";
     $user = mysqli_query($connection, $sql);
-    return $user;
+    $row = mysqli_fetch_assoc($result);
+    return $row;
 }
 
 function setRegister($name,$email,$password) {
@@ -149,12 +150,4 @@ function setRegister($name,$email,$password) {
     $save = mysqli_query($connection, $sql);
     $lines = mysqli_affected_rows($connection);
     return $lines;
-}
-
-function getRegister($email,$password) {
-    $sql = "select * from users where email='$email'
-            and password=md5('$password')";
-    $result = mysqli_query($connection, $sql);
-    $row = mysqli_fetch_assoc($result);
-    return $row;
 }
