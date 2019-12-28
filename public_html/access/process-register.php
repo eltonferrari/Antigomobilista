@@ -60,25 +60,21 @@
                     <br>
 <?php
         if ($pass == $repass) {
-            $sql = "insert into users(name, email, password) 
-                    values ('$name', '$email', md5('$pass'))";
-            $save = mysqli_query($connection, $sql);
-            $lines = mysqli_affected_rows($connection);            
+            $lines = setRegister($name, $email, $pass);           
             if($lines == 1) {
 ?>
                 <h1 class="msg-register">
-                Cadastro efetuado com sucesso!
-                <br><br>
+                    Cadastro efetuado com sucesso!
+                </h1>
+                <br>
+                <br>
 <?php
-                $sql = "select * from users where email='$email' and password=md5('$pass')";
-                $result = mysqli_query($connection, $sql);
-                $row = mysqli_fetch_assoc($result);
+                $row = getRegister($email, $pass);
                 if (is_array($row) && !empty($row)) {
                     $validuser = $row['email'];
                     $_SESSION['valid'] = $validuser;
                     $_SESSION['name'] = $row['name'];
                     $_SESSION['iduser'] = $row['iduser'];
-                    mysqli_close($connection);
 ?>
                     <a href="../home/home.php">ENTRAR NO<br><br>ANTIGOMOBILISTA</a>
 <?php
@@ -87,12 +83,17 @@
 ?>                
                 <h1 class="msg-register">
                     Cadastro NÃO efetuado.
-                    <br><br>
+                    <br>
+                    <br>
                     Já existe um usuário com este E-MAIL!
-                    <br><br>
+                    <br>
+                    <br>
                     Por favor, refaça o CADASTRO.
-                    <br><br>
-                    <a href="register.php">Refazer cadastro</a>
+                    <br>
+                    <br>
+                    <a href="register.php">
+                        Refazer cadastro
+                    </a>
                 </h1>
 <?php
             }
@@ -100,10 +101,14 @@
 ?>            
             <h1 class="msg-register">
                 A senha deve ser digitada e confirmada!
-                <br><br>
+                <br>
+                <br>
                 Por favor clique no link abaixo e refassa seu cadastro!
-                <br><br>
-                <a href="register.php">Refazer cadastro</a>
+                <br>
+                <br>
+                <a href="register.php">
+                    Refazer cadastro
+                </a>
             </h1>
 <?php
         }    

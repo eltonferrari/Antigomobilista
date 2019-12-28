@@ -137,8 +137,24 @@ function getById($id_user) {
     return $user;
 }
 
-function getByLogin($email,$password) {
+function getLogin($email,$password) {
     $sql = "select * from users where email='$email' and password=md5('$password')";
     $user = mysqli_query($connection, $sql);
     return $user;
+}
+
+function setRegister($name,$email,$password) {
+    $sql = "insert into users(name, email, password) 
+            values ('$name', '$email', md5('$password'))";
+    $save = mysqli_query($connection, $sql);
+    $lines = mysqli_affected_rows($connection);
+    return $lines;
+}
+
+function getRegister($email,$password) {
+    $sql = "select * from users where email='$email'
+            and password=md5('$password')";
+    $result = mysqli_query($connection, $sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row;
 }

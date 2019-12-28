@@ -3,7 +3,7 @@
     include '../../public_html/users/users_control.php';
     $email = $_POST["email"];
     $pass = $_POST["password"];
-    $result = getByLogin($email, $pass);
+    $result = getLogin($email, $pass);
     $row = mysqli_fetch_assoc($result);
 ?>    
     <!DOCTYPE html>
