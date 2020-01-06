@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include '../../public_html/users/users_control.php';
+    include_once '../../public_html/users/users_control.php';
     $email = $_POST["email"];
     $pass = $_POST["password"];
     $result = getLogin($email, $pass);

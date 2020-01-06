@@ -1,6 +1,5 @@
 <?php session_start();
-    include_once("../../connections/connection.php");
-    include '../../public_html/users/users_control.php';    
+ include_once '../users/users_control.php';    
     $name = $_POST['name'];
     $email = $_POST['email'];
     $pass = $_POST['password'];
@@ -61,7 +60,8 @@
                 <br>
 <?php
     if ($pass == $repass) {
-        $lines = setRegister($name,$email,$pass);           
+        $lines = setRegister($name,$email,$pass);
+        print_r($lines);
         if($lines == 1) {
 ?>
             <h1 class="msg-register">
