@@ -1,0 +1,66 @@
+@media (max-width: 575.98px) {
+
+}
+
+/*Extra small devices (portrait phones, menor que 576px)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+/*Small devices (landscape phones, 576px e maiores)*/
+@media (min-width: 768px) and (max-width: 990.98px) {
+	
+}
+
+/*Medium devices (tablets, 768px e maiores)*/
+@media (min-width: 991px) and (max-width: 1199.98px) {
+	
+}
+
+/*Large devices (desktops, 992px e maiores)*/
+@media (min-width: 1200px) {
+	
+}
+
+// NEGRITO
+.negrito {
+	font-weight: bold;
+}
+
+hr.separador {
+	border: 2px dotted #007bff;
+}
+
+// INDEX.PHP
+h1.titulo-index {	
+	font-size: calc(40px + 4vw);
+	font-weight: 700;
+}
+
+h2.subtitulo-index {
+	font-size: calc(10px + 1vw);
+	font-weight: 700;
+}
+
+// BARRA DE PROGRESSO
+div.barra {
+	height: 20px;
+	width: 200px;
+}
+
+// VALIDA E-MAIL
+p.text-X-bg-azul {
+	background-color: #20036d;
+	color: #41aeee;
+}
+
+p.text-X-bg-vermelho {
+	background-color: #af0404;
+	color: #d89585;
+}
+
+p.text-X-bg-azul,
+p.text-X-bg-vermelho {
+	border-radius: 20px;
+}
+
