@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../../scss/style.scss"
+	],
+	"sourcesContent": [
+		"@media (max-width: 575.98px) {\r\n\r\n}\r\n\r\n/*Extra small devices (portrait phones, menor que 576px)*/\r\n@media (min-width: 576px) and (max-width: 767.98px) {\r\n\r\n}\r\n\r\n/*Small devices (landscape phones, 576px e maiores)*/\r\n@media (min-width: 768px) and (max-width: 990.98px) {\r\n\t\r\n}\r\n\r\n/*Medium devices (tablets, 768px e maiores)*/\r\n@media (min-width: 991px) and (max-width: 1199.98px) {\r\n\t\r\n}\r\n\r\n/*Large devices (desktops, 992px e maiores)*/\r\n@media (min-width: 1200px) {\r\n\t\r\n}\r\n\r\n// NEGRITO\r\n.negrito {\r\n\tfont-weight: bold;\r\n}\r\n\r\nhr.separador {\r\n\tborder: 2px dotted #007bff;\r\n}\r\n\r\n// INDEX.PHP\r\nh1.titulo-index {\t\r\n\tfont-size: calc(40px + 4vw);\r\n\tfont-weight: 700;\r\n}\r\n\r\nh2.subtitulo-index {\r\n\tfont-size: calc(10px + 1vw);\r\n\tfont-weight: 700;\r\n}\r\n\r\n// BARRA DE PROGRESSO\r\ndiv.barra {\r\n\theight: 20px;\r\n\twidth: 200px;\r\n}\r\n\r\n// VALIDA E-MAIL\r\np.text-X-bg-azul {\r\n\tbackground-color: #20036d;\r\n\tcolor: #41aeee;\r\n}\r\n\r\np.text-X-bg-vermelho {\r\n\tbackground-color: #af0404;\r\n\tcolor: #d89585;\r\n}\r\n\r\np.text-X-bg-azul,\r\np.text-X-bg-vermelho {\r\n\tborder-radius: 20px;\r\n}\r\n\r\n"
+	],
+	"names": [],
+	"mappings": "AAIA,0DAA0D;AAK1D,qDAAqD;AAKrD,6CAA6C;AAK7C,6CAA6C;;AAM7C,AAAA,QAAQ,CAAC;EACR,WAAW,EAAE,IAAI;CACjB;;;AAED,AAAA,EAAE,AAAA,UAAU,CAAC;EACZ,MAAM,EAAE,kBAAkB;CAC1B;;;AAGD,AAAA,EAAE,AAAA,aAAa,CAAC;EACf,SAAS,EAAE,gBAAgB;EAC3B,WAAW,EAAE,GAAG;CAChB;;;AAED,AAAA,EAAE,AAAA,gBAAgB,CAAC;EAClB,SAAS,EAAE,gBAAgB;EAC3B,WAAW,EAAE,GAAG;CAChB;;;AAGD,AAAA,GAAG,AAAA,MAAM,CAAC;EACT,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;CACZ;;;AAGD,AAAA,CAAC,AAAA,eAAe,CAAC;EAChB,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,OAAO;CACd;;;AAED,AAAA,CAAC,AAAA,mBAAmB,CAAC;EACpB,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,OAAO;CACd;;;AAED,AAAA,CAAC,AAAA,eAAe;AAChB,CAAC,AAAA,mBAAmB,CAAC;EACpB,aAAa,EAAE,IAAI;CACnB"
+}

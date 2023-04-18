@@ -1,0 +1,51 @@
+/*Extra small devices (portrait phones, menor que 576px)*/
+/*Small devices (landscape phones, 576px e maiores)*/
+/*Medium devices (tablets, 768px e maiores)*/
+/*Large devices (desktops, 992px e maiores)*/
+/* line 26, ../../xamp/htdocs/scss/style.scss */
+.negrito {
+  font-weight: bold;
+}
+
+/* line 30, ../../xamp/htdocs/scss/style.scss */
+hr.separador {
+  border: 2px dotted #007bff;
+}
+
+/* line 35, ../../xamp/htdocs/scss/style.scss */
+h1.titulo-index {
+  font-size: calc(40px + 4vw);
+  font-weight: 700;
+}
+
+/* line 40, ../../xamp/htdocs/scss/style.scss */
+h2.subtitulo-index {
+  font-size: calc(10px + 1vw);
+  font-weight: 700;
+}
+
+/* line 46, ../../xamp/htdocs/scss/style.scss */
+div.barra {
+  height: 20px;
+  width: 200px;
+}
+
+/* line 52, ../../xamp/htdocs/scss/style.scss */
+p.text-X-bg-azul {
+  background-color: #20036d;
+  color: #41aeee;
+}
+
+/* line 57, ../../xamp/htdocs/scss/style.scss */
+p.text-X-bg-vermelho {
+  background-color: #af0404;
+  color: #d89585;
+}
+
+/* line 62, ../../xamp/htdocs/scss/style.scss */
+p.text-X-bg-azul,
+p.text-X-bg-vermelho {
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
