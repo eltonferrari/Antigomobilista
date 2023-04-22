@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `usuarios` (`id`, `pontos`, `nome`, `email`, `senha`, `imagem`, `tipo`, `ativo`, `created_at`, `updated_at`) VALUES
-(1, 5, 'Elton Ferrari', 'eltonferrari@gmail.com', '123456', 'vazio.png', 0, 1, '2023-04-03 15:11:47', '2023-04-03 15:11:47');
+(1, 5, 'Elton Ferrari', 'eltonferrari@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'vazio.png', 0, 1, '2023-04-03 15:11:47', '2023-04-03 15:11:47');
 
 --
 -- --------------------------------------------------------

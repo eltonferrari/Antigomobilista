@@ -42,6 +42,7 @@
                             ?>
                                     <h6 class="text-danger text-center"><strong><?= $msgUserExist ?></strong></h6>
                             <?php
+                                    unset($_SESSION['mensagem']);
                                 }
                             ?>
                         </div>

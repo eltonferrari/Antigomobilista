@@ -31,14 +31,92 @@ hr.separador {
 	border: 2px dotted #007bff;
 }
 
+// NAVBAR
+
 // INDEX.PHP
-h1.titulo-index {	
-	font-size: calc(40px + 4vw);
-	font-weight: 700;
+#image1 {
+	background-image: url(../../img/fotos/background_1.jpg);
 }
 
-h2.subtitulo-index {
+#image2 {
+	background-image: url(../../img/fotos/background_2.jpg);
+}
+
+#image3 {
+	background-image: url(../../img/fotos/background_3.jpg);
+}
+
+#image4 {
+	background-image: url(../../img/fotos/background_4.jpg);
+}
+
+#image5 {
+	background-image: url(../../img/fotos/background_5.jpg);
+}
+
+#image6 {
+	background-image: url(../../img/fotos/background_6.jpg);
+}
+
+#image7 {
+	background-image: url(../../img/fotos/background_7.jpg);
+}
+
+#image8 {
+	background-image: url(../../img/fotos/background_8.jpg);
+}
+
+#image9 {
+	background-image: url(../../img/fotos/background_9.jpg);
+}
+
+#image10 {
+	background-image: url(../../img/fotos/background_10.jpg);
+}
+
+#image1, 
+#image2,
+#image3,
+#image4,
+#image5,
+#image6,
+#image7,
+#image8,
+#image9,
+#image10 {
+	position: relative;
+	height: 100%;
+	min-height: 500px;
+	opacity: 0.7;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+// Fonts
+@font-face {
+	font-family: "Dancing";
+	src: url('../fonts/DancingScript-VariableFont_wght.ttf');
+}
+
+.font-dancing {
+	font-family: "Dancing";
+	font-size: 1.3em;
+}
+
+// TÍTULOS
+.titulo-index {
+	font-size: calc(20px + 2vw);
+}
+
+.subtitulo-index {
 	font-size: calc(10px + 1vw);
+}
+
+.titulo-index,
+.subtitulo-index {
+	display: inline;
 	font-weight: 700;
 }
 
@@ -63,4 +141,3 @@ p.text-X-bg-azul,
 p.text-X-bg-vermelho {
 	border-radius: 20px;
 }
-

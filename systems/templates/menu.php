@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary menu-fixed">
     <!-- LOGO -->
-    <a href="\public_html/index.php" class="navbar-brand">
-        <img src="\img/logo/antigomobilista_logo.png" width="70">
+    <a href="\index.php" class="navbar-brand">
+        <img src="\img/logo/antigomobilista_logo.png" width="50">
+        <span class="font-dancing text-light pr-5">Antigomobilista</span>
     </a>
     <!-- MENU HAMBURGUER -->
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
