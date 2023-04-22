@@ -35,7 +35,7 @@
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'antigomobilistaweb@gmail.com';
-            $mail->Password   = 'Antigomobilist@_2023';
+            $mail->Password   = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
             //Recipients
