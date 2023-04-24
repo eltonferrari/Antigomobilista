@@ -97,14 +97,14 @@ CREATE TABLE IF NOT EXISTS `pontuacoes` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_criador` int(10) NOT NULL,
   `nivel` int(5) NOT NULL,
-  `tipo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `ponto_inicial` int(11) NOT NULL,
   `ponto_final` int(11) NOT NULL,
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   FOREIGN KEY(id_criador) REFERENCES usuarios(id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
+INSERT INTO `pontuacoes` (`id`, `id_criador`, `nivel`, `ponto_inicial`, `ponto_final`, `created_at`) VALUES
+(1, 1, 1, 0, 10, '2023-04-23 15:00:00');
 --
 -- --------------------------------------------------------
 --
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `usuarios` (`id`, `pontos`, `nome`, `email`, `senha`, `imagem`, `tipo`, `ativo`, `created_at`, `updated_at`) VALUES
-(1, 5, 'Elton Ferrari', 'eltonferrari@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'vazio.png', 0, 1, '2023-04-03 15:11:47', '2023-04-03 15:11:47');
+(1, 5, 'Elton Ferrari', 'eltonferrari@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'vazio.png', 1, 1, '2023-04-03 15:11:47', '2023-04-03 15:11:47');
 
 --
 -- --------------------------------------------------------

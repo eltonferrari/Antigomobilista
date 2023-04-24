@@ -1,4 +1,10 @@
-<?php ?>
+<?php 
+	include '../../controladores/autenticacao/validador_de_acesso.php';
+	echo '===== SESSION =====';
+	echo '<pre>';
+	print_r($_SESSION);
+	echo '</pre>';
+?>
 <!doctype html>
 <html lang="pt-br">
 	<head>

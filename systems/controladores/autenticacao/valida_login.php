@@ -21,6 +21,7 @@
         foreach ($usuario  as $user) {
             if ($email == $user['email'] && $senha == $user['senha']) {
                 $_SESSION['logado'] = 1;
+                $_SESSION['id_logado'] = $user['id'];
                 header("Location: ../../visualizacoes/home/home.php");
             } else {
                 $msgUser = "Usuário e/ou Senha inválidos!";
