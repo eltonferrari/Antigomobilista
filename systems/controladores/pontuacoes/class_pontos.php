@@ -54,10 +54,10 @@
                 $pontoInicial = $n['ponto_inicial'];
                 $pontoFinal = $n['ponto_final'];
             }
-            $nivel ++;
+            $nivel = $nivel + 1;
             $qtddPontos = $pontoFinal - $pontoInicial;
             $qtddPontos = $qtddPontos * 1.1;
-            $pontoInicial = $pontoFinal ++;
+            $pontoInicial = $pontoFinal + 1;
             $pontoFinal = (int)($pontoInicial + $qtddPontos);
             $proximoNivel = $proximoNivel->addPontos($idCriador, $nivel, $pontoInicial, $pontoFinal);
             return $proximoNivel;

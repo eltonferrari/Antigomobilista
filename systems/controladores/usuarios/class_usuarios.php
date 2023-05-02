@@ -9,7 +9,7 @@
 
         function addUsuario($nome,
                             $email,
-                            $senha,
+                            $senha
                            ) {
             $query = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
             $paramType = "sss";

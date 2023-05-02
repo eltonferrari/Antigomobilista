@@ -12,57 +12,62 @@ hr.separador {
   border: 2px dotted #007bff;
 }
 
-/* line 37, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 38, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.pre-footer {
+  padding-bottom: 50px;
+}
+
+/* line 43, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image1 {
   background-image: url(../../img/fotos/background_1.jpg);
 }
 
-/* line 41, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 47, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image2 {
   background-image: url(../../img/fotos/background_2.jpg);
 }
 
-/* line 45, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 51, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image3 {
   background-image: url(../../img/fotos/background_3.jpg);
 }
 
-/* line 49, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 55, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image4 {
   background-image: url(../../img/fotos/background_4.jpg);
 }
 
-/* line 53, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 59, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image5 {
   background-image: url(../../img/fotos/background_5.jpg);
 }
 
-/* line 57, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 63, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image6 {
   background-image: url(../../img/fotos/background_6.jpg);
 }
 
-/* line 61, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 67, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image7 {
   background-image: url(../../img/fotos/background_7.jpg);
 }
 
-/* line 65, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 71, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image8 {
   background-image: url(../../img/fotos/background_8.jpg);
 }
 
-/* line 69, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 75, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image9 {
   background-image: url(../../img/fotos/background_9.jpg);
 }
 
-/* line 73, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 79, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image10 {
   background-image: url(../../img/fotos/background_10.jpg);
 }
 
-/* line 77, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 83, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image1,
 #image2,
 #image3,
@@ -88,48 +93,48 @@ hr.separador {
   src: url("../fonts/DancingScript-VariableFont_wght.ttf");
 }
 
-/* line 103, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 109, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .font-dancing {
   font-family: "Dancing";
   font-size: 1.3em;
 }
 
-/* line 109, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 115, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .titulo-index {
   font-size: calc(20px + 2vw);
 }
 
-/* line 113, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 119, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .subtitulo-index {
   font-size: calc(10px + 1vw);
 }
 
-/* line 117, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 123, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .titulo-index,
 .subtitulo-index {
   display: inline;
   font-weight: 700;
 }
 
-/* line 124, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 130, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 div.barra {
   height: 20px;
   width: 200px;
 }
 
-/* line 130, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 136, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 p.text-X-bg-azul {
   background-color: #20036d;
   color: #41aeee;
 }
 
-/* line 135, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 141, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 p.text-X-bg-vermelho {
   background-color: #af0404;
   color: #d89585;
 }
 
-/* line 140, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 146, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 p.text-X-bg-azul,
 p.text-X-bg-vermelho {
   border-radius: 20px;

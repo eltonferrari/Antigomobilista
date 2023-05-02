@@ -7,6 +7,6 @@
     // para autenticar.
     if($_SESSION['logado'] != '1' ) {
         $_SESSION['mensagem'] = 'Usuário deve ser autenticado para acessar as página internas';
-        header('Location: ../../visualisacoes/autenticacao/login.php');
+        header("Location: \systems/visualizacoes/autenticacao/login.php");
     }
 ?>

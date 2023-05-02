@@ -27,7 +27,7 @@
                 <a class="nav-link text-light" href="\systems/visualizacoes/mensagens/mensagens.php">Mensagens</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="\systems/visualizacoes/pontuacoes/adicionar_pontuacao.php">Pontos</a>
+                <a class="nav-link text-light" href="\systems/visualizacoes/pontuacoes/pontuacoes.php">Pontos</a>
             </li>
         </ul>
         <!-- BARRA DE PROGRESSO - CENTRO-->
