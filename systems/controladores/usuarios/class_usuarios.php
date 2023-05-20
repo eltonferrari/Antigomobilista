@@ -18,10 +18,37 @@
             return $insertIdPessoa;
         }
 
-        function editUsuario($id, $pontos, $nome, $email, $senha, $imagem, $tipo, $ativo, $updated_at) {
-            $query = "UPDATE usuarios SET id = ?, pontos = ?, nome = ?, email = ?, senha = ?, imagem = ?, tipo = ?, ativo = ?, updated_at = ? WHERE id = $id";
-            $paramType = "iissssiis";
-            $paramValue = array($id, $pontos, $nome, $email, $senha, $imagem, $tipo, $ativo, $updated_at);
+        function editUsuario($pontos, 
+                             $nome, 
+                             $email, 
+                             $senha, 
+                             $imagem, 
+                             $tipo, 
+                             $ativo, 
+                             $updated_at,
+                             $id
+                            ) {
+            $query = "UPDATE usuarios 
+                        SET pontos = ?, 
+                            nome = ?, 
+                            email = ?, 
+                            senha = ?, 
+                            imagem = ?, 
+                            tipo = ?, 
+                            ativo = ?, 
+                            updated_at = ? 
+                        WHERE id = ?";
+            $paramType = "issssiisi";
+            $paramValue = array($pontos, 
+                                $nome, 
+                                $email, 
+                                $senha, 
+                                $imagem, 
+                                $tipo, 
+                                $ativo, 
+                                $updated_at,
+                                $id
+                               );
             $this->db_handle->update($query, $paramType, $paramValue);
         }
 
@@ -33,14 +60,6 @@
             return $result;
         }
         
-        function setValidaEmailById($id, $confirmEmail) {
-            $query = "UPDATE usuarios SET id = ?, confirm_email WHERE id = $id";
-            $paramType = "ii";
-            $paramValue = array($id, $confirmEmail);
-            $this->db_handle->update($query, $paramType, $paramValue);
-            
-        }
-
         function getNomeById($id) {
             $pessoa = null;
             $query = "SELECT nome FROM usuarios WHERE id = ?";
@@ -51,6 +70,18 @@
                 $pessoa = $nome['nome'];
             }
             return $pessoa;
+        }
+
+        function getTipoById($id) {
+            $pessoa = null;
+            $query = "SELECT tipo FROM usuarios WHERE id = ?";
+            $paramType = "i";
+            $paramValue = array($id);
+            $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            foreach($result as $user) {
+                $tipo = $user['tipo'];
+            }
+            return $tipo;
         }
         
         function getUsuarioByEmail($email) {

@@ -1,9 +1,19 @@
 <?php 
 	include '../../controladores/autenticacao/validador_de_acesso.php';
+	
+		// Teste de usuário logado
+		echo '===== USER LOGADO =====';
+		echo '<pre>';
+		echo $tipo;
+		echo '</pre>';
+	
+
+	// Teste de sessão
 	echo '===== SESSION =====';
 	echo '<pre>';
 	print_r($_SESSION);
 	echo '</pre>';
+
 ?>
 <!doctype html>
 <html lang="pt-br">

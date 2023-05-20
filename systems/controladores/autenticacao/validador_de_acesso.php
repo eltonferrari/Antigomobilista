@@ -9,4 +9,8 @@
         $_SESSION['mensagem'] = 'Usuário deve ser autenticado para acessar as página internas';
         header("Location: \systems/visualizacoes/autenticacao/login.php");
     }
+    // Para menu funcionar
+	include '../../controladores/usuarios/class_usuarios.php';
+	$tipo = new Usuarios();
+	$tipo = $tipo->getTipoById($_SESSION['id_logado']);
 ?>

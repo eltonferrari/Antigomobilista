@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include '../../controladores/autenticacao/validador_de_acesso.php';
 ?>
 <!doctype html>
 <html lang="pt-br">
