@@ -22,16 +22,17 @@
 
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		
+		<!-- add icon link -->
+        <link rel="icon" href="img/logo/antigomobilista_logo.png" type="image/x-icon">
 		<title>Antigomobilista - Index</title>
 	</head>
     <body>
         <?php include 'systems/templates/menu.php'; ?>
 		<div class="text-center">
-			<h1 class="titulo-index text-primary font-dancing">Antigomobilista - Para quem gosta de carro antigo de verdade</h1>
+			<h1 class="titulo-index font-berk">Para quem gosta de carro antigo de verdade</h1>
 		</div>
 		<div class="container" id="<?= $style ?>">
-		<br /><br /><br /><br />
+			<br /><br /><br /><br />
 			<div class="text-center m-auto py-5">				
 				<img src="../img/em_construcao/em-construcao-conjunto-de-icones_24877-60028.webp" alt="Em construção" width="200">
 			</div>

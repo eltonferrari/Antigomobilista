@@ -25,7 +25,7 @@
 
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
-		
+		<link rel="icon" href="img/logo/antigomobilista_logo.png" type="image/x-icon">
 		<title>Antigomobilista - Entrar</title>
 	</head>
     <body>
@@ -49,23 +49,22 @@
                                 <?php
                                     if (isset($_SESSION['mensagem'])) {
                                 ?>
-                                        <div class="text-danger text-center">
+                                        <div class="text-danger text-center negrito">
                                             <?= $_SESSION['mensagem'] ?>
                                             <br />
                                             Se você não tem registro em nosso sistema,
-                                            <br />
-                                            <a href="registrar.php">
-                                                <strong>clique aqui</strong>.
+                                            <a class="link-sem-sobrescrito" href="registrar.php">
+                                                clique aqui
                                             </a>
+                                            .
                                         </div>
                                 <?php
                                         unset($_SESSION['mensagem']);
-                                    }
-                                    
+                                    }                                    
                                 ?>
                                 <br />
                                 <br />
-                                <button class="btn btn-lg btn-success btn-block" type="submit">Entrar</button>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
                             </form>
                         </div>
                     </div>

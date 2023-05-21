@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary menu-fixed">
+<nav class="navbar navbar-expand-lg navbar-light bg-branco menu-fixed">
     <!-- LOGO -->
     <a href="\index.php" class="navbar-brand">
         <img src="\img/logo/antigomobilista_logo.png" width="50">
-        <span class="font-dancing text-light pr-5">Antigomobilista</span>
+        <span class="font-dancing text-dark pr-5">Antigomobilista</span>
     </a>
     <?php 
         if (isset($_SESSION['logado'])) {
@@ -15,25 +15,25 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="\systems/visualizacoes/home/home.php">Home</a>
+                        <a class="nav-link" href="\systems/visualizacoes/home/home.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="\systems/visualizacoes/usuarios/pessoas.php">Pessoas</a>
+                        <a class="nav-link" href="\systems/visualizacoes/usuarios/pessoas.php">Pessoas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="\systems/visualizacoes/postagens/postagens.php">Fotos</a>
+                        <a class="nav-link" href="\systems/visualizacoes/postagens/postagens.php">Fotos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="\systems/visualizacoes/eventos/eventos.php">Eventos</a>
+                        <a class="nav-link" href="\systems/visualizacoes/eventos/eventos.php">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="\systems/visualizacoes/mensagens/mensagens.php">Mensagens</a>
+                        <a class="nav-link" href="\systems/visualizacoes/mensagens/mensagens.php">Mensagens</a>
                     </li>
                     <?php
                         if ($tipo == 1) {
                     ?>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="\systems/visualizacoes/pontuacoes/pontuacoes.php">Pontos</a>
+                                <a class="nav-link" href="\systems/visualizacoes/pontuacoes/pontuacoes.php">Pontos</a>
                             </li>
                     <?php
                         }
@@ -41,7 +41,7 @@
                 </ul>
                 <!-- BARRA DE PROGRESSO - CENTRO-->
                 <div class="progress bg-dark barra m-auto ">
-                    <div class="progress progress-bar bg-success progress-bar-striped progress-bar-animated barra" style="width: 37%;">37%</div>
+                    <div class="progress progress-bar bg-info progress-bar-striped progress-bar-animated barra" style="width: 37%;">37%</div>
                 </div>
     <?php
         } 
@@ -50,10 +50,10 @@
             <!-- NAVEGAÇÃO - DIREITA -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="\systems/visualizacoes/autenticacao/login.php">Entrar</a>
+                    <a class="nav-link" href="\systems/visualizacoes/autenticacao/login.php">Entrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="\systems/visualizacoes/autenticacao/registrar.php">Registro</a>
+                    <a class="nav-link" href="\systems/visualizacoes/autenticacao/registrar.php">Registro</a>
                 </li>
             </ul>
     <?php
@@ -61,7 +61,7 @@
         } else {
     ?>
             <!-- PERFIL COM FOTO E DROPDOWN -->
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="\img/users/EltonFerrari/Foto 3X3.jpg" width="40" height="40" class="rounded-circle">

@@ -1,3 +1,8 @@
+body {
+	font-size: 16px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 @media (max-width: 575.98px) {
 
 }
@@ -27,17 +32,38 @@
 	font-weight: bold;
 }
 
+// SEPARADOR
 hr.separador {
 	border: 2px dotted #007bff;
 }
 
+// LINK
+a.link-sem-sobrescrito {
+	text-decoration: none;
+}
+
 // NAVBAR
+.bg-branco {
+	background-color: #fff;
+}
+
+ul.navbar-nav > li.nav-item > a.nav-link {
+	background-color: #fff;
+	color: #aa5042;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus,
+ul.navbar-nav > li.nav-item > a.nav-link:hover,
+ul.navbar-nav > li.nav-item > a.nav-link:focus,
+ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:hover,
+ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:focus {
+	background-color: #aa5042;
+	border-radius: 10px;
+	color:	#fff;
+}
 
 // FOOTER
-
-.pre-footer {
-	padding-bottom: 50px;
-}
 
 // INDEX.PHP
 #image1 {
@@ -106,14 +132,27 @@ hr.separador {
 	src: url('../fonts/DancingScript-VariableFont_wght.ttf');
 }
 
+@font-face {
+	font-family: "Berkshire";
+	src: url('../fonts/BerkshireSwash-Regular.ttf');
+}
+
+
 .font-dancing {
 	font-family: "Dancing";
 	font-size: 1.3em;
+	font-weight: 700;
+}
+
+.font-berk {
+	font-family: "Berkshire";
+	font-size: 1em;
 }
 
 // TÍTULOS
 .titulo-index {
 	font-size: calc(20px + 2vw);
+	color: #aa5042;
 }
 
 .subtitulo-index {
