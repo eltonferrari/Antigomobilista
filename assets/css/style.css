@@ -4,37 +4,42 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* line 12, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.pre-footer {
+  height: 20px;
+}
+
 /*Extra small devices (portrait phones, menor que 576px)*/
 /*Small devices (landscape phones, 576px e maiores)*/
 /*Medium devices (tablets, 768px e maiores)*/
 /*Large devices (desktops, 992px e maiores)*/
-/* line 31, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 41, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .negrito {
   font-weight: bold;
 }
 
-/* line 36, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 46, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 hr.separador {
-  border: 2px dotted #007bff;
+  border: 1px dotted #aa5042;
 }
 
-/* line 41, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 51, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 a.link-sem-sobrescrito {
   text-decoration: none;
 }
 
-/* line 46, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 56, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .bg-branco {
   background-color: #fff;
 }
 
-/* line 50, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 62, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 ul.navbar-nav > li.nav-item > a.nav-link {
   background-color: #fff;
   color: #aa5042;
 }
 
-/* line 55, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 67, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .navbar-toggler:hover,
 .navbar-toggler:focus,
 ul.navbar-nav > li.nav-item > a.nav-link:hover,
@@ -46,57 +51,57 @@ ul.navbar-nav > li.nav-item > div.dropdown-menu > a.dropdown-item:focus {
   color: #fff;
 }
 
-/* line 69, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 81, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image1 {
   background-image: url(../../img/fotos/background_1.jpg);
 }
 
-/* line 73, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 85, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image2 {
   background-image: url(../../img/fotos/background_2.jpg);
 }
 
-/* line 77, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 89, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image3 {
   background-image: url(../../img/fotos/background_3.jpg);
 }
 
-/* line 81, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 93, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image4 {
   background-image: url(../../img/fotos/background_4.jpg);
 }
 
-/* line 85, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 97, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image5 {
   background-image: url(../../img/fotos/background_5.jpg);
 }
 
-/* line 89, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 101, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image6 {
   background-image: url(../../img/fotos/background_6.jpg);
 }
 
-/* line 93, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 105, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image7 {
   background-image: url(../../img/fotos/background_7.jpg);
 }
 
-/* line 97, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 109, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image8 {
   background-image: url(../../img/fotos/background_8.jpg);
 }
 
-/* line 101, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 113, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image9 {
   background-image: url(../../img/fotos/background_9.jpg);
 }
 
-/* line 105, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 117, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image10 {
   background-image: url(../../img/fotos/background_10.jpg);
 }
 
-/* line 109, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 121, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 #image1,
 #image2,
 #image3,
@@ -127,59 +132,116 @@ ul.navbar-nav > li.nav-item > div.dropdown-menu > a.dropdown-item:focus {
   src: url("../fonts/BerkshireSwash-Regular.ttf");
 }
 
-/* line 141, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 152, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .font-dancing {
   font-family: "Dancing";
   font-size: 1.3em;
   font-weight: 700;
 }
 
-/* line 147, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 158, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .font-berk {
   font-family: "Berkshire";
   font-size: 1em;
 }
 
-/* line 153, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 163, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.font-size-16 {
+  font-size: 16px;
+}
+
+/* line 167, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.font-size-18 {
+  font-size: 18px;
+}
+
+/* line 171, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.font-size-20 {
+  font-size: 20px;
+}
+
+/* line 175, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.font-size-22 {
+  font-size: 22px;
+}
+
+/* line 179, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.font-size-24 {
+  font-size: 24px;
+}
+
+/* line 185, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.cor-1 {
+  color: #aa5042;
+}
+
+/* line 189, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.cor-2 {
+  color: #72a98f;
+}
+
+/* line 193, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.cor-3 {
+  color: #33658a;
+}
+
+/* line 198, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.borda-card-reader {
+  border-radius: 20px 20px 0px 0px;
+  border: 2px solid #aa5042;
+}
+
+/* line 203, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.borda-card-body {
+  border: 2px;
+  border-top: 0px;
+  border-style: solid;
+  border-color: #aa5042;
+  border-radius: 0px 0px 20px 20px;
+}
+
+/* line 212, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.borda-2 {
+  border: 1px solid #72a98f;
+}
+
+/* line 217, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.botao {
+  background-color: #aa5042;
+  color: #fff;
+}
+
+/* line 222, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+.botao:hover,
+.botao:focus {
+  background-color: #fff;
+  color: #aa5042;
+  border: 2px solid #aa5042;
+  border-radius: 15px;
+}
+
+/* line 231, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .titulo-index {
   font-size: calc(20px + 2vw);
   color: #aa5042;
 }
 
-/* line 158, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 236, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .subtitulo-index {
   font-size: calc(10px + 1vw);
 }
 
-/* line 162, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 240, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 .titulo-index,
 .subtitulo-index {
   display: inline;
   font-weight: 700;
 }
 
-/* line 169, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 247, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
 div.barra {
   height: 20px;
   width: 200px;
-}
-
-/* line 175, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
-p.text-X-bg-azul {
-  background-color: #20036d;
-  color: #41aeee;
-}
-
-/* line 180, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
-p.text-X-bg-vermelho {
-  background-color: #af0404;
-  color: #d89585;
-}
-
-/* line 185, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
-p.text-X-bg-azul,
-p.text-X-bg-vermelho {
-  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -28,45 +28,37 @@
 		<title>Antigomobilista - Criar novo Usuário</title>
 	</head>
     <body>
-        <?php include '../../templates/menu.php';?>
-        <div class="container">    
+        <header>
+            <?php include '../../templates/menu.php';?>
+        </header>
+        <section class="container">    
             <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="card-login col-sm-6 pt-4">
-                    <div class="card">
-                        <div class="card-header border border-primary">
-                            <h3 class="text-center text-primary"><strong>Criar novo Usuário</strong></h3>
-                            <?php
-                                if (isset($_SESSION['mensagem'])) {
-                                    $msgUserExist = $_SESSION['mensagem'];
-                            ?>
-                                    <h6 class="text-danger text-center"><strong><?= $msgUserExist ?></strong></h6>
-                            <?php
-                                    unset($_SESSION['mensagem']);
-                                }
-                            ?>
-                        </div>
-                        <div class="card-body border border-primary">
-                            <form action="../../controladores/autenticacao/valida_registro.php" method="post">
-                                <div class="form-group">
-                                    <input type="text" name="nome" class="form-control border border-primary" placeholder="Nome" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control border border-primary" placeholder="E-mail" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="senha" class="form-control border border-primary" placeholder="Senha" required>
-                                </div>
-                                <button class="btn btn-lg btn-success btn-block" type="submit">Entrar</button>
-                            </form>
-                        </div>
+                <div class="col-sm-6 m-auto">
+                    <div class="borda-card-reader">
+                        <h1 class="text-center cor-1 negrito">Criar novo Usuário</h1>
+                    </div>
+                    <div class="borda-card-body px-5 py-3">
+                        <form action="../../controladores/autenticacao/valida_registro.php" method="post">
+                            <div class="form-group">
+                                <input type="text" name="nome" class="form-control" placeholder="Nome" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="senha" class="form-control" placeholder="Senha" required>
+                            </div>
+                            <button class="btn btn-lg btn-block botao letra-branca" type="submit">Entrar</button>
+                        </form>
                     </div>
                 </div>
-                <div class="col-sm-3"></div>
-            </div>
+            </div>            
+        </section>
         </div>
-        <?php
-            include '../../templates/js-bootstrap.php'; 
-        ?>
+        <footer>
+            <?php
+                include '../../templates/js-bootstrap.php'; 
+            ?>
+        </footer>[[]]
     </body>
 </html>

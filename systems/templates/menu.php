@@ -2,7 +2,7 @@
     <!-- LOGO -->
     <a href="\index.php" class="navbar-brand">
         <img src="\img/logo/antigomobilista_logo.png" width="50">
-        <span class="font-dancing text-dark pr-5">Antigomobilista</span>
+        <span class="font-dancing cor-3 pr-5">Antigomobilista</span>
     </a>
     <?php 
         if (isset($_SESSION['logado'])) {
@@ -30,7 +30,7 @@
                         <a class="nav-link" href="\systems/visualizacoes/mensagens/mensagens.php">Mensagens</a>
                     </li>
                     <?php
-                        if ($tipo == 1) {
+                        if (isset($tipo) && $tipo == 1) {
                     ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="\systems/visualizacoes/pontuacoes/pontuacoes.php">Pontos</a>
@@ -65,6 +65,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="\img/users/EltonFerrari/Foto 3X3.jpg" width="40" height="40" class="rounded-circle">
+                        <span><?= $nome ?></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="\systems/visualizacoes/usuarios/perfil.php">Perfil</a>

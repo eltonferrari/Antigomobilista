@@ -3,6 +3,16 @@ body {
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+$cor1: #aa5042;
+$cor2: #72a98f;
+$cor3: #33658a;
+$branco: #fff;
+$preto: #000;
+
+.pre-footer {
+	height: 20px;
+}
+
 @media (max-width: 575.98px) {
 
 }
@@ -34,7 +44,7 @@ body {
 
 // SEPARADOR
 hr.separador {
-	border: 2px dotted #007bff;
+	border: 1px dotted $cor1;
 }
 
 // LINK
@@ -44,12 +54,14 @@ a.link-sem-sobrescrito {
 
 // NAVBAR
 .bg-branco {
-	background-color: #fff;
+	background-color: $branco;
 }
 
+
+
 ul.navbar-nav > li.nav-item > a.nav-link {
-	background-color: #fff;
-	color: #aa5042;
+	background-color: $branco;
+	color: $cor1;
 }
 
 .navbar-toggler:hover,
@@ -58,9 +70,9 @@ ul.navbar-nav > li.nav-item > a.nav-link:hover,
 ul.navbar-nav > li.nav-item > a.nav-link:focus,
 ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:hover,
 ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:focus {
-	background-color: #aa5042;
+	background-color: $cor1;
 	border-radius: 10px;
-	color:	#fff;
+	color:	$branco;
 }
 
 // FOOTER
@@ -137,7 +149,6 @@ ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:focus {
 	src: url('../fonts/BerkshireSwash-Regular.ttf');
 }
 
-
 .font-dancing {
 	font-family: "Dancing";
 	font-size: 1.3em;
@@ -149,10 +160,77 @@ ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:focus {
 	font-size: 1em;
 }
 
+.font-size-16 {
+	font-size: 16px;
+}
+
+.font-size-18 {
+	font-size: 18px;
+}
+
+.font-size-20 {
+	font-size: 20px;
+}
+
+.font-size-22 {
+	font-size: 22px;
+}
+
+.font-size-24 {
+	font-size: 24px;
+}
+
+// CORES
+
+.cor-1 {
+	color: $cor1;
+}
+
+.cor-2 {
+	color: $cor2;
+}
+
+.cor-3 {
+	color: $cor3;	
+}
+
+// CARD - LOGIN + REGISTER
+.borda-card-reader {
+	border-radius: 20px 20px 0px 0px;
+	border: 2px solid $cor1;
+}
+
+.borda-card-body {
+	border: 2px;
+	border-top: 0px;
+	border-style: solid;
+	border-color: $cor1;
+	border-radius: 0px 0px 20px 20px;
+}
+
+//BORDAS
+.borda-2 {
+	border: 1px solid $cor2;
+}
+
+// BOTÃO
+.botao {
+	background-color: $cor1;
+	color: $branco;
+}
+
+.botao:hover,
+.botao:focus {
+	background-color: $branco;
+	color: $cor1;
+	border: 2px solid $cor1;
+	border-radius: 15px;
+}
+
 // TÍTULOS
 .titulo-index {
 	font-size: calc(20px + 2vw);
-	color: #aa5042;
+	color: $cor1;
 }
 
 .subtitulo-index {
@@ -169,20 +247,4 @@ ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:focus {
 div.barra {
 	height: 20px;
 	width: 200px;
-}
-
-// VALIDA E-MAIL
-p.text-X-bg-azul {
-	background-color: #20036d;
-	color: #41aeee;
-}
-
-p.text-X-bg-vermelho {
-	background-color: #af0404;
-	color: #d89585;
-}
-
-p.text-X-bg-azul,
-p.text-X-bg-vermelho {
-	border-radius: 20px;
 }

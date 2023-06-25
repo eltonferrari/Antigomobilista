@@ -2,7 +2,7 @@
 	include '../../controladores/autenticacao/validador_de_acesso.php';
 	
 		// Teste de usuário logado
-		echo '===== USER LOGADO =====';
+		echo '===== USER TIPO =====';
 		echo '<pre>';
 		echo $tipo;
 		echo '</pre>';
@@ -35,6 +35,9 @@
 
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+		
+		<!-- add icon link -->
+        <link rel="icon" href="../../../img/logo/antigomobilista_logo.png" type="image/x-icon">
 		
 		<title>Antigomobilista - Home</title>
 	</head>

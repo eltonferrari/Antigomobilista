@@ -4,7 +4,7 @@ START TRANSACTION;
 SET time_zone = "+03:00";
 
 --
--- Database: `antigomobilistabd`
+-- Database: `antigo_bd`
 --
 -- --------------------------------------------------------
 --

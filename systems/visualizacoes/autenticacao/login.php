@@ -5,7 +5,6 @@
     echo '</pre>';
 ?>
 <!doctype html>
-<!doctype html>
 <html lang="pt-br">
 	<head>
 		<!-- Required meta tags -->
@@ -25,55 +24,38 @@
 
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
-		<link rel="icon" href="img/logo/antigomobilista_logo.png" type="image/x-icon">
+		<!-- add icon link -->
+        <link rel="icon" href="../../../img/logo/antigomobilista_logo.png" type="image/x-icon">
 		<title>Antigomobilista - Entrar</title>
 	</head>
     <body>
-        <?php include '../../templates/menu.php';?>
-        <div class="container">    
+        <header>
+            <?php include '../../templates/menu.php';?>
+        </header>
+        <section class="container">    
             <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="card-login col-sm-6 pt-4">
-                    <div class="card">
-                        <div class="card-header border border-primary">
-                            <h3 class="text-center text-primary"><strong>Entrar</strong></h3>
-                        </div>
-                        <div class="card-body border border-primary">
-                            <form action="../../controladores/autenticacao/valida_login.php" method="post">
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control border border-primary" placeholder="E-mail" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="senha" class="form-control border border-primary" placeholder="Senha" required>
-                                </div>
-                                <?php
-                                    if (isset($_SESSION['mensagem'])) {
-                                ?>
-                                        <div class="text-danger text-center negrito">
-                                            <?= $_SESSION['mensagem'] ?>
-                                            <br />
-                                            Se você não tem registro em nosso sistema,
-                                            <a class="link-sem-sobrescrito" href="registrar.php">
-                                                clique aqui
-                                            </a>
-                                            .
-                                        </div>
-                                <?php
-                                        unset($_SESSION['mensagem']);
-                                    }                                    
-                                ?>
-                                <br />
-                                <br />
-                                <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-                            </form>
-                        </div>
+                <div class="col-sm-6 m-auto">
+                    <div class="borda-card-reader">
+                        <h1 class="text-center cor-1 negrito">Entrar</h1>
                     </div>
+                    <div class="borda-card-body px-5 py-3">
+                        <form action="../../controladores/autenticacao/valida_login.php" method="post">
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="senha" class="form-control" placeholder="Senha" required>
+                            </div>
+                            <button class="btn btn-lg btn-block botao letra-branca" type="submit">Entrar</button>
+                        </form>
+                    </div>                        
                 </div>
-                <div class="col-sm-3"></div>
             </div>
-        </div>
-        <?php
-            include '../../templates/js-bootstrap.php'; 
-        ?>
+        </section>
+        <footer>
+            <?php
+                include '../../templates/js-bootstrap.php'; 
+            ?>
+        </footer>
     </body>
 </html>

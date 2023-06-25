@@ -93,11 +93,26 @@
         }
         
         function getUsuarioByName($nome) {
-            $query = "SELECT * FROM usuario WHERE nome LIKE ?";
+            $query = "SELECT * FROM usuarios WHERE nome LIKE ?";
             $paramType = "s";
             $paramValue = array($nome);
             $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
             return $result;
+        }
+
+        function getPontosById($id) {
+            $query = "SELECT pontos FROM usuarios WHERE id = ?";
+            $paramType = "i";
+            $paramValue = array($id);
+            $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            foreach($result as $p) {
+                $pontos = $p['pontos'];
+            }
+            return $pontos;
+        }
+        
+        function getPorcentagemById($id) {
+            
         }
 
         function getAllUsuarios() {

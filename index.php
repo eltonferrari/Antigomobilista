@@ -1,6 +1,12 @@
-<?php 
+<?php
+	session_start();
 	$num = rand(1,10);
 	$style = "image$num";
+	
+	echo '===== SESSION =====';
+	echo '<pre>';
+	print_r($_SESSION);
+	echo '</pre>';
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -22,8 +28,10 @@
 
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		
 		<!-- add icon link -->
         <link rel="icon" href="img/logo/antigomobilista_logo.png" type="image/x-icon">
+		
 		<title>Antigomobilista - Index</title>
 	</head>
     <body>
