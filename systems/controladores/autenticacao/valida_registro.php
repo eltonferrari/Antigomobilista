@@ -18,7 +18,7 @@
     if (empty($usuario)) {
         $user = $user->addUsuario($nome, $email, $senha);
         $_SESSION['email'] = $email;
-        $_SESSION['logado'] = 0;
+        $_SESSION['logado'] = 1;
         $_SESSION['nome'] = $nome;
         $_SESSION['id_user'] = $user;
         header("Location: ../../visualizacoes/home/home.php");

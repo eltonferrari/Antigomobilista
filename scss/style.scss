@@ -37,6 +37,11 @@ $preto: #000;
 	
 }
 
+// BLUR
+.blur {
+	background: rgba($color: #fff, $alpha: 1.0);
+}
+
 // NEGRITO
 .negrito {
 	font-weight: bold;
@@ -45,6 +50,15 @@ $preto: #000;
 // SEPARADOR
 hr.separador {
 	border: 1px dotted $cor1;
+}
+
+// ALINHAMENTOS
+.d-in {
+	display: inline;
+}
+
+.d-bl {
+	display: block;
 }
 
 // LINK
@@ -192,6 +206,14 @@ ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:focus {
 
 .cor-3 {
 	color: $cor3;	
+}
+
+.cor-branco {
+	color: $branco;
+}
+
+.bg-cor-3 {
+	background-color: $cor3;
 }
 
 // CARD - LOGIN + REGISTER

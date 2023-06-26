@@ -1,12 +1,8 @@
 <?php
 	session_start();
+	
 	$num = rand(1,10);
 	$style = "image$num";
-	
-	echo '===== SESSION =====';
-	echo '<pre>';
-	print_r($_SESSION);
-	echo '</pre>';
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -34,17 +30,19 @@
 		
 		<title>Antigomobilista - Index</title>
 	</head>
-    <body>
-        <?php include 'systems/templates/menu.php'; ?>
-		<div class="text-center">
+    <body id="<?= $style ?>">
+		<header>
+	        <?php include 'systems/templates/menu.php'; ?>
+		</header>
+		<section class="text-center blur">
 			<h1 class="titulo-index font-berk">Para quem gosta de carro antigo de verdade</h1>
-		</div>
-		<div class="container" id="<?= $style ?>">
+		</section>		
+		<section class="container">
 			<br /><br /><br /><br />
 			<div class="text-center m-auto py-5">				
 				<img src="../img/em_construcao/em-construcao-conjunto-de-icones_24877-60028.webp" alt="Em construção" width="200">
 			</div>
-		</div>
+		</section>
 		<?php include 'systems/templates/js-bootstrap.php'; ?>
     </body>
 </html>

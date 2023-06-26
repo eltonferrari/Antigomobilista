@@ -1,9 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-branco menu-fixed">
     <!-- LOGO -->
-    <a href="\index.php" class="navbar-brand">
         <img src="\img/logo/antigomobilista_logo.png" width="50">
-        <span class="font-dancing cor-3 pr-5">Antigomobilista</span>
-    </a>
+        <h1 class="font-dancing cor-3 px-2 font-size-24">Antigomobilista</h1>    
     <?php 
         if (isset($_SESSION['logado'])) {
     ?>
@@ -12,7 +10,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- NAVEGAÇÃO - ESQUERDA-->
-            <div class="collapse navbar-collapse" id="navbar">
+            <div class="collapse navbar-collapse ml-3" id="navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="\systems/visualizacoes/home/home.php">Home</a>
@@ -40,8 +38,8 @@
                     ?>
                 </ul>
                 <!-- BARRA DE PROGRESSO - CENTRO-->
-                <div class="progress bg-dark barra m-auto ">
-                    <div class="progress progress-bar bg-info progress-bar-striped progress-bar-animated barra" style="width: 37%;">37%</div>
+                <div class="progress bg-dark barra m-auto" title="Nível: <?= $nivel ?> - <?= $pontos ?> pontos">
+                    <div class="progress progress-bar bg-info progress-bar-striped progress-bar-animated barra" style="width: <?= $porcentagem ?>%;"><?= $porcentagem ?>%</div>
                 </div>
     <?php
         } 

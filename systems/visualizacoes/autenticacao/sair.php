@@ -1,5 +1,19 @@
 <?php
     include '../../controladores/autenticacao/validador_de_acesso.php';
+
+    // MENU ================================================================
+	include '../../controladores/pontuacoes/class_pontuacoes.php';
+	$usuario = new Usuarios();
+	$nivel = new Usuarios();
+	$porcentagem = new Pontuacoes();
+	$usuario = $usuario->getUsuarioById($_SESSION['id_user']);
+	foreach ($usuario as $user) {
+		$nome = $user['nome'];
+		$pontos = $user['pontos'];
+	}
+	$nivel = $nivel->getNivelByIdUser($_SESSION['id_user']);
+	$porcentagem = $porcentagem->getPorcentagemById($_SESSION['id_user']);
+	// =====================================================================
 ?>
 <!doctype html>
 <html lang="pt-br">

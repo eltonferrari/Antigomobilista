@@ -1,18 +1,19 @@
 <?php 
 	include '../../controladores/autenticacao/validador_de_acesso.php';
 	
-		// Teste de usuário logado
-		echo '===== USER TIPO =====';
-		echo '<pre>';
-		echo $tipo;
-		echo '</pre>';
-	
-
-	// Teste de sessão
-	echo '===== SESSION =====';
-	echo '<pre>';
-	print_r($_SESSION);
-	echo '</pre>';
+	// MENU ================================================================
+	include '../../controladores/pontuacoes/class_pontuacoes.php';
+	$usuario = new Usuarios();
+	$nivel = new Usuarios();
+	$porcentagem = new Pontuacoes();
+	$usuario = $usuario->getUsuarioById($_SESSION['id_logado']);
+	foreach ($usuario as $user) {
+		$nome = $user['nome'];
+		$pontos = $user['pontos'];
+	}
+	$nivel = $nivel->getNivelByIdUser($_SESSION['id_logado']);
+	$porcentagem = $porcentagem->getPorcentagemById($_SESSION['id_logado']);
+	// =====================================================================
 
 ?>
 <!doctype html>
@@ -42,8 +43,10 @@
 		<title>Antigomobilista - Home</title>
 	</head>
     <body>
-        <?php include '../../../systems/templates/menu.php'; ?>
-		<div class="container">
+        <header>
+			<?php include '../../../systems/templates/menu.php'; ?>
+		</header>
+		<section class="container">
             <div class="row">
                 <div class="col-md-4 m-auto">
                     <a class="cor-2 text-center link-sem-sobrescrito" href="perfil.php"><h3 class="negrito">Seu perfil</h3></a>
@@ -52,7 +55,7 @@
 		    <div class="d-flex flex-wrap">
 
             </div>
-        </div>        
+        </section>        
         <?php include '../../templates/js-bootstrap.php'; ?>
     </body>
 </html>

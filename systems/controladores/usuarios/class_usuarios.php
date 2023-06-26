@@ -1,5 +1,6 @@
 <?php 
     require_once ("../../../conexao/DBController.php");
+    
     class Usuarios {
         private $db_handle;
         
@@ -110,11 +111,18 @@
             }
             return $pontos;
         }
-        
-        function getPorcentagemById($id) {
-            
-        }
 
+        function getNivelByIdUser($id) {
+            $pontos = new Usuarios();
+            $registro = new Pontuacoes();
+            $pontos = $pontos->getPontosById($id);
+            $registro = $registro->getRegistroByPontos($pontos);
+            foreach ($registro as $r) {
+                $nivel = $r['nivel'];
+            }
+            return $nivel;
+        }
+        
         function getAllUsuarios() {
             $query = "SELECT * FROM usuarios ORDER BY nome ASC";
             $result = $this->db_handle->runBaseQuery($query);

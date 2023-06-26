@@ -12,5 +12,5 @@
     // Para menu funcionar
 	include '../../controladores/usuarios/class_usuarios.php';
 	$tipo = new Usuarios();
-	$tipo = $tipo->getTipoById($_SESSION['id_logado']);
+	$tipo = $tipo->getTipoById($_SESSION['id_user']);
 ?>

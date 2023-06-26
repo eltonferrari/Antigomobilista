@@ -1,15 +1,20 @@
 <?php
 	include '../../controladores/autenticacao/validador_de_acesso.php';
-	include '../../controladores/pontuacoes/class_pontos.php';
 	
-	// MENU =================================================
-	$nome = new Usuarios();
-	$porcentagem = new Usuarios();
-	$nome = $nome->getNomeById($_SESSION['id_logado']);
-	$porcentagem = $porcentagem->getPorcentagemById($_SESSION['id_logado']);
-	// ======================================================
-	
-	$listaGeral = new Pontos();
+	// MENU ================================================================
+	include '../../controladores/pontuacoes/class_pontuacoes.php';
+	$usuario = new Usuarios();
+	$nivel = new Usuarios();
+	$porcentagem = new Pontuacoes();
+	$usuario = $usuario->getUsuarioById($_SESSION['id_user']);
+	foreach ($usuario as $user) {
+		$nome = $user['nome'];
+		$pontos = $user['pontos'];
+	}
+	$nivel = $nivel->getNivelByIdUser($_SESSION['id_user']);
+	$porcentagem = $porcentagem->getPorcentagemById($_SESSION['id_user']);
+	// =====================================================================
+	$listaGeral = new Pontuacoes();
 	$listaGeral = $listaGeral->getAllPontos();	 
 ?>
 <!doctype html>
@@ -31,7 +36,7 @@
 		<link   rel="stylesheet" type="text/css" href="../../../assets/css/normalize.css">
 
 		<!-- CSS CUSTOMIZADO -->
-		<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../../../assets//css/style.css">
 		
 		<title>Antigomobilista - Home</title>
 	</head>
