@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `senha` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `imagem` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'vazio.png',
+  `imagem` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'img/icones/ni.png',
   `tipo` int(1) NOT NULL DEFAULT '0',
   `ativo` int(1) NOT NULL DEFAULT '1',
   `confirm_email` int(1) NOT NULL DEFAULT '1',
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `usuarios` (`id`, `pontos`, `nome`, `email`, `senha`, `imagem`, `tipo`, `ativo`, `created_at`, `updated_at`) VALUES
-(1, 5, 'Elton Ferrari', 'eltonferrari@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'vazio.png', 1, 1, '2023-04-03 15:11:47', '2023-04-03 15:11:47');
+(1, 5, 'Elton Ferrari', 'eltonferrari@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'img/icones/ni.png', 1, 1, '2023-04-03 15:11:47', '2023-04-03 15:11:47');
 
 --
 -- --------------------------------------------------------

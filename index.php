@@ -28,7 +28,7 @@
 		<!-- add icon link -->
         <link rel="icon" href="img/logo/antigomobilista_logo.png" type="image/x-icon">
 		
-		<title>Antigomobilista - Index</title>
+		<title>Antigomobilista - Olá</title>
 	</head>
     <body id="<?= $style ?>">
 		<header>

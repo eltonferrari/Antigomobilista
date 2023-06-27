@@ -25,7 +25,7 @@
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
 		
-		<title>Antigomobilista - Criar novo Usuário</title>
+		<title>Antigomobilista - Registrar-se</title>
 	</head>
     <body>
         <header>

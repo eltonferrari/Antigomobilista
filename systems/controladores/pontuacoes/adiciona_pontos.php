@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'class_pontos.php';
+    include 'class_pontuacoes.php';
 
     echo '===== SESSION =====';
     echo '<pre>';
@@ -12,9 +12,9 @@
     print_r($_POST);
     echo '</pre>';
 
-    $idCriador = $_SESSION['id_logado'];
+    $idCriador = $_SESSION['id_user'];
     $qtddNiveis = $_POST['qtdd_niveis'];
-    $niveis = new Pontos();
+    $niveis = new Pontuacoes();
     for ($i = 0; $i < $qtddNiveis; $i ++) {
         $niveis->insertNovoNivel($idCriador);
     }

@@ -39,7 +39,7 @@
                 </ul>
                 <!-- BARRA DE PROGRESSO - CENTRO-->
                 <div class="progress bg-dark barra m-auto" title="Nível: <?= $nivel ?> - <?= $pontos ?> pontos">
-                    <div class="progress progress-bar bg-info progress-bar-striped progress-bar-animated barra" style="width: <?= $porcentagem ?>%;"><?= $porcentagem ?>%</div>
+                    <div class="progress progress-bar bg-cor-3 progress-bar-striped progress-bar-animated barra" style="width: <?= $porcentagem ?>%;"><?= $porcentagem ?>%</div>
                 </div>
     <?php
         } 
@@ -62,11 +62,11 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="\img/users/EltonFerrari/Foto 3X3.jpg" width="40" height="40" class="rounded-circle">
+                        <img src="\<?= $foto ?>" width="40" height="40" class="rounded-circle">
                         <span><?= $nome ?></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="\systems/visualizacoes/usuarios/perfil.php">Perfil</a>
+                        <a class="dropdown-item" href="\systems/visualizacoes/usuarios/pessoas.php">Perfil</a>
                         <a class="dropdown-item" href="\systems/visualizacoes/autenticacao/sair.php">Sair</a>
                     </div>
                 </li>   

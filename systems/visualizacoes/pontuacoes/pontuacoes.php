@@ -8,6 +8,7 @@
 	$porcentagem = new Pontuacoes();
 	$usuario = $usuario->getUsuarioById($_SESSION['id_user']);
 	foreach ($usuario as $user) {
+		$foto = $user['imagem'];
 		$nome = $user['nome'];
 		$pontos = $user['pontos'];
 	}
@@ -38,11 +39,13 @@
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="../../../assets//css/style.css">
 		
-		<title>Antigomobilista - Home</title>
+		<title>Antigomobilista - Pontos</title>
 	</head>
-    <body>
-        <?php include '../../../systems/templates/menu.php'; ?>
-		<div class="container">
+    <body id="wallpaper-3">
+        <header>
+			<?php include '../../../systems/templates/menu.php'; ?>
+		</header>
+		<section class="container">
 		    <h1 class="text-center cor-3 negrito py-2">Níveis</h1>
 			<div class="row">
 				<div class="col-md-9">
@@ -93,7 +96,9 @@
 				</div>
 			</div>
 			<div class="pre-footer"></div>
-        </div>        
-        <?php include '../../templates/js-bootstrap.php'; ?>
+        </section>
+		<footer>
+			<?php include '../../templates/js-bootstrap.php'; ?>
+		</footer>
     </body>
 </html>

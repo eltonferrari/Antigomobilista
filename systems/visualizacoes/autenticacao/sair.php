@@ -36,7 +36,7 @@
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
 		
-		<title>Antigomobilista - Entrar</title>
+		<title>Antigomobilista - Sair</title>
 	</head>
     <body>
         <?php include '../../templates/menu.php';?>

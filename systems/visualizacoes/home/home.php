@@ -1,12 +1,6 @@
 <?php 
 	include '../../controladores/autenticacao/validador_de_acesso.php';
 	
-	echo '===== SESSION =====';
-	echo '<pre>';
-	print_r($_SESSION);
-	echo '</pre>';
-
-
 	// MENU ================================================================
 	include '../../controladores/pontuacoes/class_pontuacoes.php';
 	$usuario = new Usuarios();
@@ -14,6 +8,7 @@
 	$porcentagem = new Pontuacoes();
 	$usuario = $usuario->getUsuarioById($_SESSION['id_user']);
 	foreach ($usuario as $user) {
+		$foto = $user['imagem'];
 		$nome = $user['nome'];
 		$pontos = $user['pontos'];
 	}
@@ -47,9 +42,11 @@
 		
 		<title>Antigomobilista - Home</title>
 	</head>
-    <body>
-        <?php include '../../../systems/templates/menu.php'; ?>
-		<div class="container">
+    <body id="wallpaper-1">
+        <header>
+			<?php include '../../../systems/templates/menu.php'; ?>
+		</header>
+		<section class="container">
 		    <div class="row">
 				<div class="col-md-4 border">
 					eventos
@@ -61,7 +58,9 @@
 					pessoas mensagens					
 				</div>
 			</div>
-        </div>        
-        <?php include '../../templates/js-bootstrap.php'; ?>
+        </section>
+		<footer>
+			<?php include '../../templates/js-bootstrap.php'; ?>
+		</footer>
     </body>
 </html>
