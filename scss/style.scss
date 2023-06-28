@@ -9,10 +9,6 @@ $cor3: #33658a;
 $branco: #fff;
 $preto: #000;
 
-.pre-footer {
-	height: 20px;
-}
-
 @media (max-width: 575.98px) {
 
 }
@@ -111,6 +107,9 @@ button.bg-cor-3:hover {
 }
 
 // FOOTER
+.pre-footer {
+	height: 20px;
+}
 
 // INDEX.PHP
 #image1 {
@@ -208,6 +207,10 @@ button.bg-cor-3:hover {
 .font-berk {
 	font-family: "Berkshire";
 	font-size: 1em;
+}
+
+.font-size-14 {
+	font-size: 14px;
 }
 
 .font-size-16 {
