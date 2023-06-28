@@ -18,11 +18,11 @@
 	$listaGeral = new Pontuacoes();
 	$listaGeral = $listaGeral->getAllPontos();	 
 ?>
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 	<head>
 		<!-- Required meta tags -->
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- COMPATIBILIDADE COM HTML5 -->
@@ -37,11 +37,17 @@
 		<link   rel="stylesheet" type="text/css" href="../../../assets/css/normalize.css">
 
 		<!-- CSS CUSTOMIZADO -->
-		<link rel="stylesheet" type="text/css" href="../../../assets//css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/style.css">
+		
+		<!-- JAVASCRIPT CUSTOMIZADO -->
+		<script src="../../../assets/js/script.js"></script>
+
+		<!-- add icon link -->
+        <link rel="icon" href="../../../img/logo/antigomobilista_logo.png" type="image/x-icon">
 		
 		<title>Antigomobilista - Pontos</title>
 	</head>
-    <body id="wallpaper-3">
+    <body>
         <header>
 			<?php include '../../../systems/templates/menu.php'; ?>
 		</header>
