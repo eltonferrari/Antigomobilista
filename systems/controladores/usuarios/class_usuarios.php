@@ -84,7 +84,26 @@
             }
             return $tipo;
         }
+
+        function getImagemById($id) {
+            $imagem = null;
+            $query = "SELECT imagem FROM usuarios WHERE id = ?";
+            $paramType = "i";
+            $paramValue = array($id);
+            $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            foreach($result as $foto) {
+                $imagem = $foto['imagem'];
+            }
+            return $imagem;
+        }
         
+        function alteraImagemPerfil($imagem, $id) {
+            $query = "UPDATE usuarios SET imagem = ? WHERE id = ?";
+            $paramType = "si";
+            $paramValue = array($imagem, $id);
+            $this->db_handle->update($query, $paramType, $paramValue);
+        }  
+
         function getUsuarioByEmail($email) {
             $query = "SELECT * FROM usuarios WHERE email = ?";
             $paramType = "s";

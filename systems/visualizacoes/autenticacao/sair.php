@@ -44,34 +44,35 @@
 		
 		<title>Antigomobilista - Sair</title>
 	</head>
-    <body>
-        <?php include '../../templates/menu.php';?>
-        <div class="container">    
+    <body id="wallpaper-sair">
+        <header>
+            <?php include '../../templates/menu.php';?>
+        </header>
+        <section class="container">    
             <div class="row">
-                <div class="card-login col-sm-6 m-auto pt-5">
-                    <div class="card">
-                        <div class="card-header border border-primary">
-                            <h3 class="text-center text-primary pt-2 negrito"><strong>Sair?</strong></h3>
-                        </div>
-                        <div class="card-body border border-primary pt-5">
-                            <h5 class="text-danger text-center negrito">Tem certeza de que deseja sair?</h5>
-                            <hr class="separador">
-                            <div class="row">
-                                <div class="col-md-6 text-center">
-                                    <a class="btn btn-danger" href="../../controladores/autenticacao/logoff.php">Sair</a>
-                                </div>
-                                <div class="col-md-6 text-center">
-                                    <a class="btn btn-primary" href="../../visualizacoes/home/home.php">Voltar para Início</a>
-                                </div>
+                <div class="col-sm-6 m-auto pt-5">
+                    <div class="borda-card-reader blur">
+                        <h3 class="text-center cor-1 p-4 negrito"><strong>Sair?</strong></h3>
+                    </div>
+                    <div class="borda-card-body pt-5 blur">
+                        <h5 class="text-danger text-center negrito">Tem certeza de que deseja sair?</h5>
+                        <hr class="separador">
+                        <div class="row">
+                            <div class="col-md-6 text-center my-4">
+                                <a class="botao-vermelho sair borda-redonda-10 negrito link-sem-sobrescrito" href="../../controladores/autenticacao/logoff.php">Sair</a>
                             </div>
-
+                            <div class="col-md-6 text-center my-4">
+                                <a class="botao px-3 py-2 borda-redonda-10 negrito link-sem-sobrescrito" href="../../visualizacoes/home/home.php">Voltar para Início</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php
-            include '../../templates/js-bootstrap.php'; 
-        ?>
+        </section>
+        <footer>
+            <?php
+                include '../../templates/js-bootstrap.php'; 
+            ?>
+        </footer>
     </body>
 </html>

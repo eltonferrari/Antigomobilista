@@ -1,20 +1,24 @@
 <?php 
 	include '../../controladores/autenticacao/validador_de_acesso.php';
 	
-	// MENU ================================================================
+	// MENU ==========================================================
 	include '../../controladores/pontuacoes/class_pontuacoes.php';
-	$usuario = new Usuarios();
+	$idUsuarioLogado = $_SESSION['id_user'];
+	$usuarioLogado = new Usuarios();
 	$nivel = new Usuarios();
 	$porcentagem = new Pontuacoes();
-	$usuario = $usuario->getUsuarioById($_SESSION['id_user']);
-	foreach ($usuario as $user) {
-		$foto = $user['imagem'];
-		$nome = $user['nome'];
-		$pontos = $user['pontos'];
+	$usuarioLogado = $usuarioLogado->getUsuarioById($idUsuarioLogado);
+	$nivel = $nivel->getNivelByIdUser($idUsuarioLogado);
+	$porcentagem = $porcentagem->getPorcentagemById($idUsuarioLogado);
+	foreach ($usuarioLogado as $ul) {
+		$nomeUsuarioLogado = $ul['nome'];
+		$fotoUsuarioLogado = $ul['imagem'];
 	}
-	$nivel = $nivel->getNivelByIdUser($_SESSION['id_user']);
-	$porcentagem = $porcentagem->getPorcentagemById($_SESSION['id_user']);
-	// =====================================================================
+	// ===============================================================
+	echo '===== USUÁRIO =====';
+	echo '<pre>';
+	print_r($usuarioLogado);
+	echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

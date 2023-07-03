@@ -6,6 +6,7 @@ body {
 $cor1: #aa5042;
 $cor2: #72a98f;
 $cor3: #33658a;
+$vermelho: #ff0000;
 $branco: #fff;
 $preto: #000;
 
@@ -35,7 +36,11 @@ $preto: #000;
 
 // BLUR
 .blur {
-	background: rgba($color: #fff, $alpha: 1.0);
+	background: rgba($color: $branco, $alpha: 1.0);
+}
+
+.blur-2 {
+	background: rgba($color: $cor2, $alpha: 1.5);
 }
 
 .blur-3 {
@@ -107,7 +112,8 @@ button.bg-cor-3:hover {
 }
 
 // FOOTER
-.pre-footer {
+.pre-footer,
+.espaco {
 	height: 20px;
 }
 
@@ -152,6 +158,46 @@ button.bg-cor-3:hover {
 	background-image: url(../../img/fotos/background_10.jpg);
 }
 
+#image11 {
+	background-image: url(../../img/fotos/background_11.jpg);
+}
+
+#image12 {
+	background-image: url(../../img/fotos/background_12.jpg);
+}
+
+#image13 {
+	background-image: url(../../img/fotos/background_13.jpg);
+}
+
+#image14 {
+	background-image: url(../../img/fotos/background_14.jpg);
+}
+
+#image15 {
+	background-image: url(../../img/fotos/background_15.jpg);
+}
+
+#image16 {
+	background-image: url(../../img/fotos/background_16.jpg);
+}
+
+#image17 {
+	background-image: url(../../img/fotos/background_17.jpg);
+}
+
+#image18 {
+	background-image: url(../../img/fotos/background_18.jpg);
+}
+
+#image19 {
+	background-image: url(../../img/fotos/background_19.jpg);
+}
+
+#image20 {
+	background-image: url(../../img/fotos/background_20.jpg);
+}
+
 #wallpaper-1 {
 	background-image: url(../../img/wallpaper/wallpaper_1.jpg);
 }
@@ -160,23 +206,20 @@ button.bg-cor-3:hover {
 	background-image: url(../../img/wallpaper/wallpaper_2.jpg);
 }
 
+#wallpaper-sair {
+	background-image: url(../../img/wallpaper/wallpaper_sair.jpg);
+}
+
 #wallpaper-3 {
 	background-image: url(../../img/wallpaper/wallpaper_3.jpg);
 }
 
-#image1, 
-#image2,
-#image3,
-#image4,
-#image5,
-#image6,
-#image7,
-#image8,
-#image9,
-#image10,
-#wallpaper-1,
-#wallpaper-2,
-#wallpaper-3 {
+#image1, #image2, #image3, #image4, #image5,
+#image6, #image7, #image8, #image9, #image10,
+#image11, #image12, #image13, #image14, #image15,
+#image16, #image17, #image18, #image19, #image20,
+#wallpaper-1, #wallpaper-2, 
+#wallpaper-3, #wallpaper-sair {
 	position: relative;
 	height: 100%;
 	min-height: 500px;
@@ -258,12 +301,23 @@ button.bg-cor-3:hover {
 .cor-branco {
 	color: $branco;
 }
+.cor-preto {
+	color: $preto;
+}
 
 .bg-cor-3 {
 	background-color: $cor3;
 }
 
-// CARD - LOGIN + REGISTER
+.read-branco:read-write {
+	color: $branco;
+}
+
+.borda-branco {
+	border: 2px solid $branco;
+}
+
+// CARD - LOGIN + REGISTER + SAIR
 .borda-card-reader {
 	border-radius: 20px 20px 0px 0px;
 	border: 2px solid $cor1;
@@ -282,22 +336,93 @@ button.bg-cor-3:hover {
 	border: 1px solid $cor2;
 }
 
+.borda-redonda-10 {
+	border-radius: 10px;
+}
+
 .borda-redonda-20 {
 	border-radius: 20px;
 }
 
 // BOTÃO
-.botao {
+.botao,
+.botao-altera-foto {
 	background-color: $cor1;
 	color: $branco;
 }
 
+.botao-altera-foto {
+	padding: 10px 20px;
+	border: $cor1;
+	border-radius: 20px;
+}
+
+.botao-altera-nome {
+	background-color: $branco;
+	color: $cor3;
+	padding: 10px 20px;
+	border-radius: 20px;
+}
+
+
+.botao-altera-nome:hover,
+.botao-altera-nome:focus {
+	background-color: $cor3;
+	color: $branco;
+}
+
+
 .botao:hover,
-.botao:focus {
+.botao:focus,
+.botao-altera-foto:hover,
+.botao-altera-foto:focus {
 	background-color: $branco;
 	color: $cor1;
 	border: 2px solid $cor1;
+	border-radius: 20px;
+}
+
+.botao-vermelho {
+	background-color: $vermelho;
+	color: $branco;
+}
+
+.botao-vermelho:hover,
+.botao-vermelho:focus {
+	background-color: $branco;
+	color: $vermelho;
+	border: 2px solid $vermelho;
 	border-radius: 15px;
+}
+
+.sair {
+	padding: 10px 60px 10px 60px;
+}
+
+input[type=file] {
+	width: 350px;
+	max-width: 100%;
+	color: $cor1;
+	padding: 5px;
+	background: $branco;
+	border-radius: 20px;
+	border: 1px solid $cor2;
+}
+  
+input[type=file]::file-selector-button {
+	margin-right: 20px;
+	border: none;
+	background: $cor2;
+	padding: 10px 20px;
+	border-radius: 20px;
+	color: $branco;
+	cursor: pointer;
+}
+  
+input[type=file]::file-selector-button:hover {
+	background: $branco;
+	color: $cor2;
+	border: 2px solid $cor2;
 }
 
 // TÍTULOS

@@ -13,25 +13,25 @@
             <div class="collapse navbar-collapse ml-3" id="navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="\systems/visualizacoes/home/home.php">Home</a>
+                        <a class="nav-link negrito" href="\systems/visualizacoes/home/home.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="\systems/visualizacoes/usuarios/pessoas.php">Pessoas</a>
+                        <a class="nav-link negrito" href="\systems/visualizacoes/usuarios/pessoas.php">Pessoas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="\systems/visualizacoes/postagens/postagens.php">Fotos</a>
+                        <a class="nav-link negrito" href="\systems/visualizacoes/postagens/postagens.php">Fotos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="\systems/visualizacoes/eventos/eventos.php">Eventos</a>
+                        <a class="nav-link negrito" href="\systems/visualizacoes/eventos/eventos.php">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="\systems/visualizacoes/mensagens/mensagens.php">Mensagens</a>
+                        <a class="nav-link negrito" href="\systems/visualizacoes/mensagens/mensagens.php">Mensagens</a>
                     </li>
                     <?php
                         if (isset($tipo) && $tipo == 1) {
                     ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="\systems/visualizacoes/pontuacoes/pontuacoes.php">Pontos</a>
+                                <a class="nav-link negrito" href="\systems/visualizacoes/pontuacoes/pontuacoes.php">Pontos</a>
                             </li>
                     <?php
                         }
@@ -48,10 +48,10 @@
             <!-- NAVEGAÇÃO - DIREITA -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="\systems/visualizacoes/autenticacao/login.php">Entrar</a>
+                    <a class="nav-link negrito" href="\systems/visualizacoes/autenticacao/login.php">Entrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="\systems/visualizacoes/autenticacao/registrar.php">Registro</a>
+                    <a class="nav-link negrito" href="\systems/visualizacoes/autenticacao/registrar.php">Registro</a>
                 </li>
             </ul>
     <?php
@@ -61,13 +61,13 @@
             <!-- PERFIL COM FOTO E DROPDOWN -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="\<?= $foto ?>" width="40" height="40" class="rounded-circle">
-                        <span><?= $nome ?></span>
+                    <a class="nav-link dropdown-toggle negrito" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="\<?= $fotoUsuarioLogado ?>" width="40" class="rounded-circle">
+                        <span><?= $nomeUsuarioLogado ?></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="\systems/visualizacoes/usuarios/pessoas.php">Perfil</a>
-                        <a class="dropdown-item" href="\systems/visualizacoes/autenticacao/sair.php">Sair</a>
+                        <a class="dropdown-item negrito cor-1" href="\systems/visualizacoes/usuarios/pessoas.php">Perfil</a>
+                        <a class="dropdown-item negrito cor-1" href="\systems/visualizacoes/autenticacao/sair.php">Sair</a>
                     </div>
                 </li>   
             </ul>

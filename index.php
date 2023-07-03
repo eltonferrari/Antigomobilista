@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	$num = rand(1,10);
+	$num = rand(1,20);
 	$style = "image$num";
 ?>
 <!doctype html>

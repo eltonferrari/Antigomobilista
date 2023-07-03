@@ -42,6 +42,7 @@
 		$bairro 				= $user['bairro'];
 		$cidade 				= $user['cidade'];
 		$estado 				= $user['estado'];
+		$tipo 					= $user['tipo'];
 		$ativo 					= $user['ativo'];
 		$confirmEmail 			= $user['confirm_email'];
 		$createdAt 				= $user['created_at'];
@@ -61,6 +62,7 @@
 	} else {
 		$emailAtivo = 'Não';
 	}
+
 	$dataCriacao = convertDataMySQL_DataPHP($createdAt);
 	$horaCriacao = convertDataMySQL_HoraPHP($createdAt);
 	$dataAlteracao = convertDataMySQL_DataPHP($updatedAt);
@@ -103,108 +105,84 @@
 		</header>
 		<section class="container">
 			<div class="row mt-5">
-				<div class="col-5 borda-redonda-20 blur-3">
-					<h1 class="font-dancing text-center cor-branco font-size-28 negrito mt-3">Pessoas</h1>
-					<hr class="separador-branco">
+				<div class="col-8 m-auto borda-redonda-20 blur-3 cor-branco">
+					<div class="espaco"></div>
 					<div class="row">
-						<div class="col-8">
-							<h2 class="font-size-16 cor-branco negrito underline">Nome</h2>
+						<div class="col-3 text-center cor-branco">
+							<h1 class="font-dancing font-size-28 negrito">Alterar perfil</h1>
 						</div>
-						<div class="col-4 text-center">
-							<h2 class="font-size-16 cor-branco negrito underline">Criado em</h2>
-						</div>
-					</div>
-					<?php
-						foreach ($usuarios as $user) {
-							$idUsers = $user['id'];
-							$nomeUsers = $user['nome'];
-							$created = $user['created_at'];
-							$criado = convertDataMySQL_DataPHP($created);
-					?>
+						<div class="col-9">
 							<div class="row">
-								<div class="col-8">
-									<a href="perfil.php?id_perfil=<?= $idUsers ?>" class="cor-branco">
-										<p class="font-size-16 cor-branco">
-											<?= $nomeUsers ?>
-										</p>
+								<div class="col-2">
+									<a href="altera_foto.php?id_user=<?= $id ?>">
+										<img class="rounded-circle borda-branco" src="\<?= $foto ?>" alt="Foto Perfil" title="Alterar foto?" width="80">
 									</a>
-								</div>
-								<div class="col-4 text-center">
-									<a href="perfil.php?id_perfil=<?= $idUsers ?>" class="cor-branco">
-										<p class="font-size-16 cor-branco">
-											<?= $criado ?>
-										</p>
-									</a>
+								</div>	
+								<div class="col-10 cor-branco">
+									<span class="negrito">Usuário nº: </span>
+									<?= $id ?>
+									<br />
+									<form action="altera_nome.php?id_user=<?= $id ?>" method="post">
+										<input class="font-dancing bg-cor-3 borda-redonda-10 cor-branco read-branco font-size-28 negrito d-in px-2" type="text" value="<?= $nome ?>" title="Alterar nome?">
+										<button class="botao-altera-nome" type="submit">Salvar</button>
+									</form>
+									<span class="negrito"><?= $pontos ?></span> pontos
 								</div>
 							</div>
-					<?php
-						}
-					?>
-				</div>
-				<div class="col-2"></div>
-				<div class="col-5 borda-redonda-20 blur-3 cor-branco">
-					<div class="espaco"></div>
-					<div class="float-left">
-						<h1 class="font-dancing text-center font-size-28 negrito d-in">Meu perfil</h1>
-					</div>
-					<div class="float-right">
-						<a href="alterar_perfil.php?id=<?= $idUsuarioLogado ?>" title="Alterar perfil?">
-							<img src="../../../img/icones/editar-branco.png" alt="Alterar perfil" width="30">
-						</a>
-					</div>
-					<div class="espaco"></div>
-					<div class="espaco"></div>
-					<hr class="separador-branco">
-					<div class="row">
-						<div class="col-6 text-center">
-							<img class="rounded-circle" src="\<?= $foto ?>" alt="Foto Perfil" title="Foto Perfil" width="80">
-						</div>
-						<div class="col-6">
-							<span class="negrito">Usuário nº: </span>
-							<?= $id ?>
-							<br />
-							<span class="negrito"><?= $nome ?></span>
-							<br />
-							<span class="negrito"><?= $pontos ?></span> pontos
 						</div>
 					</div>
 					<hr class="separador-branco">
-					<div>
-						<span class="negrito">E-mail: </span><?= $email ?>
-						<br />
-						<span class="negrito">Telefone: </span><?= $telefone ?>
-						<br />
-						<span class="negrito">Endereço: </span><?= $endereco ?>
-						<br />
-						<span class="negrito">Complemento: </span><?= $enderecoComplemento ?>
-						<br />
-						<div>
+					<form action="../../controladores/usuarios/valida_perfil.php" method="post">
+						<div class="clearfix my-3">
 							<div class="float-left">
-								<span class="negrito">Bairro: </span><?= $bairro ?>
+								<span class="negrito font-size-20">E-mail: </span><?= $email ?>
 							</div>
 							<div class="float-right">
-								<span class="negrito">Cidade: </span><?= $cidade ?>
+								<span class="negrito font-size-20">Telefone: </span><?= $telefone ?>
 							</div>
 						</div>
-						<br />
-						<div class="clearfix">
-							<span class="negrito">Estado: </span><?= $nomeEstado ?>
-							<br />
-							<span class="negrito">Usuário </span><?= $userAtivo ?>
-							<br />
-							<span class="negrito">E-mail confirmado? </span><?= $emailAtivo ?>
+						<div class="clearfix my-3">
+							<div class="float-left">
+								<span class="negrito font-size-20">Endereço: </span><?= $endereco ?>
+							</div>
+							<div class="float-left">
+								<span class="font-size-20 ml-2"> - compl.: </span><?= $enderecoComplemento ?>
+							</div>
 						</div>
-					</div>
-					<div class="font-size-14">
-						Usuário criado em
-						<span class="negrito"><?= $dataCriacao ?></span>
-						às
-						<span class="negrito"><?= $horaCriacao  ?></span>
-						<br />
-						Última alteração de perfil em
-						<span class="negrito"><?= $dataAlteracao ?></span>
-						às
-						<span class="negrito"><?= $horaAlteracao ?>
+						<div class="row clearfix my-3">
+							<div class="col-4">
+								<span class="negrito font-size-20">Bairro: </span><?= $bairro ?>
+							</div>
+							<div class="col-4 text-center">
+								<span class="negrito font-size-20">Cidade: </span><?= $cidade ?>
+							</div>
+							<div class="col-4 text-right">
+								<span class="negrito font-size-20">Estado: </span><?= $nomeEstado ?>
+							</div>
+						</div>
+						<div class="clearfix my-3">
+							<div class="float-left">
+								<span class="negrito font-size-20">Usuário </span><?= $userAtivo ?>
+							</div>
+							<div class="float-right">
+								<span class="negrito font-size-20">E-mail Confirmado? </span><?= $emailAtivo ?>
+							</div>
+						</div>
+					</form>
+					<hr class="separador-branco">
+					<div class="clearfix font-size-14">
+						<div class="float-left mb-3">
+							Usuário criado em
+							<span class="negrito"><?= $dataCriacao ?></span>
+							às
+							<span class="negrito"><?= $horaCriacao  ?></span>
+						</div>
+						<div class="float-right mb-3">
+							Última alteração de perfil em
+							<span class="negrito"><?= $dataAlteracao ?></span>
+							às
+							<span class="negrito"><?= $horaAlteracao ?>
+						</div>
 					</div>
 				</div>
 			</div>
