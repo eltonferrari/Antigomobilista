@@ -35,7 +35,7 @@
 	        <?php include 'systems/templates/menu.php'; ?>
 		</header>
 		<section class="text-center blur">
-			<h1 class="titulo-index font-berk">Para quem gosta de carro antigo de verdade</h1>
+			<h1 class="titulo-index font-berk">Para quem gosta de veículos antigos de verdade</h1>
 		</section>		
 		<section class="container">
 			<br /><br /><br /><br />

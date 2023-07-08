@@ -148,7 +148,7 @@
 						<h1 class="font-dancing text-center font-size-28 negrito d-in">Meu perfil</h1>
 					</div>
 					<div class="float-right">
-						<a href="alterar_perfil.php?id=<?= $idUsuarioLogado ?>" title="Alterar perfil?">
+						<a href="alterar_perfil.php?id_user=<?= $idUsuarioLogado ?>" title="Alterar perfil?">
 							<img src="../../../img/icones/editar-branco.png" alt="Alterar perfil" width="30">
 						</a>
 					</div>
@@ -165,7 +165,11 @@
 							<br />
 							<span class="negrito"><?= $nome ?></span>
 							<br />
-							<span class="negrito"><?= $pontos ?></span> pontos
+							
+							<span class="negrito">Nível </span>
+							<?= $nivel ?> - 
+							<span class="negrito"><?= $pontos ?></span>
+							pontos
 						</div>
 					</div>
 					<hr class="separador-branco">
@@ -195,7 +199,7 @@
 							<span class="negrito">E-mail confirmado? </span><?= $emailAtivo ?>
 						</div>
 					</div>
-					<div class="font-size-14">
+					<div class="font-size-14 text-center">
 						Usuário criado em
 						<span class="negrito"><?= $dataCriacao ?></span>
 						às

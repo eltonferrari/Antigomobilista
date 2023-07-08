@@ -2,6 +2,7 @@
 	include '../../controladores/autenticacao/validador_de_acesso.php';
 	include '../../controladores/estados/class_estados.php';
 	include '../../../bibliotecas/lib/util.php';
+	
 	echo '===== SESSION =====';
 	echo '<pre>';
 	print_r($_SESSION);
@@ -104,29 +105,47 @@
 			<?php include '../../../systems/templates/menu.php'; ?>
 		</header>
 		<section class="container">
+			<div class="text-center">
+				<?php 
+					if (isset($_SESSION['msgAlteraNome'])) {
+						$msgAlteraNome = $_SESSION['msgAlteraNome'];
+				?>
+						<h6 class="text-danger negrito text-center">(<?= $msgAlteraNome ?>)</h6>
+				<?php 
+						unset($_SESSION['msgAlteraNome']);
+					}
+				?>
+			</div>
 			<div class="row mt-5">
 				<div class="col-8 m-auto borda-redonda-20 blur-3 cor-branco">
 					<div class="espaco"></div>
 					<div class="row">
 						<div class="col-3 text-center cor-branco">
-							<h1 class="font-dancing font-size-28 negrito">Alterar perfil</h1>
+							<h1 class="font-dancing font-size-26 negrito">Alterar perfil</h1>
 						</div>
 						<div class="col-9">
 							<div class="row">
 								<div class="col-2">
 									<a href="altera_foto.php?id_user=<?= $id ?>">
-										<img class="rounded-circle borda-branco" src="\<?= $foto ?>" alt="Foto Perfil" title="Alterar foto?" width="80">
+										<img class="rounded-circle borda-branca" src="\<?= $foto ?>" alt="Foto Perfil" title="Alterar foto?" width="60">
 									</a>
 								</div>	
-								<div class="col-10 cor-branco">
-									<span class="negrito">Usuário nº: </span>
-									<?= $id ?>
+								<div class="col-10 cor-branco px-2">
+									<div class="float-left">
+										<span class="negrito mb-2">Usuário nº: </span>
+										<?= $id ?>
+									</div>
+									<div class="float-right">
+										<span class="negrito"><?= $pontos ?></span> pontos
+									</div>
 									<br />
-									<form action="altera_nome.php?id_user=<?= $id ?>" method="post">
-										<input class="font-dancing bg-cor-3 borda-redonda-10 cor-branco read-branco font-size-28 negrito d-in px-2" type="text" value="<?= $nome ?>" title="Alterar nome?">
+									<form action="../../controladores/usuarios/valida_altera_nome.php" method="post">
+										<div class="form-group">
+											<input type="hidden" value="<?= $id ?>" name="id_user">
+											<input class="form-control font-dancing bg-cor-3 borda-redonda-10 cor-branco read-branco font-size-28 negrito mb-2 px-2" type="text" value="<?= $nome ?>" name="nome" title="Alterar nome?">
+										</div>
 										<button class="botao-altera-nome" type="submit">Salvar</button>
 									</form>
-									<span class="negrito"><?= $pontos ?></span> pontos
 								</div>
 							</div>
 						</div>
@@ -171,13 +190,13 @@
 					</form>
 					<hr class="separador-branco">
 					<div class="clearfix font-size-14">
-						<div class="float-left mb-3">
+						<div class="text-center mb-3">
 							Usuário criado em
 							<span class="negrito"><?= $dataCriacao ?></span>
 							às
 							<span class="negrito"><?= $horaCriacao  ?></span>
 						</div>
-						<div class="float-right mb-3">
+						<div class="text-center mb-3">
 							Última alteração de perfil em
 							<span class="negrito"><?= $dataAlteracao ?></span>
 							às

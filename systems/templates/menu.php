@@ -1,8 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-branco menu-fixed">
     <!-- LOGO -->
-        <img src="\img/logo/antigomobilista_logo.png" width="50">
-        <h1 class="font-dancing cor-3 px-2 font-size-24">Antigomobilista</h1>    
-    <?php 
+    <img src="\img/logo/antigomobilista_logo.png" width="50">
+    <?php
+        if (!isset($_SESSION['logado'])) {
+    ?>
+            <a href="\index.php" title="Voltar para o início">
+    <?php
+        }
+    ?>
+        <h1 class="font-dancing cor-3 px-2 font-size-24">Antigomobilista</h1>
+    <?php
+        if (!isset($_SESSION['logado'])) {
+    ?>
+            </a>
+    <?php
+        }
         if (isset($_SESSION['logado'])) {
     ?>
             <!-- MENU HAMBURGUER -->

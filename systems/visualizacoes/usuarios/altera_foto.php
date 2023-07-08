@@ -21,8 +21,7 @@
 	}
 	// ===============================================================
     
-
-    $idUsuario = $_GET['id'];
+    $idUsuario = $_GET['id_user'];
     $foto = new Usuarios();
     $foto = $foto->getImagemById($idUsuario);
 ?>
@@ -60,8 +59,24 @@
         </header>
         <section class="container mb-5">    
             <h1 class="cor-3 text-center negrito">Alterar foto do perfil</h1>
+            <?php 
+                if (isset($_SESSION['msgAlteraImagem'])) {
+                    $msgAddUser = $_SESSION['msgAlteraImagem'];
+            ?>
+                    <h6 class="text-danger negrito text-center">(<?= $msgAddUser ?>)</h6>
+            <?php 
+                    unset($_SESSION['msgAlteraImagem']);
+                }
+            ?>
             <div class="row">
-                <div class="col-2"></div>
+                <div class="col-2 text-center">
+                    <div class="espaco-4x"></div>
+                    <a class="link-sem-sobrescrito" href="alterar_perfil.php?id_user=<?= $idUsuarioLogado ?>">
+                        <img src="../../../img/icones/seta_esquerda.png" alt="voltar?" title="Voltar para perfil?" width="40">
+                        <br />
+                        <span class="cor-1 negrito">Voltar para perfil?</span>
+                    </a>
+                </div>
                 <div class="col-4 text-center">
                     <h2 class="cor-1 negrito">Foto atual</h2>    
                     <img class="pr-4" src="\<?= $foto ?>" alt="Foto Perfil" title="Foto atual" width="100">

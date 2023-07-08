@@ -1,5 +1,7 @@
 <?php
+	session_start();
 	include 'class_usuarios.php';
+	date_default_timezone_set('America/Sao_Paulo');
 
 	$idUser = $_POST['id_usuario'];
 	$arquivo = $_FILES['imagem']['name'];
@@ -41,22 +43,24 @@
     $extensao = pathinfo($arquivo_up);
     $extensao = $extensao['extension'];
     if (array_search($extensao, $_UP['extensoes']) === false) {		
-		$msgAlteraImagem = "A imagem não foi alterada - extensão inválida.";
+		$msgAlteraImagem = "A imagem não foi alterada - extensão inválida!";
 	} else if ($_UP['tamanho'] < $_FILES['imagem']['size']) {
-		$msgAlteraImagem = "Arquivo muito grande.";
+		$msgAlteraImagem = "Arquivo muito grande!";
 	} else {
 		$nome_final = "foto_perfil_id-$idUser.jpg";
+		$updatedAt = new DateTime('now');
+    	$dataAtual = $updatedAt->format('Y-m-d H:i:s');
 		if (move_uploaded_file($_FILES['imagem']['tmp_name'], $_UP['pasta']. $nome_final)) {
 			//Upload efetuado com sucesso, exibe a mensagem
 			$insertImagem = new Usuarios();
-			$insertImagem = $insertImagem->alteraImagemPerfil($_UP['pasta'].$nome_final, $idUser);
-			$msgAlteraImagem = "Imagem alterada com sucesso";	
+			$insertImagem = $insertImagem->alteraImagemPerfil($_UP['pasta'].$nome_final, $dataAtual , $idUser);
+			$msgAlteraImagem = "Imagem alterada com sucesso!";	
 		} else {
-			$msgAlteraImagem = "Imagem não alterada";
+			$msgAlteraImagem = "Imagem não alterada!";
 		}
 	}
-	$_SESSION['$msgAlteraImagem'] = $msgAlteraImagem;
+	$_SESSION['msgAlteraImagem'] = $msgAlteraImagem;
 ?>
-	<meta http-equiv="refresh" content="0;url=../../visualizacoes/usuarios/altera_foto.php?id=<?= $idUser ?>">
+	<meta http-equiv="refresh" content="0;url=../../visualizacoes/usuarios/altera_foto.php?id_user=<?= $idUser ?>">
 <?php
 ?>

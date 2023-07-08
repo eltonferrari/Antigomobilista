@@ -59,7 +59,7 @@
                         <hr class="separador">
                         <div class="row">
                             <div class="col-md-6 text-center my-4">
-                                <a class="botao-vermelho sair borda-redonda-10 negrito link-sem-sobrescrito" href="../../controladores/autenticacao/logoff.php">Sair</a>
+                                <a class="botao-sair borda-redonda-10 negrito link-sem-sobrescrito" href="../../controladores/autenticacao/logoff.php">Sair</a>
                             </div>
                             <div class="col-md-6 text-center my-4">
                                 <a class="botao px-3 py-2 borda-redonda-10 negrito link-sem-sobrescrito" href="../../visualizacoes/home/home.php">Voltar para Início</a>

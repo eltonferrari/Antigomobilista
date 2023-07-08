@@ -26,7 +26,7 @@
                              $imagem, 
                              $tipo, 
                              $ativo, 
-                             $updated_at,
+                             $updatedAt,
                              $id
                             ) {
             $query = "UPDATE usuarios 
@@ -47,9 +47,16 @@
                                 $imagem, 
                                 $tipo, 
                                 $ativo, 
-                                $updated_at,
+                                $updatedAt,
                                 $id
                                );
+            $this->db_handle->update($query, $paramType, $paramValue);
+        }
+
+        function alteraNomeById($nome, $updatedAt , $id) {
+            $query = "UPDATE usuarios SET nome = ?, updated_at = ? WHERE id = ?";
+            $paramType = "ssi";
+            $paramValue = array($nome, $updatedAt, $id);
             $this->db_handle->update($query, $paramType, $paramValue);
         }
 
@@ -97,10 +104,10 @@
             return $imagem;
         }
         
-        function alteraImagemPerfil($imagem, $id) {
-            $query = "UPDATE usuarios SET imagem = ? WHERE id = ?";
-            $paramType = "si";
-            $paramValue = array($imagem, $id);
+        function alteraImagemPerfil($imagem, $updatedAt, $id) {
+            $query = "UPDATE usuarios SET imagem = ?,  updated_at = ? WHERE id = ?";
+            $paramType = "ssi";
+            $paramValue = array($imagem, $updatedAt, $id);
             $this->db_handle->update($query, $paramType, $paramValue);
         }  
 
