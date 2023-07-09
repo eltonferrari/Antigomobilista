@@ -457,26 +457,27 @@ hr.separador-branco {
   border: 2px dotted #fff;
 }
 
-/*Extra small devices (portrait phones, menor que 576px)*/
-/*Small devices (landscape phones, 576px e maiores)*/
-/*Medium devices (tablets, 768px e maiores)*/
-/*Large devices (desktops, 992px e maiores)*/
-/* line 41, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 2, ../../xampp/htdocs/Antigomobilista/scss/_especiais.scss */
 .titulo-index {
   font-size: calc(20px + 2vw);
   color: #aa5042;
 }
 
-/* line 46, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 7, ../../xampp/htdocs/Antigomobilista/scss/_especiais.scss */
 .subtitulo-index {
   font-size: calc(10px + 1vw);
 }
 
-/* line 50, ../../xampp/htdocs/Antigomobilista/scss/style.scss */
+/* line 11, ../../xampp/htdocs/Antigomobilista/scss/_especiais.scss */
 .titulo-index,
 .subtitulo-index {
   display: inline;
   font-weight: 700;
 }
+
+/*Extra small devices (portrait phones, menor que 576px)*/
+/*Small devices (landscape phones, 576px e maiores)*/
+/*Medium devices (tablets, 768px e maiores)*/
+/*Large devices (desktops, 992px e maiores)*/
 
 /*# sourceMappingURL=style.css.map */
