@@ -8,89 +8,92 @@
         }
 
         function addEvento($idUsuario,
+                           $imagem,
                            $nome,
-                           $dataInicio,
-                           $dataFim,
-                           $horário,
+                           $dataHoraInicio,
+                           $dataHoraFim,
                            $endereco,
+                           $bairro,
                            $cidade,
                            $idEstado,
+                           $idPais,
                            $descricao,
-                           $imagem,
                            $autorizado
                            ) {
             $query = "INSERT INTO eventos (id_usuario,
+                                           imagem,
                                            nome,
-                                           data_inicio,
-                                           data_fim,
-                                           horario,
+                                           data_hora_inicio,
+                                           data_hora_fim,
                                            endereco,
+                                           bairro,
                                            cidade,
                                            id_estado,
+                                           id_pais
                                            descricao,
-                                           imagem,
                                            autorizado)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            $paramType = "issssssissi";
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $paramType = "isssssssiisi";
             $paramValue = array($idUsuario,
+                                $imagem,
                                 $nome,
-                                $dataInicio,
-                                $dataFim,
-                                $horário,
+                                $dataHoraInicio,
+                                $dataHoraFim,
                                 $endereco,
+                                $bairro,
                                 $cidade,
                                 $idEstado,
+                                $idPais,
                                 $descricao,
-                                $imagem,
                                 $autorizado
                                 );
             $insertIdEvento= $this->db_handle->insert($query, $paramType, $paramValue);
             return $insertIdEvento;
         }
 
-        function editEvento($id,
-                            $idUsuario,
+        function editEvento($idUsuario,
+                            $imagem,
                             $nome,
-                            $dataInicio,
-                            $dataFim,
-                            $horário,
+                            $dataHoraInicio,
+                            $dataHoraFim,
                             $endereco,
+                            $bairro,
                             $cidade,
                             $idEstado,
+                            $idPais,
                             $descricao,
-                            $imagem,
                             $autorizado,
-                            $updatedAt
+                            $id
                             ) {
             $query = "UPDATE eventos 
-                        SET id = ?, 
-                            id_usuario = ?, 
-                            nome = ?, 
-                            data_inicio = ?, 
-                            data_fim = ?, 
-                            horario = ?,
-                            endereco = ?, 
-                            cidade = ?, 
-                            id_estado = ?, 
-                            descricao = ?, 
+                        SET id_usuario = ?, 
                             imagem = ?,
+                            nome = ?, 
+                            data_hora_inicio = ?,
+                            data_hora_fim = ?,
+                            endereco = ?, 
+                            bairro = ?,
+                            cidade = ?, 
+                            id_estado = ?,
+                            id_pais = ?,
+                            descricao = ?, 
                             autorizado = ?,
-                            updated_at = ? 
-                        WHERE id = $id";
-            $paramType = "iissssssissis";
-            $paramValue = array($id,
-                                $idUsuario,
+                            updated_at = ?,
+                        WHERE id = ?";
+            $paramType = "isssssssiisisi";
+            $paramValue = array($idUsuario,
+                                $imagem,
                                 $nome,
-                                $dataInicio,
-                                $dataFim,
-                                $horário,
+                                $dataHoraInicio,
+                                $dataHoraFim,
                                 $endereco,
+                                $bairro,
                                 $cidade,
                                 $idEstado,
+                                $idPais,
                                 $descricao,
-                                $imagem,
                                 $autorizado,
-                                $updatedAt
+                                $id
                                 );
             $this->db_handle->update($query, $paramType, $paramValue);
         }
@@ -103,7 +106,7 @@
             return $evento;
         }
         
-        function getEventoByUsuario($idUsuario) {
+        function getEventoByIdUsuario($idUsuario) {
             $query = "SELECT * FROM eventos WHERE id_usuario = $idUsuario";
             $paramType = "i";
             $paramValue = array($idUsuario);
@@ -124,7 +127,7 @@
         }
 
         function getAllEventos() {
-            $query = "SELECT * FROM eventos ORDER BY data ASC";
+            $query = "SELECT * FROM eventos ORDER BY data_hora_inicio ASC";
             $evento = $this->db_handle->runBaseQuery($query);
             return $evento;
         }

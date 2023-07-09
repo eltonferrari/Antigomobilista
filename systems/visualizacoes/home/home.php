@@ -49,8 +49,11 @@
 		
 		<title>Antigomobilista - Home</title>
 	</head>
+<!--
     <body id="wallpaper-1">
-        <header>
+-->
+	<body>
+		<header>
 			<?php include '../../../systems/templates/menu.php'; ?>
 		</header>
 		<section class="container">

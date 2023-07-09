@@ -116,7 +116,7 @@
 					}
 				?>
 			</div>
-			<div class="row mt-5">
+			<div class="row mt-2">
 				<div class="col-8 m-auto borda-redonda-20 blur-3 cor-branco">
 					<div class="espaco"></div>
 					<div class="row">
@@ -136,13 +136,14 @@
 										<?= $id ?>
 									</div>
 									<div class="float-right">
+										<span class="negrito">Nível </span><?= $nivel ?> - 
 										<span class="negrito"><?= $pontos ?></span> pontos
 									</div>
 									<br />
 									<form action="../../controladores/usuarios/valida_altera_nome.php" method="post">
 										<div class="form-group">
 											<input type="hidden" value="<?= $id ?>" name="id_user">
-											<input class="form-control font-dancing bg-cor-3 borda-redonda-10 cor-branco read-branco font-size-28 negrito mb-2 px-2" type="text" value="<?= $nome ?>" name="nome" title="Alterar nome?">
+											<input class="form-control font-dancing bg-cor-3 borda-redonda-10 cor-branco read-branco font-size-28 negrito mb-1 px-2" type="text" value="<?= $nome ?>" name="nome" title="Alterar nome?">
 										</div>
 										<button class="botao-altera-nome" type="submit">Salvar</button>
 									</form>
