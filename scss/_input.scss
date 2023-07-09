@@ -1,0 +1,32 @@
+@import 'variaveis';
+// COR DE FUNDO DE INPUT
+.read-branco:read-write {
+	color: $branco;
+}
+
+// INPUT TYPE FILE
+input[type=file] {
+	width: 350px;
+	max-width: 100%;
+	color: $cor1;
+	padding: 5px;
+	background: $branco;
+	border-radius: 20px;
+	border: 1px solid $cor2;
+}
+  
+input[type=file]::file-selector-button {
+	margin-right: 20px;
+	border: none;
+	background: $cor2;
+	padding: 10px 20px;
+	border-radius: 20px;
+	color: $branco;
+	cursor: pointer;
+}
+  
+input[type=file]::file-selector-button:hover {
+	background: $branco;
+	color: $cor2;
+	border: 2px solid $cor2;
+}

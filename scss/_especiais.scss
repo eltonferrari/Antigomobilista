@@ -1,0 +1,15 @@
+// TÍTULOS
+.titulo-index {
+	font-size: calc(20px + 2vw);
+	color: $cor1;
+}
+
+.subtitulo-index {
+	font-size: calc(10px + 1vw);
+}
+
+.titulo-index,
+.subtitulo-index {
+	display: inline;
+	font-weight: 700;
+}

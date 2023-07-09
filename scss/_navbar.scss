@@ -1,0 +1,27 @@
+@import 'variaveis';
+// NAVBAR
+.bg-branco {
+	background-color: $branco;
+}
+
+ul.navbar-nav > li.nav-item > a.nav-link {
+	background-color: $branco;
+	color: $cor1;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus,
+ul.navbar-nav > li.nav-item > a.nav-link:hover,
+ul.navbar-nav > li.nav-item > a.nav-link:focus,
+ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:hover,
+ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:focus {
+	background-color: $cor1;
+	border-radius: 10px;
+	color:	$branco;
+}
+
+// BARRA DE PROGRESSO
+div.barra {
+	height: 20px;
+	width: 200px;
+}

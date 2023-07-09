@@ -1,0 +1,51 @@
+@import 'variaveis';
+
+// BOTÕES
+
+.botao {
+	padding: 10px 20px;
+	background-color: $cor1;
+	color: $branco;
+	border-radius: 20px;
+	&:hover {
+		background-color: $branco;
+		color: $cor1;
+		border: 2px solid $cor1;
+	}
+}
+
+.botao-altera-foto {
+	@extend .botao;	
+}
+
+.botao-add {
+	@extend .botao;
+	padding: 2px 10px;
+}
+
+.botao-altera-nome {
+	@extend .botao;
+	background-color: $branco;
+	color: $cor3;
+	&:hover {
+		background-color: $cor3;
+		color: $branco;
+		border: 2px solid $branco;
+	}
+}
+
+.botao-vermelho {
+	@extend .botao;
+	background-color: $vermelho;
+	color: $branco;
+	&:hover {
+		background-color: $branco;
+		color: $vermelho;
+		border: 2px solid $vermelho;
+	}
+}
+
+.botao-sair {
+	@extend .botao-vermelho;
+	padding: 10px 60px 10px 60px;
+}

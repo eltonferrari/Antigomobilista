@@ -1,0 +1,15 @@
+// LINKS
+a.link-sem-sobrescrito {
+	text-decoration: none;
+}
+
+a.bg-cor-3:focus,
+a.bg-cor-3:hover,
+button.bg-cor-3:focus,
+button.bg-cor-3:hover {
+	background-color: $cor3!important
+}
+
+.bg-cor-3 {
+	background-color: $cor3!important
+}

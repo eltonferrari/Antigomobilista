@@ -1,0 +1,86 @@
+@import 'variaveis';
+// TIPOS DE FONTES
+@font-face {
+	font-family: "Dancing";
+	src: url('../fonts/DancingScript-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: "Berkshire";
+	src: url('../fonts/BerkshireSwash-Regular.ttf');
+}
+
+.font-dancing {
+	font-family: "Dancing";
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+.font-berk {
+	font-family: "Berkshire";
+	font-size: 1em;
+}
+
+//TAMANHOS DE FONTES
+.font-size-14 {
+	font-size: 14px;
+}
+
+.font-size-16 {
+	font-size: 16px;
+}
+
+.font-size-18 {
+	font-size: 18px;
+}
+
+.font-size-20 {
+	font-size: 20px;
+}
+
+.font-size-22 {
+	font-size: 22px;
+}
+
+.font-size-24 {
+	font-size: 24px;
+}
+
+.font-size-26 {
+	font-size: 26px;
+}
+
+.font-size-28 {
+	font-size: 28px;
+}
+
+// CORES DE FONTES
+.cor-1 {
+	color: $cor1;
+}
+
+.cor-2 {
+	color: $cor2;
+}
+
+.cor-3 {
+	color: $cor3;	
+}
+
+.cor-branco {
+	color: $branco;
+}
+
+.cor-preto {
+	color: $preto;
+}
+
+// NEGRITO
+.negrito {
+	font-weight: bold;
+}
+
+// LINHA EM BAIXO
+.underline {
+	text-decoration: underline;
+}
