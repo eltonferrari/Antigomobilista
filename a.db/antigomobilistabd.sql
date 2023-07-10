@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `eventos` (
     `bairro` varchar(100) NOT NULL,
     `cidade` varchar(100) NOT NULL,
     `id_estado` int(10) NOT NULL,
-    `id_pais` varchar(100) NOT NULL,
+    `id_pais` int(3) NOT NULL,
     `descricao` varchar(255) NOT NULL,
     `autorizado` tinyint(1) NOT NULL DEFAULT 0,
     `created_at` datetime DEFAULT CURRENT_TIMESTAMP,

@@ -29,8 +29,8 @@
         
         function getAllEstados() {
             $query = "SELECT * FROM estados ORDER BY nome ASC";
-            $result = $this->db_handle->runBaseQuery($query);
-            return $result;
+            $estados = $this->db_handle->runBaseQuery($query);
+            return $estados;
         }
     }
 ?>

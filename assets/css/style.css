@@ -8,6 +8,11 @@
   display: block;
 }
 
+/* line 3, ../../xampp/htdocs/Antigomobilista/scss/_background.scss */
+.bg-branco {
+  background-color: #fff;
+}
+
 /* line 2, ../../xampp/htdocs/Antigomobilista/scss/_blur.scss */
 .blur {
   background: white;
@@ -55,11 +60,21 @@ body {
 }
 
 /* line 27, ../../xampp/htdocs/Antigomobilista/scss/_bordas.scss */
+.borda-redonda-10-left {
+  border-radius: 10px 0px 0px 10px;
+}
+
+/* line 31, ../../xampp/htdocs/Antigomobilista/scss/_bordas.scss */
+.borda-redonda-10-right {
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* line 35, ../../xampp/htdocs/Antigomobilista/scss/_bordas.scss */
 .borda-redonda-20 {
   border-radius: 20px;
 }
 
-/* line 31, ../../xampp/htdocs/Antigomobilista/scss/_bordas.scss */
+/* line 39, ../../xampp/htdocs/Antigomobilista/scss/_bordas.scss */
 .borda-branca {
   border: 1px solid #fff;
 }
@@ -389,15 +404,21 @@ input[type=file]::file-selector-button {
   background: #72a98f;
   padding: 10px 20px;
   border-radius: 20px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
 }
 
 /* line 28, ../../xampp/htdocs/Antigomobilista/scss/_input.scss */
 input[type=file]::file-selector-button:hover {
   background: #fff;
-  color: #72a98f;
+  color: #000;
   border: 2px solid #72a98f;
+}
+
+/* line 34, ../../xampp/htdocs/Antigomobilista/scss/_input.scss */
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
 }
 
 /* line 2, ../../xampp/htdocs/Antigomobilista/scss/_links.scss */

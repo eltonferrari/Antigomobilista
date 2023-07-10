@@ -24,6 +24,14 @@
 	border-radius: 10px;
 }
 
+.borda-redonda-10-left {
+	border-radius: 10px 0px 0px 10px;
+}
+
+.borda-redonda-10-right {
+	border-radius: 0px 10px 10px 0px;
+}
+
 .borda-redonda-20 {
 	border-radius: 20px;
 }
