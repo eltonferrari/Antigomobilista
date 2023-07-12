@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `eventos` (
     `id_estado` int(10) NOT NULL,
     `id_pais` int(3) NOT NULL,
     `descricao` varchar(255) NOT NULL,
-    `autorizado` tinyint(1) NOT NULL DEFAULT 0,
+    `autorizado` int(1) DEFAULT 0,
     `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
     `updated_at` datetime DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
@@ -213,7 +213,8 @@ INSERT INTO `estados` (`id`, `nome`, `sigla`)
             (24, 'Santa Catarina', 'SC'),
             (25, 'São Paulo', 'SP'),
             (26, 'Sergipe', 'SE'),
-            (27, 'Tocantins', 'TO');
+            (27, 'Tocantins', 'TO'),
+            (28, 'Z---OUTROS---', 'ZO');
 --
 -- Estrutura da tabela `paises`
 --

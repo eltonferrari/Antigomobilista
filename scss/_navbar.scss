@@ -4,20 +4,20 @@
 	background-color: $branco;
 }
 
-ul.navbar-nav > li.nav-item > a.nav-link {
+
+ul.navbar-nav > li.nav-item > a.nav-link,
+.menu-eventos-item {
 	background-color: $branco;
 	color: $cor1;
+	&:hover, :focus{
+		background-color: $cor1;
+		border-radius: 10px;
+		color:	$branco;
+	}
 }
 
-.navbar-toggler:hover,
-.navbar-toggler:focus,
-ul.navbar-nav > li.nav-item > a.nav-link:hover,
-ul.navbar-nav > li.nav-item > a.nav-link:focus,
-ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:hover,
-ul.navbar-nav > li.nav-item > div.dropdown-menu >a.dropdown-item:focus {
-	background-color: $cor1;
-	border-radius: 10px;
-	color:	$branco;
+.menu-eventos {
+	height: 55px;
 }
 
 // BARRA DE PROGRESSO

@@ -6,11 +6,12 @@
 	padding: 10px 20px;
 	background-color: $cor1;
 	color: $branco;
+	border: 2px solid $branco;
 	border-radius: 20px;
 	&:hover {
 		background-color: $branco;
 		color: $cor1;
-		border: 2px solid $cor1;
+		border-color: $cor1;
 	}
 }
 

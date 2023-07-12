@@ -1,3 +1,5 @@
+@import 'variaveis';
+
 // IMAGENS
 #image1 {
 	background-image: url(../../img/fotos/background_1.jpg);
@@ -113,4 +115,11 @@
 
 .borda-branco {
 	border: 2px solid $branco;
+}
+
+a {
+	fill: $cor1; /* Cor inicial */
+	&:hover {
+		fill: $branco; /* Cor ao passar o mouse */
+  	}
 }

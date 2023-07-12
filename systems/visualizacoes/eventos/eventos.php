@@ -71,8 +71,17 @@
 				<h1 class="text-center cor-1 font-size-28 negrito">Eventos</h1>
 			</div>
 		    <div class="row mt-3">
-				<div class="col-4 text-center borda-redonda-20 blur-2">
-					<h2 class="text-center font-size-24 negrito mt-1">Adicionar novo Evento?</h2>
+				<div class="col-5 text-center borda-redonda-20 blur-2">
+					<h2 class="text-center font-size-24 negrito mt-1 borda-redonda-10 bg-branco p-1 cor-1">Adicionar novo Evento?</h2>
+					<?php
+							if (isset($_SESSION['msgAdicionaEvento'])) {
+								$msgAdicionaEvento = $_SESSION['msgAdicionaEvento'];
+						?>
+								<h6 class="text-danger">(<?= $msgAdicionaEvento ?>)</h6>
+						<?php 
+								unset($_SESSION['msgAdicionaEvento']);
+							}
+						?>
 					<span class="text-danger font-size-28">* </span>
 					<span class="font-size-16"> - Preenchimento obrigatório</span>
 					<hr class="separador-branco">
@@ -137,7 +146,7 @@
 						</div>
 						<div class="form-group">
 							<label class="negrito" for="estado">Estado</label>
-							<select class="form-control borda-redonda-10" id="estado">
+							<select class="form-control borda-redonda-10" id="estado" name="estado">
 								<option>Selecione o estado</option>
 								<?php 
 									foreach ($estados as $estado) {
@@ -153,7 +162,7 @@
 						</div>
 						<div class="form-group">
 							<label class="negrito" for="pais">País</label>
-							<select class="form-control borda-redonda-10" id="pais">
+							<select class="form-control borda-redonda-10" id="pais" name="pais">
 								<option value=<?= $idBrasil ?>><?= $nomeBrasil ?></option>
 								<?php 
 									foreach ($paises as $pais) {
@@ -179,21 +188,22 @@
 							<div class="text-danger negrito d-in" id="caracteres_restantes">255</div>
 							<span class="text-danger negrito">/255</span>
 						</div>
-						<div class="text-center" title="Requer autorização do Administrador">
-							<input type="checkbox" name="autorizado" disabled>
-							<span class="negrito ml-3">Autorizado?</span>
-                        </div>
+						<div class="row">
+							<div class="col-6 text-center p-2" title="Requer autorização do Administrador">
+								<input type="checkbox" name="autorizado" disabled>
+								<span class="negrito ml-3">Autorizado?</span>
+							</div>
+                        	<div class="col-6">
+								<button class="botao borda-branca" type="submit">Salvar</button>
+							</div>
+						</div>
+
 					</form>
 				</div>
-				<div class="col-7 text-center borda-redonda-20 blur-2 ml-3">
-					<div class="row text-center cor-3 font-size-24 negrito">
-						<div class="col-4 borda-redonda-10 borda-branca m-1">TODOS</div>
-						<div class="col-4 borda-redonda-10 borda-branca m-1">PRÓXIMOS</div>
-						<div class="col-4 borda-redonda-10 borda-branca m-1">ANTERIORES</div>
-					</div>
-					<div class="lista">
-
-					</div>
+				<div class="col-6 borda-redonda-20 blur-2 ml-3">
+					<?php 
+						include '../../templates/menu_eventos.php';
+					?>
 				</div>
 			</div>
         </section>

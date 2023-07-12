@@ -17,8 +17,7 @@
                            $cidade,
                            $idEstado,
                            $idPais,
-                           $descricao,
-                           $autorizado
+                           $descricao
                            ) {
             $query = "INSERT INTO eventos (id_usuario,
                                            imagem,
@@ -29,11 +28,11 @@
                                            bairro,
                                            cidade,
                                            id_estado,
-                                           id_pais
-                                           descricao,
-                                           autorizado)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            $paramType = "isssssssiisi";
+                                           id_pais,
+                                           descricao
+                                           )
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $paramType = "isssssssiis";
             $paramValue = array($idUsuario,
                                 $imagem,
                                 $nome,
@@ -44,9 +43,8 @@
                                 $cidade,
                                 $idEstado,
                                 $idPais,
-                                $descricao,
-                                $autorizado
-                                );
+                                $descricao
+                               );
             $insertIdEvento= $this->db_handle->insert($query, $paramType, $paramValue);
             return $insertIdEvento;
         }
@@ -130,6 +128,17 @@
             $query = "SELECT * FROM eventos ORDER BY data_hora_inicio ASC";
             $evento = $this->db_handle->runBaseQuery($query);
             return $evento;
+        }
+
+        function getNumeroEventosUsuario($idUser) {
+            $query = "SELECT COUNT(*) FROM eventos WHERE id_usuario = ?";
+            $paramType = "i";
+            $paramValue = array($idUser);
+            $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            foreach ($result as $num) {
+                $numeroEventos = $num['COUNT(*)'];
+            }
+            return $numeroEventos;
         }
     }
 ?>
