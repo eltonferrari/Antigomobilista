@@ -5,7 +5,7 @@
     }
 
     function convertDataMySQL_HoraPHP($dataMySQL) {
-        $horaPHP = date('H:i:s', strtotime($dataMySQL));
+        $horaPHP = date('H:i', strtotime($dataMySQL));
         return $horaPHP;
     }
 

@@ -37,7 +37,7 @@
     if (!is_dir($uploaddir)) {
         mkdir($uploaddir);
     }
-	$_UP['pasta'] = "../../../img/eventos/users/id_$idUser/";
+	$_UP['pasta'] = "\img/eventos/users/id_$idUser/";
 	
 	//Tamanho máximo do arquivo em Bytes
 	$_UP['tamanho'] = 5184*5184*100; //10mb
@@ -73,7 +73,7 @@
 	} else {
         $caminho = $_UP['pasta'];
         $num ++;
-		$nome_final = "Evento_Id_User#$idUser-num#$num.jpg";
+		$nome_final = "Evento_num$num.jpg";
         $arquivo = $caminho.$nome_final;
 		if (move_uploaded_file($_FILES['imagem']['tmp_name'], $_UP['pasta']. $nome_final)) {
 			//Upload efetuado com sucesso, exibe a mensagem

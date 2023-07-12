@@ -1,13 +1,15 @@
 <?php 
 	include '../../controladores/autenticacao/validador_de_acesso.php';
+	include '../../controladores/eventos/class_eventos.php';
 	include '../../controladores/estados/class_estados.php';
 	include '../../controladores/paises/class_paises.php';
+	include '../../../bibliotecas/lib/util.php';
 
 	echo '===== SESSION =====';
 	echo '<pre>';
 	print_r($_SESSION);
 	echo '</pre>';
-
+	
 	// MENU ==========================================================
 	include '../../controladores/pontuacoes/class_pontuacoes.php';
 	$idUsuarioLogado = $_SESSION['id_user'];
@@ -22,6 +24,34 @@
 		$fotoUsuarioLogado = $ul['imagem'];
 	}
 	// ===============================================================
+	$lista = new Eventos();
+	$nomeLista = null;
+	if (isset($_GET['eventos'])) {
+		$tipoLista = $_GET['eventos'];
+		$lista = new Eventos();
+		switch ($tipoLista) {
+			case 'all':
+				$lista = $lista->getAllEventosUserById($idUsuarioLogado);
+				$nomeLista = "Todos os eventos de $nomeUsuarioLogado";
+				break;
+
+			case 'next':
+				$lista = $lista->getNextEventosUserById($idUsuarioLogado);
+				$nomeLista = "Próximos eventos de $nomeUsuarioLogado";
+				break;
+
+			case 'prev':
+				$lista = $lista->getPrevEventosUserById($idUsuarioLogado);
+				$nomeLista = "Eventos finalizados de $nomeUsuarioLogado";
+				break;
+		}
+	}
+	echo '===== LISTA =====';
+	echo '<pre>';
+	print_r($lista);
+	echo '</pre>';
+
+
 	$estados = new Estados();
 	$estados = $estados->getAllEstados();
 	$brasil = new Paises();
@@ -72,7 +102,7 @@
 			</div>
 		    <div class="row mt-3">
 				<div class="col-5 text-center borda-redonda-20 blur-2">
-					<h2 class="text-center font-size-24 negrito mt-1 borda-redonda-10 bg-branco p-1 cor-1">Adicionar novo Evento?</h2>
+					<h2 class="text-center font-size-24 negrito mt-1 borda-redonda-10 bg-branco p-1 mt-3 cor-1">Adicionar novo Evento?</h2>
 					<?php
 							if (isset($_SESSION['msgAdicionaEvento'])) {
 								$msgAdicionaEvento = $_SESSION['msgAdicionaEvento'];
@@ -197,13 +227,95 @@
 								<button class="botao borda-branca" type="submit">Salvar</button>
 							</div>
 						</div>
-
 					</form>
 				</div>
-				<div class="col-6 borda-redonda-20 blur-2 ml-3">
-					<?php 
-						include '../../templates/menu_eventos.php';
-					?>
+				<div class="col-6 borda-redonda-20 blur-2 ml-5">
+					<h2 class="text-center font-size-24 negrito borda-redonda-10 bg-branco mt-3 p-1 cor-1"><?= $nomeLista ?></h2>
+					<div class="row justify-content-between borda-redonda-10 bg-branco mt-3 mx-1 p-2">
+							<!-- LOGO -->
+							<div class="text-left">
+								<img src="\img/logo/antigomobilista_logo.png" width="50">
+							</div>
+							<!-- NAVEGAÇÃO -->
+							<div class="text-center">
+								<a class="font-size-20 negrito link-sem-sobrescrito menu-eventos-item p-2" href="eventos.php?eventos=prev">
+									<svg xmlns="http://www.w3.org/2000/svg" 
+										viewBox="0 0 24 24" 
+										width="25" 
+										height="25" 
+										transform="matrix(-1, 0, 0, 1, 0, 0)">
+										<path d="M13.1,19.5a1.5,1.5,0,0,1-1.061-2.561l4.586-4.585a.5.5,0,0,0,0-.708L12.043,7.061a1.5,1.5,0,0,1,2.121-2.122L18.75,9.525a3.505,3.505,0,0,1,0,4.95l-4.586,4.586A1.5,1.5,0,0,1,13.1,19.5Z" />
+										<path d="M6.1,19.5a1.5,1.5,0,0,1-1.061-2.561L9.982,12,5.043,7.061A1.5,1.5,0,0,1,7.164,4.939l6,6a1.5,1.5,0,0,1,0,2.122l-6,6A1.5,1.5,0,0,1,6.1,19.5Z" />
+									</svg>
+									Anteriores
+								</a>
+							</div>
+							<div class="text-center">
+								<a class="font-size-20 negrito link-sem-sobrescrito menu-eventos-item p-2" href="eventos.php?eventos=all">Todos</a>
+							</div>
+							<div class="text-center">
+								<a class="font-size-20 negrito link-sem-sobrescrito menu-eventos-item p-2" href="eventos.php?eventos=next">
+									Próximos
+									<svg xmlns="http://www.w3.org/2000/svg" 
+										viewBox="0 0 24 24" 
+										width="25" 
+										height="25" 
+										transform="matrix(1, 0, 0, 1, 0, 0)">
+										<path d="M13.1,19.5a1.5,1.5,0,0,1-1.061-2.561l4.586-4.585a.5.5,0,0,0,0-.708L12.043,7.061a1.5,1.5,0,0,1,2.121-2.122L18.75,9.525a3.505,3.505,0,0,1,0,4.95l-4.586,4.586A1.5,1.5,0,0,1,13.1,19.5Z" />
+										<path d="M6.1,19.5a1.5,1.5,0,0,1-1.061-2.561L9.982,12,5.043,7.061A1.5,1.5,0,0,1,7.164,4.939l6,6a1.5,1.5,0,0,1,0,2.122l-6,6A1.5,1.5,0,0,1,6.1,19.5Z" />
+									</svg>
+								</a>
+							</div>
+							<!-- LOGO -->
+							<div class="text-right">
+								<img src="\img/logo/antigomobilista_logo_invertido.png" width="50">
+							</div>
+					</div>
+					<div class="lista">
+						<?php
+							foreach ($lista as $l) {
+								$id 	= $l['id'];
+								$imagem = $l['imagem'];
+								$nome 	= $l['nome'];
+								$dataHoraInicio = $l['data_hora_inicio'];
+								$dataHoraFim = $l['data_hora_fim'];
+								$dataInicio = convertDataMySQL_DataPHP($dataHoraInicio);
+								$horaInicio = convertDataMySQL_HoraPHP($dataHoraInicio);
+								$dataFim = convertDataMySQL_DataPHP($dataHoraFim);
+								$horaFim = convertDataMySQL_HoraPHP($dataHoraFim);
+						?>
+								<hr class="separador-branco my-3">
+								<a class="link-sem-sobrescrito" href="visualiza_evento.php?id=<?= $id ?>">
+									<img class="borda-redonda-20 borda-branco" src="<?= $imagem ?>" alt="Foto do evento" width="100%">
+									<div class="text-center bg-branco borda-redonda-10 mt-3">
+										<span class="cor-1 p-2 negrito"><?= $nome ?></span>
+										<br />
+						<?php
+											if ($dataInicio == $dataFim) {
+						?>
+												<span class="cor-1 py-2">Dia </span>
+												<span class="cor-1 py-2 negrito"><?= $dataInicio ?></span>
+												<span class="cor-1 py-2"> das </span>
+												<span class="cor-1 py-2 negrito"><?= $horaInicio ?></span>
+												<span class="cor-1 py-2"> às </span>
+												<span class="cor-1 py-2 negrito"><?= $horaFim ?></span>
+						<?php
+											} else {
+						?>
+												<span class="cor-1 py-2">De </span>
+												<span class="cor-1 py-2 negrito"><?= $dataInicio ?></span>
+												<span class="cor-1 py-2">à </span>
+												<span class="cor-1 py-2 negrito"><?= $dataFim ?></span>												 
+						<?php
+											}
+						?>
+									</div>
+								</a>
+						<?php
+							}
+						?>
+						<div class="espaco"></div>
+					</div>
 				</div>
 			</div>
         </section>

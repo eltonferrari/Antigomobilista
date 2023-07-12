@@ -140,5 +140,29 @@
             }
             return $numeroEventos;
         }
+
+        function getAllEventosUserById($idUser) {
+            $query = "SELECT * FROM eventos WHERE id_usuario = ?";
+            $paramType = "i";
+            $paramValue = array($idUser);
+            $todosEventos = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            return $todosEventos;
+        }
+
+        function getNextEventosUserById($idUser) {
+            $query = "SELECT * FROM eventos WHERE data_hora_fim > CURRENT_DATE() and id_usuario = ?";
+            $paramType = "i";
+            $paramValue = array($idUser);
+            $todosEventos = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            return $todosEventos;
+        }
+
+        function getPrevEventosUserById($idUser) {
+            $query = "SELECT * FROM eventos WHERE data_hora_inicio < CURRENT_DATE() and id_usuario = ?";
+            $paramType = "i";
+            $paramValue = array($idUser);
+            $todosEventos = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            return $todosEventos;
+        }
     }
 ?>
