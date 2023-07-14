@@ -50,7 +50,7 @@
 
 		<!-- CSS CUSTOMIZADO -->
 		<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
-        <link rel="icon" href="../../../img/logos/logo.png" type="image/x-icon">
+        <link rel="icon" href="../../../img/logo/antigomobilista_logo-icon.png" type="image/x-icon">
 		<title>RS - Resolve Systems</title>
 	</head>
     <body>

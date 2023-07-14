@@ -93,7 +93,7 @@
 		<script src="../../../assets/js/script.js"></script>
 
 		<!-- add icon link -->
-        <link rel="icon" href="../../../img/logo/antigomobilista_logo.png" type="image/x-icon">
+        <link rel="icon" href="../../../img/logo/antigomobilista_logo-icon.png" type="image/x-icon">
 		
 		<title>Antigomobilista - Pessoas</title>
 	</head>
