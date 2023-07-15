@@ -45,17 +45,22 @@
         $dataHoraInicio = $e['data_hora_inicio'];
         $dataHoraFim = $e['data_hora_fim'];
         $endereco = $e['endereco'];
+		$bairro = $e['bairro'];
+		$cidade = $e['cidade'];
+		$idEstado = $e['id_estado'];
+		$idPais = $e['id_pais'];
+		$descricao = $e['descricao'];
         $dataInicio = convertDataMySQL_DataPHP($dataHoraInicio);
         $horaInicio = convertDataMySQL_HoraPHP($dataHoraInicio);
         $dataFim = convertDataMySQL_DataPHP($dataHoraFim);
         $horaFim = convertDataMySQL_HoraPHP($dataHoraFim);
     }
 	
-    $estados = new Estados();
-	$estados = $estados->getAllEstados();
+    $estado = new Estados();
+	$estado = $estado->getNomeById($idEstado);
 	
-    $paises = new Paises();
-	$paises = $paises->getAllPaises();
+    $pais = new Paises();
+	$pais = $pais->getNomeById($idPais);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -96,7 +101,7 @@
 			</div>
 		    <div class="row mt-1">
 				<div class="col-9 m-auto">
-					<div class="text-center borda-redonda-20 p-3">
+					<div class="text-center p-3">
                         <img class="borda-cor3 borda-redonda-10 sombra-imagem-evento" src="<?= $imagem ?>" width="100%">
 					</div>
 					<div class="text-center mt-3">
@@ -125,37 +130,43 @@
                     </div>
                     <div class="row">
                         <div class="col-4">
-                            <div class="text-center font-size-24 mt-3">
+                            <div class="text-center font-size-20 mt-3">
                                 <span class="cor-1 negrito">Endereço:</span>
                                 <p class="cor-3"><?= $endereco ?></p>
 							</div>
                         </div>
-                        <div class="col-4"></div>
-                        <div class="col-4"></div>
+                        <div class="col-4">
+							<div class="text-center font-size-20 mt-3">
+                                <span class="cor-1 negrito">Bairro:</span>
+                                <p class="cor-3"><?= $bairro ?></p>
+							</div>
+						</div>
+                        <div class="col-4">
+							<div class="text-center font-size-20 mt-3">
+                                <span class="cor-1 negrito">Cidade:</span>
+                                <p class="cor-3"><?= $cidade ?></p>
+							</div>
+						</div>
                     </div>
-
-
-							<div class="form-group">
-								<label class="negrito" for="bairro"><span class="text-danger mr-2">*</span>Bairro:</label>
+					<div class="row">
+                        <div class="col-6">
+                            <div class="text-center font-size-20 mt-3">
+                                <span class="cor-1 negrito">Estado:</span>
+                                <p class="cor-3"><?= $estado ?></p>
 							</div>
-							<div class="form-group">
-								<label class="negrito" for="cidade"><span class="text-danger mr-2">*</span>Cidade:</label>
+                        </div>
+                        <div class="col-6">
+							<div class="text-center font-size-20 mt-3">
+                                <span class="cor-1 negrito">País:</span>
+                                <p class="cor-3"><?= $pais ?></p>
 							</div>
-							<div class="form-group">
-								<label class="negrito" for="estado">Estado</label>
-							</div>
-							<div class="form-group">
-								<label class="negrito" for="pais">País</label>
-							</div>
-							<div class="text-area">
-								<div class="form-group">
-									<label class="negrito" for="mensagem">Descrição do evento:</label>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-6 text-center p-2" title="Requer autorização do Administrador">
-							</div>
-						</form>
+						</div>
+                    </div>
+					<div class="row">
+						<div class="col-8 m-auto text-center font-size-20 p-1">
+							<span class="cor-1 negrito">Descrição do evento:</span>
+							<p class="cor-3 borda-cor1 borda-redonda-10"><?= $descricao ?></p>
+						</div>
 					</div>
 				</div>				
 			</div>
@@ -164,18 +175,5 @@
 		<footer>
 	        <?php include '../../templates/js-bootstrap.php'; ?>
 		</footer>
-		<script>
-            // Preview de imagem
-            function readImage() {
-                if (this.files && this.files[0]) {
-                    var file = new FileReader();
-                    file.onload = function(e) {
-                        document.getElementById("preview").src = e.target.result;
-                    };       
-                    file.readAsDataURL(this.files[0]);
-                }
-            }
-            document.getElementById("img-input").addEventListener("change", readImage, false);
-        </script>
     </body>
 </html>
