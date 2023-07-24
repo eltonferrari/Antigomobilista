@@ -40,20 +40,21 @@
 	echo '</pre>';
 
     foreach ($evento as $e) {
-        $imagem = $e['imagem'];
-        $nome = $e['nome'];
+		$id 			= $e['id'];
+        $imagem 		= $e['imagem'];
+        $nome 			= $e['nome'];
         $dataHoraInicio = $e['data_hora_inicio'];
-        $dataHoraFim = $e['data_hora_fim'];
-        $endereco = $e['endereco'];
-		$bairro = $e['bairro'];
-		$cidade = $e['cidade'];
-		$idEstado = $e['id_estado'];
-		$idPais = $e['id_pais'];
-		$descricao = $e['descricao'];
-        $dataInicio = convertDataMySQL_DataPHP($dataHoraInicio);
-        $horaInicio = convertDataMySQL_HoraPHP($dataHoraInicio);
-        $dataFim = convertDataMySQL_DataPHP($dataHoraFim);
-        $horaFim = convertDataMySQL_HoraPHP($dataHoraFim);
+        $dataHoraFim 	= $e['data_hora_fim'];
+        $endereco 		= $e['endereco'];
+		$bairro 		= $e['bairro'];
+		$cidade 		= $e['cidade'];
+		$idEstado 		= $e['id_estado'];
+		$idPais 		= $e['id_pais'];
+		$descricao 		= $e['descricao'];
+        $dataInicio 	= convertDataMySQL_DataPHP($dataHoraInicio);
+        $horaInicio 	= convertDataMySQL_HoraPHP($dataHoraInicio);
+        $dataFim 		= convertDataMySQL_DataPHP($dataHoraFim);
+        $horaFim 		= convertDataMySQL_HoraPHP($dataHoraFim);
     }
 	
     $estado = new Estados();
@@ -96,13 +97,23 @@
 			<?php include '../../../systems/templates/menu.php'; ?>
 		</header>
         <section class="container">
-			<div class="titulo">
-				<h1 class="text-center cor-1 font-size-32 negrito">Evento</h1>
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10">
+					<div class="titulo">
+						<h1 class="text-center cor-1 font-size-32 negrito">Evento</h1>
+					</div>
+				</div>
+				<div class="col-1 pt-5">
+					<a href="alterar_evento.php?id=<?= $id ?>">
+						<img src="../../../img/icones/editar-cor-1.png" alt="Alterar evento?" title="Alterar Evento?" width="30">
+					</a>
+				</div>
 			</div>
 		    <div class="row mt-1">
 				<div class="col-9 m-auto">
 					<div class="text-center p-3">
-                        <img class="borda-cor3 borda-redonda-10 sombra-imagem-evento" src="<?= $imagem ?>" width="100%">
+                        <img class="borda-cor3 borda-redonda-10 borda-cor1 sombra-imagem-evento" src="<?= $imagem ?>" width="100%">
 					</div>
 					<div class="text-center mt-3">
                         <h2 class="cor-1 font-size-28">" <?= $nome ?> "</h2>

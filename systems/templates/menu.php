@@ -4,7 +4,7 @@
     <?php
         if (!isset($_SESSION['logado'])) {
     ?>
-            <a href="\index.php" title="Voltar para o início">
+            <a class="link-sem-sobrescrito" href="\index.php" title="Voltar para o início">
     <?php
         }
     ?>

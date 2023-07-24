@@ -17,7 +17,7 @@ input[type=file] {
   
 input[type=file]::file-selector-button {
 	margin-right: 20px;
-	border: none;
+	border: 2px solid $cor2;
 	background: $cor2;
 	padding: 5px 20px;
 	border-radius: 10px;
