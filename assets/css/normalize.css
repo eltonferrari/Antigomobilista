@@ -6,7 +6,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 /* line 11, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 9, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 html {
   line-height: 1.15;
   /* 1 */
@@ -20,7 +19,6 @@ html {
      * Remove the margin in all browsers.
      */
 /* line 23, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 22, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 body {
   margin: 0;
 }
@@ -29,7 +27,6 @@ body {
      * Render the `main` element consistently in IE.
      */
 /* line 31, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 30, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 main {
   display: block;
 }
@@ -39,7 +36,6 @@ main {
      * `article` contexts in Chrome, Firefox, and Safari.
      */
 /* line 40, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 39, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -52,7 +48,6 @@ h1 {
      * 2. Show the overflow in Edge and IE.
      */
 /* line 53, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 51, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 hr {
   box-sizing: content-box;
   /* 1 */
@@ -67,7 +62,6 @@ hr {
      * 2. Correct the odd `em` font sizing in all browsers.
      */
 /* line 64, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 65, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 pre {
   font-family: monospace, monospace;
   /* 1 */
@@ -81,7 +75,6 @@ pre {
      * Remove the gray background on active links in IE 10.
      */
 /* line 76, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 78, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 a {
   background-color: transparent;
 }
@@ -91,7 +84,6 @@ a {
      * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
      */
 /* line 85, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 87, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -105,7 +97,6 @@ abbr[title] {
      * Add the correct font weight in Chrome, Edge, and Safari.
      */
 /* line 95, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 100, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 b,
 strong {
   font-weight: bolder;
@@ -116,7 +107,6 @@ strong {
      * 2. Correct the odd `em` font sizing in all browsers.
      */
 /* line 105, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 110, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 code,
 kbd,
 samp {
@@ -130,7 +120,6 @@ samp {
      * Add the correct font size in all browsers.
      */
 /* line 116, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 123, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 small {
   font-size: 80%;
 }
@@ -140,7 +129,6 @@ small {
      * all browsers.
      */
 /* line 125, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 132, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -150,13 +138,11 @@ sup {
 }
 
 /* line 133, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 141, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 sub {
   bottom: -0.25em;
 }
 
 /* line 137, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 146, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 sup {
   top: -0.5em;
 }
@@ -167,7 +153,6 @@ sup {
      * Remove the border on images inside links in IE 10.
      */
 /* line 148, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 156, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 img {
   border-style: none;
 }
@@ -179,7 +164,6 @@ img {
      * 2. Remove the margin in Firefox and Safari.
      */
 /* line 160, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 167, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 button,
 input,
 optgroup,
@@ -200,7 +184,6 @@ textarea {
      * 1. Show the overflow in Edge.
      */
 /* line 176, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 187, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 button,
 input {
   /* 1 */
@@ -212,7 +195,6 @@ input {
      * 1. Remove the inheritance of text transform in Firefox.
      */
 /* line 186, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 198, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 button,
 select {
   /* 1 */
@@ -223,7 +205,6 @@ select {
      * Correct the inability to style clickable types in iOS and Safari.
      */
 /* line 195, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 208, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 button,
 [type="button"],
 [type="reset"],
@@ -235,7 +216,6 @@ button,
      * Remove the inner border and padding in Firefox.
      */
 /* line 206, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 219, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -248,7 +228,6 @@ button::-moz-focus-inner,
      * Restore the focus styles unset by the previous rule.
      */
 /* line 218, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 231, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -260,7 +239,6 @@ button:-moz-focusring,
      * Correct the padding in Firefox.
      */
 /* line 229, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 242, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
@@ -272,7 +250,6 @@ fieldset {
      *    `fieldset` elements in all browsers.
      */
 /* line 240, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 253, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 legend {
   box-sizing: border-box;
   /* 1 */
@@ -292,7 +269,6 @@ legend {
      * Add the correct vertical alignment in Chrome, Firefox, and Opera.
      */
 /* line 253, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 272, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 progress {
   vertical-align: baseline;
 }
@@ -301,7 +277,6 @@ progress {
      * Remove the default vertical scrollbar in IE 10+.
      */
 /* line 261, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 280, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 textarea {
   overflow: auto;
 }
@@ -311,7 +286,6 @@ textarea {
      * 2. Remove the padding in IE 10.
      */
 /* line 270, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 289, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
@@ -324,7 +298,6 @@ textarea {
      * Correct the cursor style of increment and decrement buttons in Chrome.
      */
 /* line 280, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 301, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -335,7 +308,6 @@ textarea {
      * 2. Correct the outline style in Safari.
      */
 /* line 290, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 311, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 [type="search"] {
   appearance: textfield;
   /* 1 */
@@ -347,7 +319,6 @@ textarea {
      * Remove the inner padding in Chrome and Safari on macOS.
      */
 /* line 299, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 322, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 [type="search"]::-webkit-search-decoration {
   appearance: none;
 }
@@ -357,7 +328,6 @@ textarea {
      * 2. Change font properties to `inherit` in Safari.
      */
 /* line 308, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 331, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 ::-webkit-file-upload-button {
   appearance: button;
   /* 1 */
@@ -371,7 +341,6 @@ textarea {
      * Add the correct display in Edge, IE 10+, and Firefox.
      */
 /* line 320, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 344, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 details {
   display: block;
 }
@@ -380,7 +349,6 @@ details {
      * Add the correct display in all browsers.
      */
 /* line 328, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 352, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 summary {
   display: list-item;
 }
@@ -391,7 +359,6 @@ summary {
      * Add the correct display in IE 10+.
      */
 /* line 339, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 362, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 template {
   display: none;
 }
@@ -400,11 +367,8 @@ template {
      * Add the correct display in IE 10.
      */
 /* line 347, ../../xamp/htdocs/Publicacao/scss/normalize.scss */
-/* line 370, ../../xampp/htdocs/Antigomobilista/scss/normalize.scss */
 [hidden] {
   display: none;
 }
-
-/*# sourceMappingURL=normalize.css.map */
 
 /*# sourceMappingURL=normalize.css.map */

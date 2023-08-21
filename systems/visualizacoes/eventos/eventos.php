@@ -233,7 +233,13 @@
 				</div>
 				<div class="col-6 ml-5">
 					<div class="borda-redonda-20 blur-2 px-3 py-1">
-						<h2 class="text-center font-size-24 negrito borda-redonda-10 bg-branco mt-3 p-1 cor-1"><?= $nomeLista ?></h2>
+						<?php 
+							if ($nomeLista != null) {
+						?>
+								<h2 class="text-center font-size-24 negrito borda-redonda-10 bg-branco mt-3 p-1 cor-1"><?= $nomeLista ?></h2>
+						<?php
+							}
+						?>
 						<div class="row justify-content-between borda-redonda-10 bg-branco mt-3 mx-1 p-2">
 								<!-- LOGO -->
 								<div class="text-left">
@@ -276,44 +282,64 @@
 						</div>
 						<div class="lista">
 							<?php
-								foreach ($lista as $l) {
-									$id 	= $l['id'];
-									$imagem = $l['imagem'];
-									$nome 	= $l['nome'];
-									$dataHoraInicio = $l['data_hora_inicio'];
-									$dataHoraFim = $l['data_hora_fim'];
-									$dataInicio = convertDataMySQL_DataPHP($dataHoraInicio);
-									$horaInicio = convertDataMySQL_HoraPHP($dataHoraInicio);
-									$dataFim = convertDataMySQL_DataPHP($dataHoraFim);
-									$horaFim = convertDataMySQL_HoraPHP($dataHoraFim);
+								if (!empty($lista)) {
+									foreach ($lista as $l) {
+										$id 	= $l['id'];
+										$imagem = $l['imagem'];
+										$nome 	= $l['nome'];
+										$dataHoraInicio = $l['data_hora_inicio'];
+										$dataHoraFim = $l['data_hora_fim'];
+										$dataInicio = convertDataMySQL_DataPHP($dataHoraInicio);
+										$horaInicio = convertDataMySQL_HoraPHP($dataHoraInicio);
+										$dataFim = convertDataMySQL_DataPHP($dataHoraFim);
+										$horaFim = convertDataMySQL_HoraPHP($dataHoraFim);
 							?>
-									<hr class="separador-branco my-3">
-									<a class="link-sem-sobrescrito" href="visualiza_evento.php?id=<?= $id ?>">
-										<img class="borda-redonda-20 borda-branco" src="<?= $imagem ?>" alt="Foto do evento" width="100%">
-										<div class="text-center bg-branco borda-redonda-10 mt-3">
-											<span class="cor-1 p-2 negrito"><?= $nome ?></span>
+										<hr class="separador-branco my-3">
+										<a class="link-sem-sobrescrito" href="visualiza_evento.php?id=<?= $id ?>">
+											<img class="borda-redonda-20 borda-branco" src="<?= $imagem ?>" alt="Foto do evento" width="100%">
+											<div class="text-center bg-branco borda-redonda-10 mt-3">
+												<span class="cor-1 p-2 negrito"><?= $nome ?></span>
+												<br />
+							<?php
+													if ($dataInicio == $dataFim) {
+							?>
+														<span class="cor-1 py-2">Dia </span>
+														<span class="cor-1 py-2 negrito"><?= $dataInicio ?></span>
+														<span class="cor-1 py-2"> das </span>
+														<span class="cor-1 py-2 negrito"><?= $horaInicio ?></span>
+														<span class="cor-1 py-2"> às </span>
+														<span class="cor-1 py-2 negrito"><?= $horaFim ?></span>
+							<?php
+													} else {
+							?>
+														<span class="cor-1 py-2">De </span>
+														<span class="cor-1 py-2 negrito"><?= $dataInicio ?></span>
+														<span class="cor-1 py-2">à </span>
+														<span class="cor-1 py-2 negrito"><?= $dataFim ?></span>												 
+							<?php
+													}
+							?>
+											</div>
+										</a>
+							<?php
+									}
+								} else {
+							?>
+									<div class="row">
+										<div class="col-2 px-3">
 											<br />
-							<?php
-												if ($dataInicio == $dataFim) {
-							?>
-													<span class="cor-1 py-2">Dia </span>
-													<span class="cor-1 py-2 negrito"><?= $dataInicio ?></span>
-													<span class="cor-1 py-2"> das </span>
-													<span class="cor-1 py-2 negrito"><?= $horaInicio ?></span>
-													<span class="cor-1 py-2"> às </span>
-													<span class="cor-1 py-2 negrito"><?= $horaFim ?></span>
-							<?php
-												} else {
-							?>
-													<span class="cor-1 py-2">De </span>
-													<span class="cor-1 py-2 negrito"><?= $dataInicio ?></span>
-													<span class="cor-1 py-2">à </span>
-													<span class="cor-1 py-2 negrito"><?= $dataFim ?></span>												 
-							<?php
-												}
-							?>
+											<img src="../../../img/icones/flecha_esquerda.gif" alt="seta" width="50">
+											<br />
+											<img src="../../../img/icones/flecha_esquerda.gif" alt="seta" width="50">
 										</div>
-									</a>
+										<div class="col-10">
+											<p class="text-center font-size-20 negrito borda-redonda-10 bg-branco mt-3 p-1 cor-vermelho">
+												Não existem eventos cadastrados.
+												<br />
+												Cadastre aqui ao lado um novo evento.
+											</p>
+										</div>
+									</div>
 							<?php
 								}
 							?>
