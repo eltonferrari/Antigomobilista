@@ -4,7 +4,7 @@
 	echo '<pre>';
 	print_r($_SESSION);
 	echo '</pre>';
-    $msg = $_SESSION['mensagem'];
+    
 	// MENU ==========================================================
 	include '../../controladores/pontuacoes/class_pontuacoes.php';
     include '../../controladores/usuarios/class_usuarios.php';
@@ -69,10 +69,16 @@
                     <div id="termos-condicoes">
                         <div id="titulo-termos" class="text-center">
                             <h1 class="cor-1">Termos e Condições de Serviço</h1>
-                            <div class="alert alert-danger negrito borda-redonda-20">
+                            
                                 <?php 
-                                    echo $msg;
-                                    unset($_SESSION['msg']);
+                                    if (isset($_SESSION['mensagem'])) {
+                                ?>
+                                        <div class="alert alert-danger negrito borda-redonda-20">
+                                <?php
+                                            $msg = $_SESSION['mensagem'];
+                                            echo $msg;
+                                    }
+                                    unset($_SESSION['mensagem']);
                                 ?>
                             </div>
                         </div>

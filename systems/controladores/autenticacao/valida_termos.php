@@ -19,11 +19,12 @@
         $aceite = $_POST['aceite'];
         if ($aceite == 'on') {
             $user = new Usuarios();
+            $user->editTermosById($idUser);
             $emailValido = $user->getValidaEmailById($idUser);
             if ($emailValido == 0) {
                 header("Location: ../../visualizacoes/autenticacao/valida_email.php");
             }
-        } 
+        }
     } else {
         session_destroy();
         header("Location: ../../../index.php");

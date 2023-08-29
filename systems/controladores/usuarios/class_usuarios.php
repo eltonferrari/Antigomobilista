@@ -77,6 +77,12 @@ use LDAP\Result;
                                );
             $this->db_handle->update($query, $paramType, $paramValue);
         }
+        function editTermosById($id) {
+            $query = "UPDATE usuarios SET termos_condicoes = 1 WHERE id = ?";
+            $paramType = "i";
+            $paramValue = array($id);
+            $this->db_handle->update($query, $paramType, $paramValue);
+        }
 
         function alteraNomeById($nome, $updatedAt , $id) {
             $query = "UPDATE usuarios SET nome = ?, updated_at = ? WHERE id = ?";

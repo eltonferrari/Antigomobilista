@@ -7,9 +7,13 @@
 	print_r($_SESSION);
 	echo '</pre>';
     
-    $idUser = $_SESSION['id_user'];
-    $email = new Usuarios();
-    $email = $email->getEmailById($idUser);
+    if (isset($_SESSION['id_user'])) {
+		$idUser = $_SESSION['id_user'];
+		$user = new Usuarios();
+		$nome = $user->getNomeById($idUser);
+	    $email = $user->getEmailById($idUser);
+	}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,9 +45,6 @@
 		<title>Antigomobilista - Criar novo Usuário</title>
 	</head>
     <body>
-        <header>
-            <?php include '../../templates/menu.php';?>
-        </header>
         <section class="container">
             <div class="row">
                 <div class="card-login col-sm-8 m-auto pt-4">                                           
@@ -52,7 +53,7 @@
 						<div class="alert alert-danger borda-redonda-20">
 							Para sua segurança precisamos confirmar seu e-mail <strong><?= $email ?></strong>
 							<br />
-							Por favor verifique sua caixa de eentrada do referido endereço de e-mail
+							Por favor verifique sua caixa de entrada do referido endereço de e-mail
 							 e siga as instruçoes que enviamos para você.
 							<br />
 							Clique no botão abaixo autorizando o envio do e-mail de confirmação para você!
@@ -60,7 +61,7 @@
 							<span class="font-size-22 negrito">Após a confirmação entre novamente no sistema</span>
 						</div>
 						<div id="botao-confirmacao" class="p-5">
-							<a class="btn btn-outline-success borda-redonda-20 font-size-22 negrito px-5 py-3" href="../../controladores/autenticacao/envia-email.php">Autorizo a enviar-me o e-mail de confirmação</a>
+							<a class="btn btn-outline-success borda-redonda-20 font-size-22 negrito px-5 py-3" href="../../controladores/autenticacao/envia_email.php?nome=<?= $nome ?>&email=<?= $email ?>">Autorizo a enviar-me o e-mail de confirmação</a>
 						</div>
 						
 					</div>
