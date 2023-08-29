@@ -1,6 +1,5 @@
 <?php
-	session_start();
-	
+	session_start();	
 	$num = rand(1,20);
 	$style = "image$num";
 ?>
@@ -31,10 +30,10 @@
 		<title>Antigomobilista</title>
 	</head>
     <body id="<?= $style ?>">
-		<header>
+		<header id="menu">
 	        <?php include 'systems/templates/menu.php'; ?>
 		</header>
-		<section class="text-center blur">
+		<section id="titulo" class="text-center blur">
 			<h1 class="titulo-index font-berk">Para quem gosta de veículos antigos de verdade</h1>
 		</section>		
 		<section class="container">
@@ -42,7 +41,7 @@
 			<div class="text-center m-auto py-5">				
 				<img src="../img/em_construcao/em-construcao-conjunto-de-icones_24877-60028.webp" alt="Em construção" width="200">
 			</div>
-		</section>
+		</section>	
 		<?php include 'systems/templates/js-bootstrap.php'; ?>
     </body>
 </html>

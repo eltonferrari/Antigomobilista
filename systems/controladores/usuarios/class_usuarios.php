@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use LDAP\Result;
+
     require_once ("../../../conexao/DBController.php");
     
     class Usuarios {
@@ -19,6 +22,28 @@
             return $insertIdPessoa;
         }
 
+        function getTermosCondicoesById($id) {
+            $query = "SELECT termos_condicoes FROM usuarios WHERE id = ?";
+            $paramType = "i";
+            $paramValue = array($id);
+            $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            foreach ($result as $tc) {
+                $termosCondicoes = $tc['termos_condicoes'];
+            }
+            return $termosCondicoes;
+        }
+
+        function getValidaEmailById($id) {
+            $query = "SELECT confirm_email FROM usuarios WHERE id = ?";
+            $paramType = "i";
+            $paramValue = array($id);
+            $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            foreach ($result as $ce) {
+                $confirmEmail = $ce['confirm_email'];
+            }
+            return $confirmEmail;
+        }
+        
         function editUsuario($pontos, 
                              $nome, 
                              $email, 
@@ -78,6 +103,17 @@
                 $pessoa = $nome['nome'];
             }
             return $pessoa;
+        }
+
+        function getEmailById($id) {
+            $query = "SELECT email FROM usuarios WHERE id = ?";
+            $paramType = "i";
+            $paramValue = array($id);
+            $result = $this->db_handle->runQuery($query, $paramType, $paramValue);
+            foreach($result as $e) {
+                $email = $e['email'];
+            }
+            return $email;
         }
 
         function getTipoById($id) {

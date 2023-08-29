@@ -21,10 +21,10 @@
         $_SESSION['logado'] = 1;
         $_SESSION['nome'] = $nome;
         $_SESSION['id_user'] = $user;
-        header("Location: ../../visualizacoes/home/home.php");
+        header("Location: ../../visualizacoes/autenticacao/termos_condicoes.php");
     } else {
         $_SESSION['mensagem'] = "O usuário $email já existe no sistema.";
         $_SESSION['logado'] = 0;
-        header("Location: ../../visualizacoes/autenticacao/registrar.php");
+        //header("Location: ../../visualizacoes/autenticacao/registrar.php");
     }
 ?>

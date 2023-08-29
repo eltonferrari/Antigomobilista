@@ -1,87 +1,18 @@
 <?php 
     session_start();
+	include '../../controladores/usuarios/class_usuarios.php';
+	include '../../../bibliotecas/lib/util.php';
+	echo '===== SESSION =====';
+	echo '<pre>';
+	print_r($_SESSION);
+	echo '</pre>';
     
-    use Exception as GlobalException;
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
-    
-    require '../../../bibliotecas/PHPMailer/src/Exception.php';
-    require '../../../bibliotecas/PHPMailer/src/PHPMailer.php';
-    require '../../../bibliotecas/PHPMailer/src/SMTP.php';
-    
-    include '../../controladores/usuarios/class_usuarios.php';
-    
-    echo '<pre>';
-        print_r($_SESSION);
-    echo '</pre>';
-
-    $email = $_SESSION['email'];
-    $nome =  $_SESSION['nome'];
-    $logado = $_SESSION['logado'];
-    if (isset($_GET['logado'])) {
-        $emailConfirmado = $_GET['logado'];
-        $user = $user->setValidaEmailById($idLogado, $emailConfirmado);
-    }
-    $idLogado = $_SESSION['id_user'];
-    $user = new Usuarios();
-    
-    if ($logado == 0) {
-        $mail = new PHPMailer(true);
-        try {
-            //Server settings
-            $mail->SMTPDebug = false;
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'antigomobilistaweb@gmail.com';
-            $mail->Password   = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
-            //Recipients
-            $mail->setFrom('eltonferrari@gmail.com', 'Antigomobilista.com');
-            $mail->addAddress($email, $nome);
-            //Content
-            $mail->isHTML(true);
-            $mail->Subject = 'Antigomobilista - E-mail de confirmação';
-            $mail->Body    = "Prezado(a)" . $nome . ", <br /><br />Agradecemos a sua solicitação 
-                            de cadastramento em nosso site, Antigomobilista! <br /><br /> Para que
-                            seu cadastro possa ser finalizado e seu acesso luiberado em nosso site,
-                            solicitamos a confirmação, deste endereço de e-mail, clicando no link
-                            abaixo: <br /><br /><a href='http://localhost/Antigomobilista/systems
-                            /visualizacao/autenticacao/valida-email.php?logado=1>Clique aqui.</a>
-                            <br /><br /><br />Esta mensagem foi enviada a você pelo site
-                            Antigomobilista.com.<br />Você está recebendo esta porque seu e-mail
-                            foi cadastrado para acesso ao site.<br /><br />Observação: Nenhum
-                            e-mail enviado pelo site possui arquivos anexados, solicita o
-                            preenchimento de senhas ou solicita informações cadastrais.<br />
-                            <br />Att,<br />Elton Ferrari<br />Desenvolvedor do sistema
-                            Antigomobilista.<br /><br />";
-            $mail->AltBody = "Prezado(a)" . $nome . ", \n\nAgradecemos a sua solicitação 
-                            de cadastramento em nosso site, Antigomobilista! \n\n Para que
-                            seu cadastro possa ser finalizado e seu acesso luiberado em nosso site,
-                            solicitamos a confirmação, deste endereço de e-mail, clicando no link
-                            abaixo: \n\n<a href='http://localhost/Antigomobilista/systems
-                            /visualizacao/autenticacao/valida-email.php?logado=1>Clique aqui.</a>
-                            \n\n\nEsta mensagem foi enviada a você pelo site
-                            Antigomobilista.com.\nVocê está recebendo esta porque seu e-mail
-                            foi cadastrado para acesso ao site.\n\nObservação: Nenhum
-                            e-mail enviado pelo site possui arquivos anexados, solicita o
-                            preenchimento de senhas ou solicita informações cadastrais.\n\n
-                            Att,\nElton Ferrari<br />Desenvolvedor do sistema
-                            Antigomobilista.\n\n";
-            $mail->send();
-            echo 'Message has been sent';
-        } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-        }
-    } else {
-
-        header("Location: ../home/home.php");
-    }
+    $idUser = $_SESSION['id_user'];
+    $email = new Usuarios();
+    $email = $email->getEmailById($idUser);
 ?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="UTF-8">
@@ -110,18 +41,36 @@
 		<title>Antigomobilista - Criar novo Usuário</title>
 	</head>
     <body>
-        <?php include '../../templates/menu.php';?>
-        <div class="container">
+        <header>
+            <?php include '../../templates/menu.php';?>
+        </header>
+        <section class="container">
             <div class="row">
                 <div class="card-login col-sm-8 m-auto pt-4">                                           
-                    <p class="text-center text-X-bg-azul p-2"><strong>O usuário <?= $email ?> foi cadastrado com sucesso no sistema.</strong></p>
-                    <p class="text-center text-X-bg-vermelho p-2"><strong>Para sua segurança, foi enviada uma mensagem para sua caixa de e-mail.<br />
-                                                                        Favor verificar e fazer a confirmação no mesmo, para continuar...</strong></p>
+					<div class="text-center">
+						<h1 class="cor-1">Confirmação de E-mail</h1>
+						<div class="alert alert-danger borda-redonda-20">
+							Para sua segurança precisamos confirmar seu e-mail <strong><?= $email ?></strong>
+							<br />
+							Por favor verifique sua caixa de eentrada do referido endereço de e-mail
+							 e siga as instruçoes que enviamos para você.
+							<br />
+							Clique no botão abaixo autorizando o envio do e-mail de confirmação para você!
+							<br />
+							<span class="font-size-22 negrito">Após a confirmação entre novamente no sistema</span>
+						</div>
+						<div id="botao-confirmacao" class="p-5">
+							<a class="btn btn-outline-success borda-redonda-20 font-size-22 negrito px-5 py-3" href="../../controladores/autenticacao/envia-email.php">Autorizo a enviar-me o e-mail de confirmação</a>
+						</div>
+						
+					</div>
                 </div>
             </div>
-        </div>
-        <?php
-            include '../../templates/js-bootstrap.php'; 
-        ?>
+        </section>
+        <footer>
+            <?php
+                include '../../templates/js-bootstrap.php';
+            ?>
+        </footer>
     </body>
 </html>

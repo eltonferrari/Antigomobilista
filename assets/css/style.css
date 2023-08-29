@@ -129,6 +129,14 @@ body {
   padding: 0px;
 }
 
+.espaco-50 {
+  height: 50px;
+}
+
+.espaco-100 {
+  height: 100px;
+}
+
 .titulo-index {
   font-size: calc(20px + 2vw);
   color: #aa5042;
